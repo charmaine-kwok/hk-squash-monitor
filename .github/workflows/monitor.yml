@@ -2,10 +2,13 @@ name: HK Squash Monitor
 
 on:
   schedule:
-    # Every 15 minutes
-    - cron: "7,22,37,52 * * * *"
+    # Monday-Friday, every 15 minutes
+    # GitHub Actions cron uses UTC.
+    # 01:00-09:59 UTC = 09:00-17:59 Hong Kong time.
+    # - cron: "7,22,37,52 1-9 * * 1-5"
+    - cron: "*/5 * * * *"
 
-  # Allows us to test it manually
+  # Allows manual testing
   workflow_dispatch:
 
 permissions:
