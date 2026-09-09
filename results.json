@@ -1,0 +1,615 @@
+{
+  "9A": {
+    "Star Squash Club 7|Squash-On 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Star Squash Club 7",
+      "team2": "Squash-On 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-0,3-0,3-0)"
+    },
+    "Pika KP Dream Squash Team|Kwai Tsing District Squash Club 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Pika KP Dream Squash Team",
+      "team2": "Kwai Tsing District Squash Club 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(3-1,0-3,0-3)"
+    },
+    "M&M Squash|Hong Kong Racketlon Association D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "M&M Squash",
+      "team2": "Hong Kong Racketlon Association D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-1,3-0,3-0)"
+    },
+    "Kwai Tsing District Squash Club 9A|M&M Squash|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Kwai Tsing District Squash Club 9A",
+      "team2": "M&M Squash",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(0-3,0-3,1-3)"
+    },
+    "Squash-On 9A|Pika KP Dream Squash Team|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Squash-On 9A",
+      "team2": "Pika KP Dream Squash Team",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "2-1(2-3,CR,CR)"
+    },
+    "I am fine thank you and you|Star Squash Club 7|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "I am fine thank you and you",
+      "team2": "Star Squash Club 7",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-1,3-0,3-0)"
+    },
+    "Pika KP Dream Squash Team|I am fine thank you and you|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Pika KP Dream Squash Team",
+      "team2": "I am fine thank you and you",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(3-1,0-3,CR)"
+    },
+    "M&M Squash|Squash-On 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "M&M Squash",
+      "team2": "Squash-On 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-0,3-0,3-0)"
+    },
+    "Hong Kong Racketlon Association D9|Kwai Tsing District Squash Club 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Hong Kong Racketlon Association D9",
+      "team2": "Kwai Tsing District Squash Club 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(2-3,0-3,2-3)"
+    },
+    "Squash-On 9A|Hong Kong Racketlon Association D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Squash-On 9A",
+      "team2": "Hong Kong Racketlon Association D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(0-3,0-3,0-3)"
+    },
+    "I am fine thank you and you|M&M Squash|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "I am fine thank you and you",
+      "team2": "M&M Squash",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "2-1(3-0,0-3,3-0)"
+    },
+    "Star Squash Club 7|Pika KP Dream Squash Team|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Star Squash Club 7",
+      "team2": "Pika KP Dream Squash Team",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(1-3,0-3,CR)"
+    },
+    "M&M Squash|Star Squash Club 7|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "M&M Squash",
+      "team2": "Star Squash Club 7",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-0,3-0,3-0)"
+    },
+    "Hong Kong Racketlon Association D9|I am fine thank you and you|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Hong Kong Racketlon Association D9",
+      "team2": "I am fine thank you and you",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(2-3,1-3,3-0)"
+    },
+    "Kwai Tsing District Squash Club 9A|Squash-On 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Kwai Tsing District Squash Club 9A",
+      "team2": "Squash-On 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(CR,CR,CR)"
+    },
+    "I am fine thank you and you|Kwai Tsing District Squash Club 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "I am fine thank you and you",
+      "team2": "Kwai Tsing District Squash Club 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-1,3-0,3-0)"
+    },
+    "Star Squash Club 7|Hong Kong Racketlon Association D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Star Squash Club 7",
+      "team2": "Hong Kong Racketlon Association D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(3-2,0-3,0-3)"
+    },
+    "Pika KP Dream Squash Team|M&M Squash|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Pika KP Dream Squash Team",
+      "team2": "M&M Squash",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(1-3,0-3,0-3)"
+    },
+    "Hong Kong Racketlon Association D9|Pika KP Dream Squash Team|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Hong Kong Racketlon Association D9",
+      "team2": "Pika KP Dream Squash Team",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "2-1(3-1,1-3,3-1)"
+    },
+    "Kwai Tsing District Squash Club 9A|Star Squash Club 7|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Kwai Tsing District Squash Club 9A",
+      "team2": "Star Squash Club 7",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-0,3-0,3-2)"
+    },
+    "Squash-On 9A|I am fine thank you and you|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Squash-On 9A",
+      "team2": "I am fine thank you and you",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(0-3,0-3,CR)"
+    },
+    "Squash-On 9A|Star Squash Club 7|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Squash-On 9A",
+      "team2": "Star Squash Club 7",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(CR,CR,CR)"
+    },
+    "Kwai Tsing District Squash Club 9A|Pika KP Dream Squash Team|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Kwai Tsing District Squash Club 9A",
+      "team2": "Pika KP Dream Squash Team",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-2,3-0,3-0)"
+    },
+    "Hong Kong Racketlon Association D9|M&M Squash|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Hong Kong Racketlon Association D9",
+      "team2": "M&M Squash",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(0-3,0-3,3-0)"
+    },
+    "M&M Squash|Kwai Tsing District Squash Club 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "M&M Squash",
+      "team2": "Kwai Tsing District Squash Club 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "2-1(3-0,3-0,0-3)"
+    },
+    "Pika KP Dream Squash Team|Squash-On 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Pika KP Dream Squash Team",
+      "team2": "Squash-On 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(0-3,CR,CR)"
+    },
+    "Star Squash Club 7|I am fine thank you and you|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Star Squash Club 7",
+      "team2": "I am fine thank you and you",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(0-3,0-3,0-3)"
+    },
+    "I am fine thank you and you|Pika KP Dream Squash Team|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "I am fine thank you and you",
+      "team2": "Pika KP Dream Squash Team",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-2,CR,CR)"
+    },
+    "Squash-On 9A|M&M Squash|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Squash-On 9A",
+      "team2": "M&M Squash",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(CR,0-3,0-3)"
+    },
+    "Kwai Tsing District Squash Club 9A|Hong Kong Racketlon Association D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Kwai Tsing District Squash Club 9A",
+      "team2": "Hong Kong Racketlon Association D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(0-3,0-3,0-3)"
+    },
+    "Hong Kong Racketlon Association D9|Squash-On 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Hong Kong Racketlon Association D9",
+      "team2": "Squash-On 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(CR,CR,CR)"
+    },
+    "M&M Squash|I am fine thank you and you|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "M&M Squash",
+      "team2": "I am fine thank you and you",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Pika KP Dream Squash Team|Star Squash Club 7|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Pika KP Dream Squash Team",
+      "team2": "Star Squash Club 7",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Star Squash Club 7|M&M Squash|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Star Squash Club 7",
+      "team2": "M&M Squash",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "I am fine thank you and you|Hong Kong Racketlon Association D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "I am fine thank you and you",
+      "team2": "Hong Kong Racketlon Association D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Squash-On 9A|Kwai Tsing District Squash Club 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Squash-On 9A",
+      "team2": "Kwai Tsing District Squash Club 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Kwai Tsing District Squash Club 9A|I am fine thank you and you|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Kwai Tsing District Squash Club 9A",
+      "team2": "I am fine thank you and you",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Hong Kong Racketlon Association D9|Star Squash Club 7|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Hong Kong Racketlon Association D9",
+      "team2": "Star Squash Club 7",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "M&M Squash|Pika KP Dream Squash Team|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "M&M Squash",
+      "team2": "Pika KP Dream Squash Team",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Pika KP Dream Squash Team|Hong Kong Racketlon Association D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Pika KP Dream Squash Team",
+      "team2": "Hong Kong Racketlon Association D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Star Squash Club 7|Kwai Tsing District Squash Club 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Star Squash Club 7",
+      "team2": "Kwai Tsing District Squash Club 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "I am fine thank you and you|Squash-On 9A|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "I am fine thank you and you",
+      "team2": "Squash-On 9A",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    }
+  },
+  "9C": {
+    "Relay 4|Happy Squash 5|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Relay 4",
+      "team2": "Happy Squash 5",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-2,3-1,3-0)"
+    },
+    "SQUASH SCAM CLUB|HKIS D9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "SQUASH SCAM CLUB",
+      "team2": "HKIS D9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(0-3,3-2,3-0)"
+    },
+    "i-Mask Advance Squash Club 9|Unity Squash 3|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "i-Mask Advance Squash Club 9",
+      "team2": "Unity Squash 3",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(3-0,0-3,0-3)"
+    },
+    "Electrify Squash 9|North District Sports Association 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Electrify Squash 9",
+      "team2": "North District Sports Association 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(1-3,3-1,3-0)"
+    },
+    "Raimondi College 1|Raimondi College 2|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 1",
+      "team2": "Raimondi College 2",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(3-0,0-3,CR)"
+    },
+    "Happy Squash 5|North District Sports Association 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Happy Squash 5",
+      "team2": "North District Sports Association 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(3-0,0-3,0-3)"
+    },
+    "Unity Squash 3|Electrify Squash 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Unity Squash 3",
+      "team2": "Electrify Squash 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(3-0,0-3,0-3)"
+    },
+    "Raimondi College 2|i-Mask Advance Squash Club 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 2",
+      "team2": "i-Mask Advance Squash Club 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "0-3(0-3,0-3,2-3)"
+    },
+    "HKIS D9|Raimondi College 1|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "HKIS D9",
+      "team2": "Raimondi College 1",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(0-3,3-0,CR)"
+    },
+    "Relay 4|SQUASH SCAM CLUB|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Relay 4",
+      "team2": "SQUASH SCAM CLUB",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(0-3,1-3,3-1)"
+    },
+    "SQUASH SCAM CLUB|Happy Squash 5|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "SQUASH SCAM CLUB",
+      "team2": "Happy Squash 5",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "3-0(3-0,3-0,3-0)"
+    },
+    "Raimondi College 1|Relay 4|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Raimondi College 1",
+      "team2": "Relay 4",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "2-1(3-0,3-0,0-3)"
+    },
+    "i-Mask Advance Squash Club 9|HKIS D9|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "i-Mask Advance Squash Club 9",
+      "team2": "HKIS D9",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "0-3(1-3,0-3,CR)"
+    },
+    "Electrify Squash 9|Raimondi College 2|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "Electrify Squash 9",
+      "team2": "Raimondi College 2",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "2-1(3-0,2-3,CR)"
+    },
+    "North District Sports Association 4|Unity Squash 3|Cornwall Street Squash Centre (SL26)|19:00:00": {
+      "team1": "North District Sports Association 4",
+      "team2": "Unity Squash 3",
+      "venue": "Cornwall Street Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": "1-2(3-0,0-3,0-3)"
+    },
+    "Happy Squash 5|Unity Squash 3|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Happy Squash 5",
+      "team2": "Unity Squash 3",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "0-3(0-3,0-3,CR)"
+    },
+    "Raimondi College 2|North District Sports Association 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 2",
+      "team2": "North District Sports Association 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "0-3(0-3,CR,CR)"
+    },
+    "HKIS D9|Electrify Squash 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "HKIS D9",
+      "team2": "Electrify Squash 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(3-0,3-1,1-3)"
+    },
+    "Relay 4|i-Mask Advance Squash Club 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Relay 4",
+      "team2": "i-Mask Advance Squash Club 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(3-0,2-3,3-0)"
+    },
+    "SQUASH SCAM CLUB|Raimondi College 1|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "SQUASH SCAM CLUB",
+      "team2": "Raimondi College 1",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-2,3-2,3-0)"
+    },
+    "Raimondi College 1|Happy Squash 5|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 1",
+      "team2": "Happy Squash 5",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(3-0,3-1,0-3)"
+    },
+    "i-Mask Advance Squash Club 9|SQUASH SCAM CLUB|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "i-Mask Advance Squash Club 9",
+      "team2": "SQUASH SCAM CLUB",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(2-3,3-0,3-1)"
+    },
+    "Electrify Squash 9|Relay 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Electrify Squash 9",
+      "team2": "Relay 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(0-3,3-2,CR)"
+    },
+    "North District Sports Association 4|HKIS D9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "North District Sports Association 4",
+      "team2": "HKIS D9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(1-3,0-3,3-0)"
+    },
+    "Unity Squash 3|Raimondi College 2|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Unity Squash 3",
+      "team2": "Raimondi College 2",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-0,WO,WO)"
+    },
+    "Happy Squash 5|Raimondi College 2|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Happy Squash 5",
+      "team2": "Raimondi College 2",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-0,3-0,CR)"
+    },
+    "HKIS D9|Unity Squash 3|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "HKIS D9",
+      "team2": "Unity Squash 3",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-0,3-2,3-0)"
+    },
+    "Relay 4|North District Sports Association 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Relay 4",
+      "team2": "North District Sports Association 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-0,3-1,2-1)"
+    },
+    "SQUASH SCAM CLUB|Electrify Squash 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "SQUASH SCAM CLUB",
+      "team2": "Electrify Squash 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "2-1(3-0,3-1,0-3)"
+    },
+    "Raimondi College 1|i-Mask Advance Squash Club 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 1",
+      "team2": "i-Mask Advance Squash Club 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-1,3-0,3-2)"
+    },
+    "i-Mask Advance Squash Club 9|Happy Squash 5|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "i-Mask Advance Squash Club 9",
+      "team2": "Happy Squash 5",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-0,3-2,3-0)"
+    },
+    "Electrify Squash 9|Raimondi College 1|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Electrify Squash 9",
+      "team2": "Raimondi College 1",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(1-3,0-3,3-0)"
+    },
+    "North District Sports Association 4|SQUASH SCAM CLUB|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "North District Sports Association 4",
+      "team2": "SQUASH SCAM CLUB",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(0-3,1-3,3-1)"
+    },
+    "Unity Squash 3|Relay 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Unity Squash 3",
+      "team2": "Relay 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "1-2(3-0,0-3,0-3)"
+    },
+    "Raimondi College 2|HKIS D9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 2",
+      "team2": "HKIS D9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "0-3(0-3,0-3,0-3)"
+    },
+    "Happy Squash 5|HKIS D9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Happy Squash 5",
+      "team2": "HKIS D9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "0-3(1-3,0-3,1-3)"
+    },
+    "Relay 4|Raimondi College 2|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Relay 4",
+      "team2": "Raimondi College 2",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "SQUASH SCAM CLUB|Unity Squash 3|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "SQUASH SCAM CLUB",
+      "team2": "Unity Squash 3",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "Raimondi College 1|North District Sports Association 4|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "Raimondi College 1",
+      "team2": "North District Sports Association 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": "3-0(3-2,3-0,3-0)"
+    },
+    "i-Mask Advance Squash Club 9|Electrify Squash 9|HK Squash Centre (SL26)|17:00:00": {
+      "team1": "i-Mask Advance Squash Club 9",
+      "team2": "Electrify Squash 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "Electrify Squash 9|Happy Squash 5|HK Squash Centre (SL26)|19:00:00": {
+      "team1": "Electrify Squash 9",
+      "team2": "Happy Squash 5",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "North District Sports Association 4|i-Mask Advance Squash Club 9|HK Squash Centre (SL26)|19:00:00": {
+      "team1": "North District Sports Association 4",
+      "team2": "i-Mask Advance Squash Club 9",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Unity Squash 3|Raimondi College 1|HK Squash Centre (SL26)|19:00:00": {
+      "team1": "Unity Squash 3",
+      "team2": "Raimondi College 1",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "Raimondi College 2|SQUASH SCAM CLUB|HK Squash Centre (SL26)|19:00:00": {
+      "team1": "Raimondi College 2",
+      "team2": "SQUASH SCAM CLUB",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "HKIS D9|Relay 4|HK Squash Centre (SL26)|19:00:00": {
+      "team1": "HKIS D9",
+      "team2": "Relay 4",
+      "venue": "HK Squash Centre (SL26)",
+      "time": "19:00:00",
+      "result": ""
+    }
+  }
+}
