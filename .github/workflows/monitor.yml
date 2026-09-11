@@ -2,7 +2,9 @@ name: HK Squash Monitor
 
 on:
   repository_dispatch:
-    types: [check-squash-results]
+    types:
+      - check-squash-results
+      - check-squash-standings
 
   workflow_dispatch:
 
@@ -26,13 +28,22 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Check squash results
+        if: github.event.action == 'check-squash-results' || github.event_name == 'workflow_dispatch'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BOT_COMMAND: ${{ github.event.client_payload.command }}
         run: python monitor.py
 
+      - name: Get squash standings
+        if: github.event.action == 'check-squash-standings'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python standings.py
+
       - name: Save latest results
+        if: github.event.action == 'check-squash-results' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "HK Squash Monitor"
           git config user.email "actions@users.noreply.github.com"
