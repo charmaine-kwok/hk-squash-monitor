@@ -29,6 +29,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BOT_COMMAND: ${{ github.event.client_payload.command }}
         run: python monitor.py
 
       - name: Save latest results

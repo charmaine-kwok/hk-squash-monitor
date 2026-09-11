@@ -15,6 +15,7 @@ load_dotenv()
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+BOT_COMMAND = os.getenv("BOT_COMMAND", "")
 
 def send_telegram_message(message):
     if not BOT_TOKEN or not CHAT_ID:
@@ -133,6 +134,7 @@ def main():
     previous_results = load_previous_results()
 
     current_results = {}
+    pending_counts = {}
 
     for league_name, url in LEAGUES.items():
         matches = get_matches(url)
@@ -142,6 +144,8 @@ def main():
             1 for match in matches.values()
             if match["result"] == ""
         )
+
+        pending_counts[league_name] = not_updated
 
         print(
             f"Division {league_name}: "
@@ -154,6 +158,26 @@ def main():
         print("\nNo previous results found.")
         print("Saving current results as baseline.")
         save_results(current_results)
+
+        if BOT_COMMAND == "checkscore":
+            lines = [
+                "✅ Score check complete",
+                "",
+            ]
+
+            for league_name, pending in pending_counts.items():
+                lines.append(
+                    f"Division {league_name}: "
+                    f"{pending} results pending"
+                )
+
+            lines.extend([
+                "",
+                "Baseline created. No previous results to compare."
+            ])
+
+            send_telegram_message("\n".join(lines))
+
         return
 
     updates = check_for_updates(
@@ -195,11 +219,54 @@ def main():
         for message in messages:
             send_telegram_message(message)
 
+        # If this was manually requested with /checkscore,
+        # also send a final summary.
+        if BOT_COMMAND == "checkscore":
+            lines = [
+                "✅ Score check complete",
+                "",
+                f"New results found: {len(updates)}",
+                "",
+            ]
+
+            for league_name, pending in pending_counts.items():
+                lines.append(
+                    f"Division {league_name}: "
+                    f"{pending} results pending"
+                )
+
+            send_telegram_message("\n".join(lines))
+
     else:
         print("\nNo new score updates.")
 
+        # Scheduled checks stay silent.
+        # /checkscore always gets a response.
+        if BOT_COMMAND == "checkscore":
+            lines = [
+                "✅ Score check complete",
+                "",
+            ]
+
+            for league_name, pending in pending_counts.items():
+                lines.append(
+                    f"Division {league_name}: "
+                    f"{pending} results pending"
+                )
+
+            lines.extend([
+                "",
+                "No new results since the previous check."
+            ])
+
+            send_telegram_message("\n".join(lines))
+
+    # ALWAYS save the latest state
     save_results(current_results)
 
+
+if __name__ == "__main__":
+    main()
 
 if __name__ == "__main__":
     main()
