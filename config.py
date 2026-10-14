@@ -1,13 +1,15 @@
 LEAGUES = {
-    "9A": {
-        "id": "D00516",
-        "year": 2026,
-        "season": "Summer",
+    "L4": {
+        "id": "D00549",
+        "year": "2026-2027",
+        "season": "Squash",
+        "pages_id": 25,
     },
-    "9C": {
-        "id": "D00518",
-        "year": 2026,
-        "season": "Summer",
+    "D15B": {
+        "id": "D00542",
+        "year": "2026-2027",
+        "season": "Squash",
+        "pages_id": 25,
     },
 }
 
@@ -22,7 +24,7 @@ def results_url(league_name):
         f"id/{config['id']}/"
         f"league/{config['season']}/"
         f"year/{config['year']}/"
-        "pages_id/26.html"
+        f"pages_id/{config['pages_id']}.html"
     )
 
 
@@ -34,5 +36,5 @@ def standings_url(league_name):
         f"id/{config['id']}/"
         f"league/{config['season']}/"
         f"year/{config['year']}/"
-        "pages_id/26.html"
+        f"pages_id/{config['pages_id']}.html"
     )
