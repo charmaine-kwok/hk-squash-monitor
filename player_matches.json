@@ -100,9 +100,11 @@
         {
           "position": 5,
           "player1": "Lam Hiu Tung",
-          "player2": null,
+          "player1_hks_no": "35433",
+          "player2": "Kim Justin",
+          "player2_hks_no": "36575",
           "score": "3-0",
-          "status": "unresolved"
+          "status": "confirmed"
         }
       ]
     },
@@ -293,6 +295,51 @@
           "player2": "Tsang Lorita Yau Ching",
           "player2_hks_no": "26526",
           "score": "3-0",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "23/10/2026|JESSICA L4|JESSICA L4 Mochis|HK Squash Centre|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "JESSICA L4",
+      "team2": "JESSICA L4 Mochis",
+      "team_result": "2-2(0-3,3-0,3-0,0-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Cai Yuxi Serena",
+          "player1_hks_no": "34327",
+          "player2": "Jin Olivia",
+          "player2_hks_no": "34461",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Lam Ngo Sze Osee",
+          "player1_hks_no": "34354",
+          "player2": "Kwok To Yan",
+          "player2_hks_no": "34258",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Chiu Yuet Yi",
+          "player1_hks_no": "34206",
+          "player2": "Chan Siu Yuen",
+          "player2_hks_no": "32125",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Guttendorf Zoe",
+          "player1_hks_no": "34848",
+          "player2": "Ng Hei Ching",
+          "player2_hks_no": "35141",
+          "score": "0-3",
           "status": "confirmed"
         }
       ]

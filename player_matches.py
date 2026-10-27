@@ -166,7 +166,9 @@ def get_players(league_name):
                 i += 1
                 continue
 
-            points = 0.0
+            # None = no points value shown / has not played
+            # 0.0 = explicit 0.00 shown / played and earned zero points
+            points = None
 
             next_index = i + 4
 
@@ -298,11 +300,18 @@ def build_candidates_for_position(
     candidates = []
 
     for hks_no, player in players.items():
+        observed_points = player.get(
+            "points"
+        )
+
+        # Blank points means the player has no
+        # recorded result yet, so they cannot
+        # be a candidate for this completed match.
+        if observed_points is None:
+            continue
+
         observed_average = float(
-            player.get(
-                "points",
-                0,
-            )
+            observed_points
         )
 
         old_player = team_state.get(
