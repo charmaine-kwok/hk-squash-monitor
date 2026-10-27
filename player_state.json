@@ -1,0 +1,285 @@
+{
+  "D15B": {
+    "The Zero Squash Club D15B": {
+      "35267": {
+        "name": "Yu Tak Gi",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "35250": {
+        "name": "Hong Ming Chit",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "35464": {
+        "name": "Tam Sum Yi",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "35441": {
+        "name": "Kwok Wai Yin",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "36529": {
+        "name": "Lau Ka Chun",
+        "average": 15.0,
+        "matches_played": 1
+      }
+    },
+    "Raimondi College": {
+      "34867": {
+        "name": "Tang Yat Ming",
+        "average": 15.0,
+        "matches_played": 1
+      },
+      "34418": {
+        "name": "Chan Yu Hin",
+        "average": 15.0,
+        "matches_played": 1
+      },
+      "37194": {
+        "name": "Cheng Hoi Him",
+        "average": 6.0,
+        "matches_played": 1
+      }
+    },
+    "French Boast Club": {
+      "36922": {
+        "name": "Yim Tsz Kin",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "35010": {
+        "name": "Chou Kowk Wai",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "35443": {
+        "name": "Chiu Ho Ying",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "35440": {
+        "name": "Wang Wai Kuen",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "35433": {
+        "name": "Lam Hiu Tung",
+        "average": 15.0,
+        "matches_played": 1
+      }
+    },
+    "Hong Kong International School D15": {
+      "34598": {
+        "name": "Verma Tara",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "35173": {
+        "name": "Chiu Amber Elisabeth",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "34789": {
+        "name": "Krefman Kylie Judith",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "35000": {
+        "name": "Leekha Reyansh",
+        "average": 3.0,
+        "matches_played": 1
+      }
+    },
+    "North District Sports Association 3": {
+      "26010": {
+        "name": "Chiu Yee Lai",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "33164": {
+        "name": "Leung Hing Chung",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "33418": {
+        "name": "Lo Wing Yan",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "36553": {
+        "name": "Deng Hui Ru",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "35335": {
+        "name": "Hong Xue Yan",
+        "average": 15.0,
+        "matches_played": 1
+      }
+    },
+    "Kwai Tsing District Squash Club D15": {
+      "36903": {
+        "name": "Ho Hing Kin",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "36525": {
+        "name": "Cheung Kwok Po Aurora",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "36526": {
+        "name": "Tsang Kwong Keung",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "36527": {
+        "name": "Po Wing Yan",
+        "average": 3.0,
+        "matches_played": 1
+      },
+      "36893": {
+        "name": "Wong Tak Yu",
+        "average": 0.0,
+        "matches_played": 1
+      }
+    }
+  },
+  "L4": {
+    "Squashathon Ladies": {
+      "32610": {
+        "name": "Chung Wing Yin",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "31848": {
+        "name": "Yuen Wai Ting",
+        "average": 15.0,
+        "matches_played": 1
+      },
+      "34870": {
+        "name": "Chak Wai Suen",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "30714": {
+        "name": "Tsang Ka Lei Carrie",
+        "average": 3.0,
+        "matches_played": 1
+      }
+    },
+    "Kwai Tsing District Squash Club L4": {
+      "35315": {
+        "name": "Chow Hoi Ying",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "35392": {
+        "name": "Yu Wing Tung",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "35464": {
+        "name": "Tam Sum Yi",
+        "average": 6.0,
+        "matches_played": 1
+      },
+      "35441": {
+        "name": "Kwok Wai Yin",
+        "average": 18.0,
+        "matches_played": 1
+      }
+    },
+    "Hong Kong Cricket Club L4": {
+      "28446": {
+        "name": "Leung Lilian Wai Shan",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "34589": {
+        "name": "Jue Emily Xiao Ran",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "35173": {
+        "name": "Chiu Amber Elisabeth",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "34789": {
+        "name": "Krefman Kylie Judith",
+        "average": 18.0,
+        "matches_played": 1
+      }
+    },
+    "Hong Kong Cricket Club L4 Rockettes": {
+      "35019": {
+        "name": "Liang Shijing",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "32932": {
+        "name": "Cumming Alison",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "35566": {
+        "name": "Beyers Karli",
+        "average": 6.0,
+        "matches_played": 1
+      },
+      "37073": {
+        "name": "Potter Kathryn Jane",
+        "average": 3.0,
+        "matches_played": 1
+      }
+    },
+    "Hong Kong Football Club L4A": {
+      "33819": {
+        "name": "Chui Jennifer",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "34134": {
+        "name": "Law Tsz Ting",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "34651": {
+        "name": "Ho Suet Ying",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "33570": {
+        "name": "Wan Esther",
+        "average": 18.0,
+        "matches_played": 1
+      }
+    },
+    "Hong Kong Football Club L4B": {
+      "33257": {
+        "name": "Cheng Chen Kaja",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "26243": {
+        "name": "Man Angela Pui Kei",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "34108": {
+        "name": "Dua Jigyasa",
+        "average": 6.0,
+        "matches_played": 1
+      },
+      "26526": {
+        "name": "Tsang Lorita Yau Ching",
+        "average": 3.0,
+        "matches_played": 1
+      }
+    }
+  }
+}

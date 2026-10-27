@@ -178,23 +178,37 @@ def check_for_updates(old_results, new_results):
     updates = []
 
     for league_name, matches in new_results.items():
-        old_league = old_results.get(league_name, {})
+        old_league = old_results.get(
+            league_name,
+            {}
+        )
 
         for match_id, match in matches.items():
             new_result = match["result"]
 
-            old_match = old_league.get(match_id)
+            old_match = old_league.get(
+                match_id
+            )
 
-            # New fixture not present in old baseline
+            # New fixture not present in old baseline.
+            # We don't alert for this because it may simply
+            # be a newly added fixture / refreshed schedule.
             if old_match is None:
                 continue
 
-            old_result = old_match.get("result", "")
+            old_result = old_match.get(
+                "result",
+                ""
+            )
 
             # Blank result -> newly published result
-            if old_result == "" and new_result != "":
+            if (
+                old_result == ""
+                and new_result != ""
+            ):
                 updates.append({
                     "league": league_name,
+                    "match_id": match_id,
                     **match,
                 })
 
@@ -205,6 +219,7 @@ def check_for_updates(old_results, new_results):
             ):
                 updates.append({
                     "league": league_name,
+                    "match_id": match_id,
                     **match,
                     "old_result": old_result,
                 })

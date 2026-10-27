@@ -38,3 +38,14 @@ def standings_url(league_name):
         f"year/{config['year']}/"
         f"pages_id/{config['pages_id']}.html"
     )
+
+def players_url(league_name):
+    config = LEAGUES[league_name]
+
+    return (
+        f"{BASE_URL}/players/"
+        f"id/{config['id']}/"
+        f"league/{config['season']}/"
+        f"year/{config['year']}/"
+        f"pages_id/{config['pages_id']}.html"
+    )

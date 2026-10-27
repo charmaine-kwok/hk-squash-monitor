@@ -1,0 +1,301 @@
+{
+  "D15B": {
+    "24/10/2026|The Zero Squash Club D15B|Raimondi College|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Raimondi College",
+      "team_result": "5-0(3-1,3-2,3-0,CR,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Yu Tak Gi",
+          "player1_hks_no": "35267",
+          "player2": "Tang Yat Ming",
+          "player2_hks_no": "34867",
+          "score": "3-1",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Hong Ming Chit",
+          "player1_hks_no": "35250",
+          "player2": "Chan Yu Hin",
+          "player2_hks_no": "34418",
+          "score": "3-2",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Tam Sum Yi",
+          "player1_hks_no": "35464",
+          "player2": "Cheng Hoi Him",
+          "player2_hks_no": "37194",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": "Kwok Wai Yin",
+          "player1_hks_no": "35441"
+        },
+        {
+          "position": 5,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": "Lau Ka Chun",
+          "player1_hks_no": "36529"
+        }
+      ]
+    },
+    "24/10/2026|French Boast Club|Hong Kong International School D15|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "French Boast Club",
+      "team2": "Hong Kong International School D15",
+      "team_result": "5-0(3-0,3-0,3-1,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Yim Tsz Kin",
+          "player1_hks_no": "36922",
+          "player2": "Verma Tara",
+          "player2_hks_no": "34598",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Chou Kowk Wai",
+          "player1_hks_no": "35010",
+          "player2": "Chiu Amber Elisabeth",
+          "player2_hks_no": "35173",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Chiu Ho Ying",
+          "player1_hks_no": "35443",
+          "player2": "Krefman Kylie Judith",
+          "player2_hks_no": "34789",
+          "score": "3-1",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Wang Wai Kuen",
+          "player1_hks_no": "35440",
+          "player2": "Leekha Reyansh",
+          "player2_hks_no": "35000",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 5,
+          "player1": "Lam Hiu Tung",
+          "player2": null,
+          "score": "3-0",
+          "status": "unresolved"
+        }
+      ]
+    },
+    "24/10/2026|North District Sports Association 3|Kwai Tsing District Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "North District Sports Association 3",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "team_result": "5-0(3-0,3-0,3-1,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Chiu Yee Lai",
+          "player1_hks_no": "26010",
+          "player2": "Ho Hing Kin",
+          "player2_hks_no": "36903",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Leung Hing Chung",
+          "player1_hks_no": "33164",
+          "player2": "Cheung Kwok Po Aurora",
+          "player2_hks_no": "36525",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Lo Wing Yan",
+          "player1_hks_no": "33418",
+          "player2": "Tsang Kwong Keung",
+          "player2_hks_no": "36526",
+          "score": "3-1",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Deng Hui Ru",
+          "player1_hks_no": "36553",
+          "player2": "Po Wing Yan",
+          "player2_hks_no": "36527",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 5,
+          "player1": "Hong Xue Yan",
+          "player1_hks_no": "35335",
+          "player2": "Wong Tak Yu",
+          "player2_hks_no": "36893",
+          "score": "3-0",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "L4": {
+    "23/10/2026|Squashathon Ladies|Kwai Tsing District Squash Club L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "team_result": "2-2(3-0,2-3,3-0,0-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Chung Wing Yin",
+          "player1_hks_no": "32610",
+          "player2": "Chow Hoi Ying",
+          "player2_hks_no": "35315",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Yuen Wai Ting",
+          "player1_hks_no": "31848",
+          "player2": "Yu Wing Tung",
+          "player2_hks_no": "35392",
+          "score": "2-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Chak Wai Suen",
+          "player1_hks_no": "34870",
+          "player2": "Tam Sum Yi",
+          "player2_hks_no": "35464",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Tsang Ka Lei Carrie",
+          "player1_hks_no": "30714",
+          "player2": "Kwok Wai Yin",
+          "player2_hks_no": "35441",
+          "score": "0-3",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "23/10/2026|Hong Kong Cricket Club L4|Hong Kong Cricket Club L4 Rockettes|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "team_result": "3-1(0-3,3-0,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Leung Lilian Wai Shan",
+          "player1_hks_no": "28446",
+          "player2": "Liang Shijing",
+          "player2_hks_no": "35019",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Jue Emily Xiao Ran",
+          "player1_hks_no": "34589",
+          "player2": "Cumming Alison",
+          "player2_hks_no": "32932",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Chiu Amber Elisabeth",
+          "player1_hks_no": "35173",
+          "player2": "Beyers Karli",
+          "player2_hks_no": "35566",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Krefman Kylie Judith",
+          "player1_hks_no": "34789",
+          "player2": "Potter Kathryn Jane",
+          "player2_hks_no": "37073",
+          "score": "3-0",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "23/10/2026|Hong Kong Football Club L4A|Hong Kong Football Club L4B|Hong Kong Football Club|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Football Club L4B",
+      "team_result": "4-0(3-0,3-0,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Chui Jennifer",
+          "player1_hks_no": "33819",
+          "player2": "Cheng Chen Kaja",
+          "player2_hks_no": "33257",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Law Tsz Ting",
+          "player1_hks_no": "34134",
+          "player2": "Man Angela Pui Kei",
+          "player2_hks_no": "26243",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Ho Suet Ying",
+          "player1_hks_no": "34651",
+          "player2": "Dua Jigyasa",
+          "player2_hks_no": "34108",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Wan Esther",
+          "player1_hks_no": "33570",
+          "player2": "Tsang Lorita Yau Ching",
+          "player2_hks_no": "26526",
+          "score": "3-0",
+          "status": "confirmed"
+        }
+      ]
+    }
+  }
+}
