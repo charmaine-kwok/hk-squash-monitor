@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HK Squash Match Tracker</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f4f6f8;
+            color: #1f2937;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 28px 16px 60px;
+        }
+
+        .header {
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin: 0 0 6px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            margin: 0;
+            color: #6b7280;
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-bottom: 24px;
+        }
+
+        .filter {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .filter label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        select {
+            min-width: 170px;
+
+            padding: 10px 12px;
+
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+
+            background: white;
+
+            font-size: 15px;
+        }
+
+        .summary {
+            margin-bottom: 18px;
+
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .match-card {
+            background: white;
+
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+        }
+
+        .match-header {
+            padding: 18px;
+
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .match-meta {
+            margin-bottom: 13px;
+
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .teams {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr) auto minmax(0, 1fr);
+
+            gap: 14px;
+
+            align-items: center;
+        }
+
+        .team {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .team.team2 {
+            text-align: right;
+        }
+
+        .team-result {
+            padding: 5px 10px;
+
+            background: #f3f4f6;
+
+            border-radius: 8px;
+
+            font-size: 21px;
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+        .individual-header {
+            display: grid;
+
+            grid-template-columns:
+                45px minmax(0, 1fr) 75px minmax(0, 1fr);
+
+            gap: 10px;
+
+            padding: 9px 18px;
+
+            background: #fafafa;
+
+            color: #6b7280;
+            font-size: 12px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .individual-match {
+            display: grid;
+
+            grid-template-columns:
+                45px minmax(0, 1fr) 75px minmax(0, 1fr);
+
+            gap: 10px;
+
+            align-items: center;
+
+            padding: 13px 18px;
+
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .position {
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .player {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .player.team2 {
+            text-align: right;
+        }
+
+        .score {
+            text-align: center;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+        .cr {
+            color: #b45309;
+        }
+
+        .sub-score {
+            display: block;
+
+            margin-top: 2px;
+
+            color: #6b7280;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .unresolved {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .status {
+            margin-left: 5px;
+
+            padding: 2px 5px;
+
+            border-radius: 5px;
+
+            background: #fef3c7;
+            color: #92400e;
+
+            font-size: 10px;
+            font-style: normal;
+        }
+
+        .empty {
+            padding: 45px 16px;
+
+            text-align: center;
+
+            color: #6b7280;
+        }
+
+        .error {
+            padding: 18px;
+
+            background: #fee2e2;
+            color: #991b1b;
+
+            border-radius: 8px;
+        }
+
+        @media (max-width: 650px) {
+            h1 {
+                font-size: 23px;
+            }
+
+            .container {
+                padding:
+                    20px 10px 40px;
+            }
+
+            .teams {
+                gap: 7px;
+            }
+
+            .team {
+                font-size: 14px;
+            }
+
+            .team-result {
+                font-size: 17px;
+            }
+
+            .individual-header,
+            .individual-match {
+                grid-template-columns:
+                    28px minmax(0, 1fr) 55px minmax(0, 1fr);
+
+                gap: 5px;
+
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .individual-match {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>HK Squash Match Tracker</h1>
+
+            <p class="subtitle">
+                Individual Main League match results
+            </p>
+        </div>
+
+        <div class="filters">
+
+            <div class="filter">
+                <label for="leagueFilter">
+                    Division
+                </label>
+
+                <select id="leagueFilter"></select>
+            </div>
+
+            <div class="filter">
+                <label for="weekFilter">
+                    Week
+                </label>
+
+                <select id="weekFilter">
+                    <option value="all">
+                        All weeks
+                    </option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="summary" class="summary"></div>
+
+        <div id="matches"></div>
+
+    </div>
+
+
+    <script>
+
+        let data = {};
+
+
+        const leagueFilter =
+            document.getElementById(
+                "leagueFilter"
+            );
+
+        const weekFilter =
+            document.getElementById(
+                "weekFilter"
+            );
+
+        const matchesContainer =
+            document.getElementById(
+                "matches"
+            );
+
+        const summary =
+            document.getElementById(
+                "summary"
+            );
+
+
+        async function loadData() {
+
+            try {
+
+                const response = await fetch(
+                    "./player_matches.json",
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(
+                        `HTTP ${response.status}`
+                    );
+                }
+
+                data =
+                    await response.json();
+
+                populateLeagues();
+
+                populateWeeks();
+
+                renderMatches();
+
+            }
+            catch (error) {
+
+                console.error(error);
+
+                matchesContainer.innerHTML = `
+            <div class="error">
+                Unable to load
+                player_matches.json.
+            </div>
+        `;
+
+            }
+
+        }
+
+
+        function getFixtures(league) {
+
+            const leagueData =
+                data[league] || {};
+
+            return Object.entries(
+                leagueData
+            ).filter(
+                ([_, match]) => {
+
+                    return (
+                        match
+                        && match.team1
+                        && match.team2
+                        && Array.isArray(
+                            match.individual_matches
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        function populateLeagues() {
+
+            leagueFilter.innerHTML = "";
+
+            const leagues =
+                Object.keys(data);
+
+            leagues.forEach(
+                league => {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+                    option.value =
+                        league;
+
+                    option.textContent =
+                        `Division ${league}`;
+
+                    leagueFilter.appendChild(
+                        option
+                    );
+
+                }
+            );
+
+        }
+
+
+        function getWeekNumber(week) {
+
+            const match =
+                String(week).match(
+                    /\d+/
+                );
+
+            return match
+                ? Number(match[0])
+                : 999;
+        }
+
+
+        function populateWeeks() {
+
+            const league =
+                leagueFilter.value;
+
+            const fixtures =
+                getFixtures(
+                    league
+                );
+
+            const weeks = [
+                ...new Set(
+                    fixtures
+                        .map(
+                            ([_, match]) =>
+                                match.week
+                        )
+                        .filter(Boolean)
+                )
+            ];
+
+            weeks.sort(
+                (a, b) =>
+                    getWeekNumber(a)
+                    - getWeekNumber(b)
+            );
+
+            weekFilter.innerHTML = "";
+
+            const allOption =
+                document.createElement(
+                    "option"
+                );
+
+            allOption.value =
+                "all";
+
+            allOption.textContent =
+                "All weeks";
+
+            weekFilter.appendChild(
+                allOption
+            );
+
+            weeks.forEach(
+                week => {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+                    option.value =
+                        week;
+
+                    option.textContent =
+                        formatWeek(
+                            week
+                        );
+
+                    weekFilter.appendChild(
+                        option
+                    );
+
+                }
+            );
+
+        }
+
+
+        function formatWeek(week) {
+
+            if (!week) {
+                return "";
+            }
+
+            return String(week)
+                .replace(
+                    /^week/i,
+                    "Week"
+                );
+        }
+
+
+        function teamScore(
+            result
+        ) {
+
+            if (!result) {
+                return "";
+            }
+
+            return result
+                .split("(")[0]
+                .trim();
+        }
+
+
+        function parseDate(
+            value
+        ) {
+
+            if (!value) {
+                return 0;
+            }
+
+            const parts =
+                value.split("/");
+
+            if (
+                parts.length !== 3
+            ) {
+                return 0;
+            }
+
+            const [
+                day,
+                month,
+                year
+            ] = parts.map(Number);
+
+            return new Date(
+                year,
+                month - 1,
+                day
+            ).getTime();
+
+        }
+
+
+        function formatDate(
+            value
+        ) {
+
+            if (!value) {
+                return "";
+            }
+
+            const parts =
+                value.split("/");
+
+            if (
+                parts.length !== 3
+            ) {
+                return value;
+            }
+
+            const [
+                day,
+                month,
+                year
+            ] = parts.map(Number);
+
+            const date =
+                new Date(
+                    year,
+                    month - 1,
+                    day
+                );
+
+            return date.toLocaleDateString(
+                "en-GB",
+                {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric"
+                }
+            );
+
+        }
+
+
+        function escapeHtml(
+            value
+        ) {
+
+            return String(
+                value ?? ""
+            )
+                .replaceAll(
+                    "&",
+                    "&amp;"
+                )
+                .replaceAll(
+                    "<",
+                    "&lt;"
+                )
+                .replaceAll(
+                    ">",
+                    "&gt;"
+                )
+                .replaceAll(
+                    '"',
+                    "&quot;"
+                )
+                .replaceAll(
+                    "'",
+                    "&#039;"
+                );
+
+        }
+
+
+        function playerHtml(
+            player,
+            unresolved = false
+        ) {
+
+            if (player) {
+                return escapeHtml(
+                    player
+                );
+            }
+
+            if (unresolved) {
+                return `
+            <span class="unresolved">
+                Unresolved
+            </span>
+        `;
+            }
+
+            return `
+        <span class="unresolved">
+            —
+        </span>
+    `;
+        }
+
+
+        function createIndividualRow(
+            match
+        ) {
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+            row.className =
+                "individual-match";
+
+            const isConcession =
+                match.result_type
+                === "concession";
+
+            const isUnresolved =
+                match.status
+                === "unresolved";
+
+            let player1 =
+                playerHtml(
+                    match.player1,
+                    isUnresolved
+                );
+
+            let player2 =
+                playerHtml(
+                    match.player2,
+                    isUnresolved
+                );
+
+            let score =
+                escapeHtml(
+                    match.score
+                );
+
+            if (isConcession) {
+
+                player2 = `
+            <span class="unresolved">
+                No opponent
+            </span>
+        `;
+
+                score = `
+            <span class="cr">
+                CR
+            </span>
+
+            <span class="sub-score">
+                3–0
+            </span>
+        `;
+            }
+
+            row.innerHTML = `
+
+        <div class="position">
+            ${escapeHtml(
+                match.position
+            )}
+        </div>
+
+        <div class="player">
+            ${player1}
+        </div>
+
+        <div class="score">
+            ${score}
+        </div>
+
+        <div class="player team2">
+            ${player2}
+        </div>
+
+    `;
+
+            return row;
+
+        }
+
+
+        function renderMatches() {
+
+            const league =
+                leagueFilter.value;
+
+            const selectedWeek =
+                weekFilter.value;
+
+            let fixtures =
+                getFixtures(
+                    league
+                );
+
+            if (
+                selectedWeek
+                !== "all"
+            ) {
+
+                fixtures =
+                    fixtures.filter(
+                        ([_, match]) =>
+                            match.week
+                            === selectedWeek
+                    );
+
+            }
+
+            fixtures.sort(
+                ([_, a], [__, b]) => {
+
+                    const dateDifference =
+                        parseDate(a.date)
+                        - parseDate(b.date);
+
+                    if (
+                        dateDifference !== 0
+                    ) {
+                        return dateDifference;
+                    }
+
+                    return String(
+                        a.team1
+                    ).localeCompare(
+                        String(
+                            b.team1
+                        )
+                    );
+
+                }
+            );
+
+            summary.textContent =
+                `${fixtures.length} match${fixtures.length === 1
+                    ? ""
+                    : "es"
+                }`;
+
+            matchesContainer.innerHTML =
+                "";
+
+            if (
+                fixtures.length === 0
+            ) {
+
+                matchesContainer.innerHTML = `
+            <div class="empty">
+                No matches found.
+            </div>
+        `;
+
+                return;
+            }
+
+            fixtures.forEach(
+                ([_, match]) => {
+
+                    const card =
+                        document.createElement(
+                            "section"
+                        );
+
+                    card.className =
+                        "match-card";
+
+                    const header =
+                        document.createElement(
+                            "div"
+                        );
+
+                    header.className =
+                        "match-header";
+
+                    header.innerHTML = `
+
+                <div class="match-meta">
+
+                    ${escapeHtml(
+                        formatWeek(
+                            match.week
+                        )
+                    )}
+
+                    ·
+
+                    ${escapeHtml(
+                        formatDate(
+                            match.date
+                        )
+                    )}
+
+                </div>
+
+                <div class="teams">
+
+                    <div class="team">
+                        ${escapeHtml(
+                        match.team1
+                    )}
+                    </div>
+
+                    <div class="team-result">
+                        ${escapeHtml(
+                        teamScore(
+                            match.team_result
+                        )
+                    )}
+                    </div>
+
+                    <div class="team team2">
+                        ${escapeHtml(
+                        match.team2
+                    )}
+                    </div>
+
+                </div>
+
+            `;
+
+                    card.appendChild(
+                        header
+                    );
+
+
+                    const individualHeader =
+                        document.createElement(
+                            "div"
+                        );
+
+                    individualHeader.className =
+                        "individual-header";
+
+                    individualHeader.innerHTML = `
+                <div>Pos</div>
+                <div>${escapeHtml(
+                        match.team1
+                    )}</div>
+                <div class="right">
+                    Score
+                </div>
+                <div class="right">
+                    ${escapeHtml(
+                        match.team2
+                    )}
+                </div>
+            `;
+
+                    card.appendChild(
+                        individualHeader
+                    );
+
+
+                    match.individual_matches
+                        .forEach(
+                            individualMatch => {
+
+                                card.appendChild(
+                                    createIndividualRow(
+                                        individualMatch
+                                    )
+                                );
+
+                            }
+                        );
+
+
+                    matchesContainer.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
+
+
+        leagueFilter.addEventListener(
+            "change",
+            () => {
+
+                populateWeeks();
+
+                renderMatches();
+
+            }
+        );
+
+
+        weekFilter.addEventListener(
+            "change",
+            renderMatches
+        );
+
+
+        loadData();
+
+    </script>
+
+</body>
+
+</html>
