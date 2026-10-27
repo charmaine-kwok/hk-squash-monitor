@@ -37,39 +37,115 @@ def send_telegram_message(message):
 
 
 def get_matches(url):
-    response = requests.get(url, timeout=20)
+    response = requests.get(
+        url,
+        timeout=45,
+    )
     response.raise_for_status()
 
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(
+        response.text,
+        "html.parser"
+    )
 
     matches = {}
 
-    rows = soup.select("div.results-schedules-list")
+    current_week = ""
+    current_date = ""
 
-    for row in rows:
-        columns = row.find_all("div", recursive=False)
+    # Process the page in document order so that
+    # each result row can inherit its week/date.
+    elements = soup.find_all(
+        ["div", "h1", "h2", "h3", "h4", "h5"]
+    )
+
+    for element in elements:
+        text = element.get_text(
+            " ",
+            strip=True
+        )
+
+        # Example:
+        # week 1 - 23/10/2026
+        if (
+            text.lower().startswith("week ")
+            and " - " in text
+        ):
+            parts = text.split(" - ", 1)
+
+            current_week = parts[0].strip()
+            current_date = parts[1].strip()
+
+            continue
+
+        classes = element.get(
+            "class",
+            []
+        )
+
+        if "results-schedules-list" not in classes:
+            continue
+
+        columns = element.find_all(
+            "div",
+            recursive=False
+        )
 
         if len(columns) != 6:
             continue
 
-        team1 = columns[0].get_text(" ", strip=True)
-        team2 = columns[2].get_text(" ", strip=True)
-        venue = columns[3].get_text(" ", strip=True)
-        match_time = columns[4].get_text(" ", strip=True)
-        result = columns[5].get_text(" ", strip=True)
+        team1 = columns[0].get_text(
+            " ",
+            strip=True
+        )
 
-        # Skip header row
+        team2 = columns[2].get_text(
+            " ",
+            strip=True
+        )
+
+        venue = columns[3].get_text(
+            " ",
+            strip=True
+        )
+
+        match_time = columns[4].get_text(
+            " ",
+            strip=True
+        )
+
+        result = columns[5].get_text(
+            " ",
+            strip=True
+        )
+
+        # Skip column heading
         if team1.lower() == "team":
             continue
 
         # Ignore BYE fixtures
-        if "[BYE]" in team1 or "[BYE]" in team2:
+        if (
+            "[BYE]" in team1
+            or "[BYE]" in team2
+        ):
             continue
 
-        # Unique ID for the fixture
-        match_id = f"{team1}|{team2}|{venue}|{match_time}"
+        # Week/date is now part of the ID.
+        #
+        # This prevents a later return fixture
+        # between the same teams at the same venue/time
+        # from overwriting the earlier fixture.
+        match_id = (
+            f"{current_date}|"
+            f"{team1}|"
+            f"{team2}|"
+            f"{venue}|"
+            f"{match_time}"
+        )
 
         matches[match_id] = {
+            "week": current_week,
+            "date": current_date,
             "team1": team1,
             "team2": team2,
             "venue": venue,

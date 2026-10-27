@@ -1,11 +1,11 @@
 LEAGUES = {
-    "L4": {
+    "D15B": {
         "id": "D00549",
         "year": "2026-2027",
         "season": "Squash",
         "pages_id": 25,
     },
-    "D15B": {
+    "L4": {
         "id": "D00542",
         "year": "2026-2027",
         "season": "Squash",
