@@ -48,10 +48,14 @@ jobs:
           git config user.name "HK Squash Monitor"
           git config user.email "actions@users.noreply.github.com"
 
-          git add results.json
+          git add \
+            results.json \
+            player_matches.json \
+            player_state.json \
+            docs/player_matches.json
 
           if git diff --cached --quiet; then
-            echo "No results.json changes."
+            echo "No data changes."
           else
             git commit -m "Update squash results"
             git push

@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 from config import LEAGUES, results_url
+from player_matches import process_result_updates
 
 
 RESULTS_FILE = "results.json"
@@ -130,11 +131,6 @@ def get_matches(url):
         ):
             continue
 
-        # Week/date is now part of the ID.
-        #
-        # This prevents a later return fixture
-        # between the same teams at the same venue/time
-        # from overwriting the earlier fixture.
         match_id = (
             f"{current_date}|"
             f"{team1}|"
@@ -160,12 +156,20 @@ def load_previous_results():
     if not os.path.exists(RESULTS_FILE):
         return {}
 
-    with open(RESULTS_FILE, "r", encoding="utf-8") as file:
+    with open(
+        RESULTS_FILE,
+        "r",
+        encoding="utf-8"
+    ) as file:
         return json.load(file)
 
 
 def save_results(results):
-    with open(RESULTS_FILE, "w", encoding="utf-8") as file:
+    with open(
+        RESULTS_FILE,
+        "w",
+        encoding="utf-8"
+    ) as file:
         json.dump(
             results,
             file,
@@ -191,8 +195,8 @@ def check_for_updates(old_results, new_results):
             )
 
             # New fixture not present in old baseline.
-            # We don't alert for this because it may simply
-            # be a newly added fixture / refreshed schedule.
+            # Do not alert because it may simply be a
+            # newly added fixture / refreshed schedule.
             if old_match is None:
                 continue
 
@@ -212,7 +216,7 @@ def check_for_updates(old_results, new_results):
                     **match,
                 })
 
-            # Existing result -> corrected/changed result
+            # Existing result -> corrected result
             elif (
                 old_result != ""
                 and new_result != old_result
@@ -227,7 +231,10 @@ def check_for_updates(old_results, new_results):
     return updates
 
 
-def build_check_summary(pending_counts, update_count=None):
+def build_check_summary(
+    pending_counts,
+    update_count=None
+):
     lines = [
         "✅ Score check complete",
         "",
@@ -248,23 +255,129 @@ def build_check_summary(pending_counts, update_count=None):
     return lines
 
 
-def main():
-    print("Checking HK Squash results...\n")
+def add_individual_matches_to_message(
+    message,
+    fixture,
+):
+    if not fixture:
+        return message
 
-    previous_results = load_previous_results()
+    individual_matches = fixture.get(
+        "individual_matches",
+        []
+    )
+
+    if not individual_matches:
+        return message
+
+    message += "\n\nIndividual matches:"
+
+    for match in individual_matches:
+        position = match.get(
+            "position",
+            "?"
+        )
+
+        score = match.get(
+            "score",
+            ""
+        )
+
+        player1 = match.get(
+            "player1"
+        )
+
+        player2 = match.get(
+            "player2"
+        )
+
+        result_type = match.get(
+            "result_type"
+        )
+
+        # CR = team1 player won 3-0
+        # because the opponent conceded.
+        if result_type == "concession":
+            if player1:
+                message += (
+                    f"\n{position}. "
+                    f"{player1} — CR (3-0)"
+                )
+            else:
+                message += (
+                    f"\n{position}. "
+                    f"CR (3-0)"
+                )
+
+            continue
+
+        # Both players known
+        if player1 and player2:
+            message += (
+                f"\n{position}. "
+                f"{player1} vs "
+                f"{player2} — "
+                f"{score}"
+            )
+
+        # Only team1 player known
+        elif player1:
+            message += (
+                f"\n{position}. "
+                f"{player1} vs "
+                f"Unresolved — "
+                f"{score}"
+            )
+
+        # Only team2 player known
+        elif player2:
+            message += (
+                f"\n{position}. "
+                f"Unresolved vs "
+                f"{player2} — "
+                f"{score}"
+            )
+
+        else:
+            message += (
+                f"\n{position}. "
+                f"Players unresolved — "
+                f"{score}"
+            )
+
+    return message
+
+
+def main():
+    print(
+        "Checking HK Squash results...\n"
+    )
+
+    previous_results = (
+        load_previous_results()
+    )
 
     current_results = {}
     pending_counts = {}
 
     # Fetch every configured league once
     for league_name in LEAGUES:
-        url = results_url(league_name)
+        url = results_url(
+            league_name
+        )
 
-        print(f"Fetching Division {league_name}...")
+        print(
+            f"Fetching Division "
+            f"{league_name}..."
+        )
 
-        matches = get_matches(url)
+        matches = get_matches(
+            url
+        )
 
-        current_results[league_name] = matches
+        current_results[
+            league_name
+        ] = matches
 
         not_updated = sum(
             1
@@ -272,20 +385,31 @@ def main():
             if match["result"] == ""
         )
 
-        pending_counts[league_name] = not_updated
+        pending_counts[
+            league_name
+        ] = not_updated
 
         print(
             f"Division {league_name}: "
             f"{len(matches)} matches, "
-            f"{not_updated} results not updated"
+            f"{not_updated} results "
+            f"not updated"
         )
 
     # First ever run
     if not previous_results:
-        print("\nNo previous results found.")
-        print("Saving current results as baseline.")
+        print(
+            "\nNo previous results found."
+        )
 
-        save_results(current_results)
+        print(
+            "Saving current results "
+            "as baseline."
+        )
+
+        save_results(
+            current_results
+        )
 
         if BOT_COMMAND == "checkscore":
             lines = build_check_summary(
@@ -295,7 +419,8 @@ def main():
             lines.extend([
                 "",
                 "Baseline created. "
-                "No previous results to compare.",
+                "No previous results "
+                "to compare.",
             ])
 
             send_telegram_message(
@@ -309,33 +434,69 @@ def main():
         current_results,
     )
 
+    # Reconstruct individual player matches.
+    #
+    # This also updates:
+    # - player_matches.json
+    # - player_state.json
+    # - docs/player_matches.json
+    individual_results = {}
+
     if updates:
-        print("\n🚨 NEW RESULT UPDATES!\n")
+        try:
+            individual_results = (
+                process_result_updates(
+                    updates
+                )
+            )
+
+        except Exception as error:
+            # Team result notifications should
+            # still work even if player matching
+            # temporarily fails.
+            print(
+                "Player match reconstruction "
+                f"failed: {error}"
+            )
+
+            individual_results = {}
+
+    if updates:
+        print(
+            "\n🚨 NEW RESULT UPDATES!\n"
+        )
 
         for update in updates:
             print(
-                f'Division {update["league"]}: '
+                f'Division '
+                f'{update["league"]}: '
                 f'{update["team1"]} vs '
                 f'{update["team2"]}'
             )
 
             if "old_result" in update:
                 print(
-                    f'Old: {update["old_result"]}'
+                    f'Old: '
+                    f'{update["old_result"]}'
                 )
 
             print(
-                f'New: {update["result"]}'
+                f'New: '
+                f'{update["result"]}'
             )
+
             print()
 
             message = (
-                "🚨 HK Squash result updated!\n\n"
-                f'Division {update["league"]}\n\n'
+                "🚨 HK Squash result "
+                "updated!\n\n"
+                f'Division '
+                f'{update["league"]}\n\n'
                 f'{update["team1"]}\n'
                 "vs\n"
                 f'{update["team2"]}\n\n'
-                f'Result: {update["result"]}'
+                f'Result: '
+                f'{update["result"]}'
             )
 
             if "old_result" in update:
@@ -344,13 +505,34 @@ def main():
                     f'{update["old_result"]}'
                 )
 
-            send_telegram_message(message)
+            fixture = (
+                individual_results.get(
+                    (
+                        update["league"],
+                        update["match_id"],
+                    )
+                )
+            )
 
-        # /checkscore should always give a completion response
+            message = (
+                add_individual_matches_to_message(
+                    message,
+                    fixture,
+                )
+            )
+
+            send_telegram_message(
+                message
+            )
+
+        # /checkscore should always give
+        # a completion response
         if BOT_COMMAND == "checkscore":
             lines = build_check_summary(
                 pending_counts,
-                update_count=len(updates),
+                update_count=len(
+                    updates
+                ),
             )
 
             send_telegram_message(
@@ -358,7 +540,9 @@ def main():
             )
 
     else:
-        print("\nNo new score updates.")
+        print(
+            "\nNo new score updates."
+        )
 
         # Scheduled checks stay silent.
         # Explicit /checkscore gets a response.
@@ -377,8 +561,11 @@ def main():
                 "\n".join(lines)
             )
 
-    # Always update baseline after a successful check
-    save_results(current_results)
+    # Always update baseline after
+    # a successful check.
+    save_results(
+        current_results
+    )
 
 
 if __name__ == "__main__":
