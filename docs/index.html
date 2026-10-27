@@ -196,6 +196,52 @@
             text-align: right;
         }
 
+        .player-link {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            text-align: inherit;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+        }
+
+        .player-link:hover {
+            color: #2563eb;
+        }
+
+        .ranking-popup {
+            position: absolute;
+            z-index: 1000;
+            min-width: 220px;
+            max-width: 280px;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            font-size: 13px;
+        }
+
+        .ranking-popup-title {
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .ranking-popup-row {
+            margin-top: 3px;
+        }
+
+        .ranking-popup-loading,
+        .ranking-popup-error {
+            color: #6b7280;
+        }
+
         .score {
             text-align: center;
 
@@ -336,6 +382,7 @@
 
     </div>
 
+    <div id="rankingPopup" class="ranking-popup" hidden></div>
 
     <script>
 
@@ -361,6 +408,16 @@
             document.getElementById(
                 "summary"
             );
+
+        const RANKING_API =
+            "https://hk-squash-bot.mickeymousekwok97.workers.dev/ranking";
+
+        const rankingPopup =
+            document.getElementById(
+                "rankingPopup"
+            );
+
+        const rankingCache = new Map();
 
 
         async function loadData() {
@@ -679,29 +736,42 @@
 
 
         function playerHtml(
-            player,
+            playerName,
+            memberId,
             unresolved = false
         ) {
+            if (!playerName) {
+                if (unresolved) {
+                    return `
+                        <span class="unresolved">
+                            Unresolved
+                        </span>
+                    `;
+                }
 
-            if (player) {
+                return `
+                    <span class="unresolved">
+                        —
+                    </span>
+                `;
+            }
+
+            if (!memberId) {
                 return escapeHtml(
-                    player
+                    playerName
                 );
             }
 
-            if (unresolved) {
-                return `
-            <span class="unresolved">
-                Unresolved
-            </span>
-        `;
-            }
-
             return `
-        <span class="unresolved">
-            —
-        </span>
-    `;
+                <button
+                    type="button"
+                    class="player-link"
+                    data-member-id="${escapeHtml(memberId)}"
+                    data-player-name="${escapeHtml(playerName)}"
+                >
+                    ${escapeHtml(playerName)}
+                </button>
+            `;
         }
 
 
@@ -728,12 +798,14 @@
             let player1 =
                 playerHtml(
                     match.player1,
+                    match.player1_hks_no,
                     isUnresolved
                 );
 
             let player2 =
                 playerHtml(
                     match.player2,
+                    match.player2_hks_no,
                     isUnresolved
                 );
 
@@ -998,6 +1070,226 @@
         weekFilter.addEventListener(
             "change",
             renderMatches
+        );
+
+
+        async function loadRanking(memberId) {
+            if (rankingCache.has(memberId)) {
+                return rankingCache.get(memberId);
+            }
+
+            const response = await fetch(
+                `${RANKING_API}?member=${encodeURIComponent(memberId)}`
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+            }
+
+            const player = await response.json();
+
+            rankingCache.set(
+                memberId,
+                player
+            );
+
+            return player;
+        }
+
+
+        function positionPopup(button) {
+            const rect =
+                button.getBoundingClientRect();
+
+            const popupWidth = 280;
+            const margin = 12;
+
+            let left =
+                window.scrollX + rect.left;
+
+            const maxLeft =
+                window.scrollX
+                + document.documentElement.clientWidth
+                - popupWidth
+                - margin;
+
+            left = Math.max(
+                window.scrollX + margin,
+                Math.min(left, maxLeft)
+            );
+
+            rankingPopup.style.left =
+                `${left}px`;
+
+            rankingPopup.style.top =
+                `${window.scrollY + rect.bottom + 8}px`;
+        }
+
+
+        async function showRanking(button) {
+            const memberId =
+                button.dataset.memberId;
+
+            const playerName =
+                button.dataset.playerName;
+
+            if (!memberId) {
+                return;
+            }
+
+            positionPopup(button);
+
+            rankingPopup.hidden = false;
+
+            rankingPopup.innerHTML = `
+                <div class="ranking-popup-title">
+                    ${escapeHtml(playerName)}
+                </div>
+
+                <div class="ranking-popup-loading">
+                    Loading live ranking...
+                </div>
+            `;
+
+            try {
+                const player =
+                    await loadRanking(memberId);
+
+                const change =
+                    Number(player.change ?? 0);
+
+                const changeText =
+                    change > 0
+                        ? `+${change}`
+                        : String(change);
+
+                rankingPopup.innerHTML = `
+                    <div class="ranking-popup-title">
+                        ${escapeHtml(playerName)}
+                    </div>
+
+                    ${player.chineseName
+                        ? `
+                                <div class="ranking-popup-row">
+                                    ${escapeHtml(player.chineseName)}
+                                </div>
+                            `
+                        : ""
+                    }
+
+                    <div class="ranking-popup-row">
+                        HKS ${escapeHtml(player.memberId)}
+                    </div>
+
+                    <div class="ranking-popup-row">
+                        Overall ranking:
+                        <strong>
+                            ${escapeHtml(player.ranking)}
+                        </strong>
+                    </div>
+
+                    <div class="ranking-popup-row">
+                        Points:
+                        <strong>
+                            ${escapeHtml(player.points)}
+                        </strong>
+                    </div>
+
+                    <div class="ranking-popup-row">
+                        Change:
+                        <strong>
+                            ${escapeHtml(changeText)}
+                        </strong>
+                    </div>
+                `;
+            }
+            catch (error) {
+                console.error(error);
+
+                rankingPopup.innerHTML = `
+                    <div class="ranking-popup-title">
+                        ${escapeHtml(playerName)}
+                    </div>
+
+                    <div class="ranking-popup-error">
+                        Unable to load live ranking.
+                    </div>
+                `;
+            }
+        }
+
+
+        // Desktop hover: show ranking when pointer enters a player name.
+        document.addEventListener(
+            "mouseover",
+            event => {
+                const button =
+                    event.target.closest(
+                        ".player-link"
+                    );
+
+                if (!button) {
+                    return;
+                }
+
+                showRanking(button);
+            }
+        );
+
+
+        // Click / tap: keep the popup open.
+        document.addEventListener(
+            "click",
+            event => {
+                const button =
+                    event.target.closest(
+                        ".player-link"
+                    );
+
+                if (button) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    showRanking(button);
+                    return;
+                }
+
+                // Clicking anywhere outside a player or popup closes it.
+                if (
+                    !event.target.closest(
+                        "#rankingPopup"
+                    )
+                ) {
+                    rankingPopup.hidden = true;
+                }
+            }
+        );
+
+
+        // Prevent clicks inside the popup from closing it.
+        rankingPopup.addEventListener(
+            "click",
+            event => {
+                event.stopPropagation();
+            }
+        );
+
+
+        // Close popup when changing filters.
+        leagueFilter.addEventListener(
+            "change",
+            () => {
+                rankingPopup.hidden = true;
+            }
+        );
+
+        weekFilter.addEventListener(
+            "change",
+            () => {
+                rankingPopup.hidden = true;
+            }
         );
 
 
