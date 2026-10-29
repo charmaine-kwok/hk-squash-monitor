@@ -1383,8 +1383,35 @@
                 return;
             }
 
+            let lastWeek = null;
+
             fixtures.forEach(
                 ([_, match]) => {
+
+                    if (
+                        match.week !== lastWeek
+                    ) {
+
+                        const weekTitle =
+                            document.createElement(
+                                "div"
+                            );
+
+                        weekTitle.className =
+                            "week-section-title";
+
+                        weekTitle.textContent =
+                            formatWeek(
+                                match.week
+                            );
+
+                        matchesContainer.appendChild(
+                            weekTitle
+                        );
+
+                        lastWeek =
+                            match.week;
+                    }
 
                     const team1Selected =
                         selectedTeam !== "all"
@@ -1972,8 +1999,7 @@
                 ([_, match]) => {
 
                     if (
-                        selectedWeek === "all"
-                        && match.week !== lastWeek
+                        match.week !== lastWeek
                     ) {
 
                         const weekTitle =
