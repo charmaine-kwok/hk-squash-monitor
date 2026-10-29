@@ -161,6 +161,99 @@
           "status": "confirmed"
         }
       ]
+    },
+    "24/10/2026|Grit Squash-1|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "Grit Squash-1",
+      "team2": "Electrify Squash Club D15",
+      "team_result": "0-5(0-3,CR,CR,CR,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": null,
+          "player2": "Lau Man Kit",
+          "score": "0-3",
+          "status": "unresolved"
+        },
+        {
+          "position": 2,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": null
+        },
+        {
+          "position": 3,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": null
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": null
+        },
+        {
+          "position": 5,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": null
+        }
+      ]
+    },
+    "24/10/2026|Star Squash Club 4|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "Star Squash Club 4",
+      "team2": "Kinetic Squash Club 6",
+      "team_result": "2-3(0-3,3-0,3-1,0-3,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": null,
+          "player2": "Man Vincent Winn Siae",
+          "score": "0-3",
+          "status": "unresolved"
+        },
+        {
+          "position": 2,
+          "player1": null,
+          "player2": "Poon Ka Hei Joshua",
+          "score": "3-0",
+          "status": "unresolved"
+        },
+        {
+          "position": 3,
+          "player1": null,
+          "player2": "HO KA IN",
+          "score": "3-1",
+          "status": "unresolved"
+        },
+        {
+          "position": 4,
+          "player1": null,
+          "player2": "Wei Susan",
+          "score": "0-3",
+          "status": "unresolved"
+        },
+        {
+          "position": 5,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player2": null,
+          "player1": null
+        }
+      ]
     }
   },
   "L4": {
