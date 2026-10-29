@@ -376,6 +376,35 @@
             margin-bottom: 14px;
         }
 
+        .schedule-card.has-result {
+            cursor: pointer;
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+        }
+
+        .schedule-card.has-result:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 3px 10px rgba(15, 23, 42, 0.07);
+        }
+
+        .schedule-card.has-result:focus-visible {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+
+        .view-player-matches {
+            margin-left: auto;
+            color: #2563eb;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .match-card.jump-highlight {
+            outline: 3px solid #93c5fd;
+            outline-offset: 3px;
+        }
+
         .schedule-teams {
             display: grid;
             grid-template-columns:
@@ -495,6 +524,18 @@
                     </select>
                 </div>
 
+                <div class="filter">
+                    <label for="teamFilter">
+                        Team
+                    </label>
+
+                    <select id="teamFilter">
+                        <option value="all">
+                            All teams
+                        </option>
+                    </select>
+                </div>
+
             </div>
 
             <div id="summary" class="summary"></div>
@@ -568,6 +609,11 @@
         const weekFilter =
             document.getElementById(
                 "weekFilter"
+            );
+
+        const teamFilter =
+            document.getElementById(
+                "teamFilter"
             );
 
         const matchesContainer =
@@ -661,6 +707,7 @@
                 // Player matches
                 populateLeagues();
                 populateWeeks();
+                populateTeams();
                 renderMatches();
 
 
@@ -826,6 +873,96 @@
 
                 }
             );
+
+        }
+
+
+        function populateTeams(
+            preferredTeam = "all"
+        ) {
+
+            const league =
+                leagueFilter.value;
+
+            const fixtures =
+                getFixtures(
+                    league
+                );
+
+            const teams =
+                new Set();
+
+            fixtures.forEach(
+                ([_, match]) => {
+
+                    if (match.team1) {
+                        teams.add(
+                            match.team1
+                        );
+                    }
+
+                    if (match.team2) {
+                        teams.add(
+                            match.team2
+                        );
+                    }
+
+                }
+            );
+
+            teamFilter.innerHTML = "";
+
+            const allOption =
+                document.createElement(
+                    "option"
+                );
+
+            allOption.value = "all";
+            allOption.textContent = "All teams";
+
+            teamFilter.appendChild(
+                allOption
+            );
+
+            [...teams]
+                .sort(
+                    (a, b) =>
+                        a.localeCompare(b)
+                )
+                .forEach(
+                    team => {
+
+                        const option =
+                            document.createElement(
+                                "option"
+                            );
+
+                        option.value =
+                            team;
+
+                        option.textContent =
+                            team;
+
+                        teamFilter.appendChild(
+                            option
+                        );
+
+                    }
+                );
+
+            if (
+                preferredTeam !== "all"
+                && teams.has(
+                    preferredTeam
+                )
+            ) {
+                teamFilter.value =
+                    preferredTeam;
+            }
+            else {
+                teamFilter.value =
+                    "all";
+            }
 
         }
 
@@ -1120,6 +1257,9 @@
             const selectedWeek =
                 weekFilter.value;
 
+            const selectedTeam =
+                teamFilter.value;
+
             let fixtures =
                 getFixtures(
                     league
@@ -1135,6 +1275,22 @@
                         ([_, match]) =>
                             match.week
                             === selectedWeek
+                    );
+
+            }
+
+            if (
+                selectedTeam !== "all"
+            ) {
+
+                fixtures =
+                    fixtures.filter(
+                        ([_, match]) =>
+                            match.team1
+                            === selectedTeam
+                            ||
+                            match.team2
+                            === selectedTeam
                     );
 
             }
@@ -1188,6 +1344,14 @@
             fixtures.forEach(
                 ([_, match]) => {
 
+                    const team1Selected =
+                        selectedTeam !== "all"
+                        && match.team1 === selectedTeam;
+
+                    const team2Selected =
+                        selectedTeam !== "all"
+                        && match.team2 === selectedTeam;
+
                     const card =
                         document.createElement(
                             "section"
@@ -1195,6 +1359,11 @@
 
                     card.className =
                         "match-card";
+
+                    card.dataset.matchKey =
+                        buildMatchKey(
+                            match
+                        );
 
                     const header =
                         document.createElement(
@@ -1226,24 +1395,30 @@
 
                 <div class="teams">
 
-                    <div class="team">
+                    <div class="team ${team1Selected
+                            ? "selected-team"
+                            : ""
+                        }">
                         ${escapeHtml(
-                        match.team1
-                    )}
+                            match.team1
+                        )}
                     </div>
 
                     <div class="team-result">
                         ${escapeHtml(
-                        teamScore(
-                            match.team_result
-                        )
-                    )}
+                            teamScore(
+                                match.team_result
+                            )
+                        )}
                     </div>
 
-                    <div class="team team2">
+                    <div class="team team2 ${team2Selected
+                            ? "selected-team"
+                            : ""
+                        }">
                         ${escapeHtml(
-                        match.team2
-                    )}
+                            match.team2
+                        )}
                     </div>
 
                 </div>
@@ -1305,6 +1480,154 @@
             );
 
         }
+
+        function buildMatchKey(
+            match
+        ) {
+
+            return [
+                match.date || "",
+                match.team1 || "",
+                match.team2 || ""
+            ].join("|");
+
+        }
+
+
+        function switchToTab(
+            tabId
+        ) {
+
+            document
+                .querySelectorAll(
+                    ".tab-button"
+                )
+                .forEach(
+                    tab => {
+                        tab.classList.toggle(
+                            "active",
+                            tab.dataset.tab
+                            === tabId
+                        );
+                    }
+                );
+
+            document
+                .querySelectorAll(
+                    ".tab-content"
+                )
+                .forEach(
+                    content => {
+                        content.classList.toggle(
+                            "active",
+                            content.id
+                            === tabId
+                        );
+                    }
+                );
+
+            rankingPopup.hidden = true;
+
+        }
+
+
+        function openPlayerMatch(
+            league,
+            scheduleMatch
+        ) {
+
+            switchToTab(
+                "matchesTab"
+            );
+
+            leagueFilter.value =
+                league;
+
+            populateWeeks();
+
+            if (
+                scheduleMatch.week
+                && [...weekFilter.options]
+                    .some(
+                        option =>
+                            option.value
+                            === scheduleMatch.week
+                    )
+            ) {
+                weekFilter.value =
+                    scheduleMatch.week;
+            }
+            else {
+                weekFilter.value =
+                    "all";
+            }
+
+            const scheduleSelectedTeam =
+                scheduleTeamFilter.value;
+
+            let preferredTeam =
+                "all";
+
+            if (
+                scheduleSelectedTeam !== "all"
+                && (
+                    scheduleMatch.team1
+                    === scheduleSelectedTeam
+                    ||
+                    scheduleMatch.team2
+                    === scheduleSelectedTeam
+                )
+            ) {
+                preferredTeam =
+                    scheduleSelectedTeam;
+            }
+
+            populateTeams(
+                preferredTeam
+            );
+
+            renderMatches();
+
+            const matchKey =
+                buildMatchKey(
+                    scheduleMatch
+                );
+
+            const target =
+                [...matchesContainer
+                    .querySelectorAll(
+                        ".match-card"
+                    )]
+                    .find(
+                        card =>
+                            card.dataset.matchKey
+                            === matchKey
+                    );
+
+            if (!target) {
+                return;
+            }
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            target.classList.add(
+                "jump-highlight"
+            );
+
+            window.setTimeout(
+                () => {
+                    target.classList.remove(
+                        "jump-highlight"
+                    );
+                },
+                1800
+            );
+
+        }
+
 
         function getScheduleFixtures(
             league
@@ -1732,12 +2055,63 @@
                                 Result pending
                             </span>
                         `
-                            : ""
+                            : `
+                            <span class="view-player-matches">
+                                View player matches →
+                            </span>
+                        `
                         }
 
             </div>
 
         `;
+
+                    if (match.result) {
+
+                        card.classList.add(
+                            "has-result"
+                        );
+
+                        card.tabIndex = 0;
+
+                        card.setAttribute(
+                            "role",
+                            "button"
+                        );
+
+                        card.setAttribute(
+                            "aria-label",
+                            `View player matches for ${match.team1} vs ${match.team2}`
+                        );
+
+                        const openMatch = () => {
+                            openPlayerMatch(
+                                league,
+                                match
+                            );
+                        };
+
+                        card.addEventListener(
+                            "click",
+                            openMatch
+                        );
+
+                        card.addEventListener(
+                            "keydown",
+                            event => {
+
+                                if (
+                                    event.key === "Enter"
+                                    || event.key === " "
+                                ) {
+                                    event.preventDefault();
+                                    openMatch();
+                                }
+
+                            }
+                        );
+
+                    }
 
                     scheduleMatches.appendChild(
                         card
@@ -1753,7 +2127,7 @@
             () => {
 
                 populateWeeks();
-
+                populateTeams();
                 renderMatches();
 
             }
@@ -1761,6 +2135,12 @@
 
 
         weekFilter.addEventListener(
+            "change",
+            renderMatches
+        );
+
+
+        teamFilter.addEventListener(
             "change",
             renderMatches
         );
@@ -2008,6 +2388,13 @@
             }
         );
 
+        teamFilter.addEventListener(
+            "change",
+            () => {
+                rankingPopup.hidden = true;
+            }
+        );
+
         document.querySelectorAll(
             ".tab-button"
         ).forEach(
@@ -2016,54 +2403,15 @@
                 button.addEventListener(
                     "click",
                     () => {
-
-                        const target =
-                            button.dataset.tab;
-
-                        document
-                            .querySelectorAll(
-                                ".tab-button"
-                            )
-                            .forEach(
-                                tab => {
-                                    tab.classList.remove(
-                                        "active"
-                                    );
-                                }
-                            );
-
-                        document
-                            .querySelectorAll(
-                                ".tab-content"
-                            )
-                            .forEach(
-                                content => {
-                                    content.classList.remove(
-                                        "active"
-                                    );
-                                }
-                            );
-
-                        button.classList.add(
-                            "active"
+                        switchToTab(
+                            button.dataset.tab
                         );
-
-                        document
-                            .getElementById(
-                                target
-                            )
-                            .classList.add(
-                                "active"
-                            );
-
-                        rankingPopup.hidden =
-                            true;
-
                     }
                 );
 
             }
         );
+
 
         loadData();
 
