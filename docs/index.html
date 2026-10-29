@@ -98,6 +98,21 @@
             margin-bottom: 20px;
         }
 
+        .week-section-title {
+            margin: 28px 0 12px;
+            padding-bottom: 8px;
+
+            border-bottom: 2px solid #d1d5db;
+
+            font-size: 18px;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        .week-section-title:first-child {
+            margin-top: 0;
+        }
+
         .match-header {
             padding: 18px;
 
@@ -300,6 +315,73 @@
             border-radius: 8px;
         }
 
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 22px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .tab-button {
+            border: 0;
+            background: none;
+            padding: 10px 14px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #6b7280;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button.active {
+            color: #1f2937;
+            border-bottom-color: #2563eb;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .schedule-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .schedule-teams {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr) auto minmax(0, 1fr);
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .schedule-vs {
+            color: #9ca3af;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .schedule-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .pending {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
         @media (max-width: 650px) {
             h1 {
                 font-size: 23px;
@@ -348,37 +430,103 @@
             <h1>HK Squash Match Tracker</h1>
 
             <p class="subtitle">
-                Individual Main League match results
+                Hong Kong Squash Main League
             </p>
         </div>
 
-        <div class="filters">
+        <div class="tabs">
 
-            <div class="filter">
-                <label for="leagueFilter">
-                    Division
-                </label>
+            <button type="button" class="tab-button active" data-tab="matchesTab">
+                Player Matches
+            </button>
 
-                <select id="leagueFilter"></select>
-            </div>
-
-            <div class="filter">
-                <label for="weekFilter">
-                    Week
-                </label>
-
-                <select id="weekFilter">
-                    <option value="all">
-                        All weeks
-                    </option>
-                </select>
-            </div>
+            <button type="button" class="tab-button" data-tab="scheduleTab">
+                Schedule
+            </button>
 
         </div>
 
-        <div id="summary" class="summary"></div>
 
-        <div id="matches"></div>
+        <!-- PLAYER MATCHES -->
+
+        <div id="matchesTab" class="tab-content active">
+
+            <div class="filters">
+
+                <div class="filter">
+                    <label for="leagueFilter">
+                        Division
+                    </label>
+
+                    <select id="leagueFilter"></select>
+                </div>
+
+                <div class="filter">
+                    <label for="weekFilter">
+                        Week
+                    </label>
+
+                    <select id="weekFilter">
+                        <option value="all">
+                            All weeks
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="summary" class="summary"></div>
+
+            <div id="matches"></div>
+
+        </div>
+
+
+        <!-- SCHEDULE -->
+
+        <div id="scheduleTab" class="tab-content">
+
+            <div class="filters">
+
+                <div class="filter">
+                    <label for="scheduleLeagueFilter">
+                        Division
+                    </label>
+
+                    <select id="scheduleLeagueFilter"></select>
+                </div>
+
+                <div class="filter">
+                    <label for="scheduleWeekFilter">
+                        Week
+                    </label>
+
+                    <select id="scheduleWeekFilter">
+                        <option value="all">
+                            All weeks
+                        </option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <label for="scheduleTeamFilter">
+                        Team
+                    </label>
+
+                    <select id="scheduleTeamFilter">
+                        <option value="all">
+                            All teams
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="scheduleSummary" class="summary"></div>
+
+            <div id="scheduleMatches"></div>
+
+        </div>
 
     </div>
 
@@ -387,6 +535,7 @@
     <script>
 
         let data = {};
+        let scheduleData = {};
 
 
         const leagueFilter =
@@ -409,6 +558,31 @@
                 "summary"
             );
 
+        const scheduleLeagueFilter =
+            document.getElementById(
+                "scheduleLeagueFilter"
+            );
+
+        const scheduleWeekFilter =
+            document.getElementById(
+                "scheduleWeekFilter"
+            );
+
+        const scheduleTeamFilter =
+            document.getElementById(
+                "scheduleTeamFilter"
+            );
+
+        const scheduleMatches =
+            document.getElementById(
+                "scheduleMatches"
+            );
+
+        const scheduleSummary =
+            document.getElementById(
+                "scheduleSummary"
+            );
+
         const RANKING_API =
             "https://hk-squash-bot.mickeymousekwok97.workers.dev/ranking";
 
@@ -424,27 +598,55 @@
 
             try {
 
-                const response = await fetch(
-                    "./player_matches.json",
-                    {
-                        cache: "no-store"
-                    }
-                );
+                const [
+                    playerResponse,
+                    scheduleResponse
+                ] = await Promise.all([
+                    fetch(
+                        "./player_matches.json",
+                        {
+                            cache: "no-store"
+                        }
+                    ),
 
-                if (!response.ok) {
+                    fetch(
+                        "./schedule.json",
+                        {
+                            cache: "no-store"
+                        }
+                    )
+                ]);
+
+                if (!playerResponse.ok) {
                     throw new Error(
-                        `HTTP ${response.status}`
+                        "Unable to load player_matches.json"
+                    );
+                }
+
+                if (!scheduleResponse.ok) {
+                    throw new Error(
+                        "Unable to load schedule.json"
                     );
                 }
 
                 data =
-                    await response.json();
+                    await playerResponse.json();
 
+                scheduleData =
+                    await scheduleResponse.json();
+
+
+                // Player matches
                 populateLeagues();
-
                 populateWeeks();
-
                 renderMatches();
+
+
+                // Schedule
+                populateScheduleLeagues();
+                populateScheduleWeeks();
+                populateScheduleTeams();
+                renderSchedule();
 
             }
             catch (error) {
@@ -453,15 +655,19 @@
 
                 matchesContainer.innerHTML = `
             <div class="error">
-                Unable to load
-                player_matches.json.
+                Unable to load match data.
+            </div>
+        `;
+
+                scheduleMatches.innerHTML = `
+            <div class="error">
+                Unable to load schedule data.
             </div>
         `;
 
             }
 
         }
-
 
         function getFixtures(league) {
 
@@ -703,6 +909,30 @@
 
         }
 
+        function formatTime(
+            value
+        ) {
+
+            if (!value) {
+                return "";
+            }
+
+            const parts =
+                value.split(":");
+
+            if (
+                parts.length < 2
+            ) {
+                return value;
+            }
+
+            return (
+                parts[0]
+                + ":"
+                + parts[1]
+            );
+
+        }
 
         function escapeHtml(
             value
@@ -1054,6 +1284,438 @@
 
         }
 
+        function getScheduleFixtures(
+            league
+        ) {
+
+            const leagueData =
+                scheduleData[league] || {};
+
+            return Object.entries(
+                leagueData
+            );
+
+        }
+
+
+        function populateScheduleLeagues() {
+
+            scheduleLeagueFilter.innerHTML =
+                "";
+
+            Object.keys(
+                scheduleData
+            ).forEach(
+                league => {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+                    option.value =
+                        league;
+
+                    option.textContent =
+                        `Division ${league}`;
+
+                    scheduleLeagueFilter
+                        .appendChild(
+                            option
+                        );
+
+                }
+            );
+
+        }
+
+
+        function populateScheduleWeeks() {
+
+            const league =
+                scheduleLeagueFilter.value;
+
+            const fixtures =
+                getScheduleFixtures(
+                    league
+                );
+
+            const weeks = [
+                ...new Set(
+                    fixtures
+                        .map(
+                            ([_, match]) =>
+                                match.week
+                        )
+                        .filter(Boolean)
+                )
+            ];
+
+            weeks.sort(
+                (a, b) =>
+                    getWeekNumber(a)
+                    - getWeekNumber(b)
+            );
+
+            scheduleWeekFilter.innerHTML =
+                "";
+
+            const allOption =
+                document.createElement(
+                    "option"
+                );
+
+            allOption.value = "all";
+
+            allOption.textContent =
+                "All weeks";
+
+            scheduleWeekFilter.appendChild(
+                allOption
+            );
+
+            weeks.forEach(
+                week => {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+                    option.value =
+                        week;
+
+                    option.textContent =
+                        formatWeek(
+                            week
+                        );
+
+                    scheduleWeekFilter
+                        .appendChild(
+                            option
+                        );
+
+                }
+            );
+
+        }
+
+
+        function populateScheduleTeams() {
+
+            const league =
+                scheduleLeagueFilter.value;
+
+            const fixtures =
+                getScheduleFixtures(
+                    league
+                );
+
+            const teams =
+                new Set();
+
+            fixtures.forEach(
+                ([_, match]) => {
+
+                    if (match.team1) {
+                        teams.add(
+                            match.team1
+                        );
+                    }
+
+                    if (match.team2) {
+                        teams.add(
+                            match.team2
+                        );
+                    }
+
+                }
+            );
+
+            scheduleTeamFilter.innerHTML =
+                "";
+
+            const allOption =
+                document.createElement(
+                    "option"
+                );
+
+            allOption.value =
+                "all";
+
+            allOption.textContent =
+                "All teams";
+
+            scheduleTeamFilter.appendChild(
+                allOption
+            );
+
+            [...teams]
+                .sort(
+                    (a, b) =>
+                        a.localeCompare(b)
+                )
+                .forEach(
+                    team => {
+
+                        const option =
+                            document.createElement(
+                                "option"
+                            );
+
+                        option.value =
+                            team;
+
+                        option.textContent =
+                            team;
+
+                        scheduleTeamFilter
+                            .appendChild(
+                                option
+                            );
+
+                    }
+                );
+
+        }
+
+
+        function renderSchedule() {
+
+            const league =
+                scheduleLeagueFilter.value;
+
+            const selectedWeek =
+                scheduleWeekFilter.value;
+
+            const selectedTeam =
+                scheduleTeamFilter.value;
+
+            let fixtures =
+                getScheduleFixtures(
+                    league
+                );
+
+
+            // Week filter
+            if (
+                selectedWeek !== "all"
+            ) {
+
+                fixtures =
+                    fixtures.filter(
+                        ([_, match]) =>
+                            match.week
+                            === selectedWeek
+                    );
+
+            }
+
+
+            // Team filter
+            if (
+                selectedTeam !== "all"
+            ) {
+
+                fixtures =
+                    fixtures.filter(
+                        ([_, match]) =>
+                            match.team1
+                            === selectedTeam
+                            ||
+                            match.team2
+                            === selectedTeam
+                    );
+
+            }
+
+
+            // Date + time sorting
+            fixtures.sort(
+                ([_, a], [__, b]) => {
+
+                    const dateDifference =
+                        parseDate(a.date)
+                        - parseDate(b.date);
+
+                    if (
+                        dateDifference !== 0
+                    ) {
+                        return dateDifference;
+                    }
+
+                    return String(
+                        a.time || ""
+                    ).localeCompare(
+                        String(
+                            b.time || ""
+                        )
+                    );
+
+                }
+            );
+
+
+            scheduleSummary.textContent =
+                `${fixtures.length} fixture${fixtures.length === 1
+                    ? ""
+                    : "s"
+                }`;
+
+
+            scheduleMatches.innerHTML =
+                "";
+
+
+            if (!fixtures.length) {
+
+                scheduleMatches.innerHTML = `
+            <div class="empty">
+                No fixtures found.
+            </div>
+        `;
+
+                return;
+            }
+
+
+            let lastWeek = null;
+
+            fixtures.forEach(
+                ([_, match]) => {
+
+                    if (
+                        selectedWeek === "all"
+                        && match.week !== lastWeek
+                    ) {
+
+                        const weekTitle =
+                            document.createElement(
+                                "div"
+                            );
+
+                        weekTitle.className =
+                            "week-section-title";
+
+                        weekTitle.textContent =
+                            formatWeek(
+                                match.week
+                            );
+
+                        scheduleMatches.appendChild(
+                            weekTitle
+                        );
+
+                        lastWeek =
+                            match.week;
+                    }
+
+
+                    const card =
+                        document.createElement(
+                            "section"
+                        );
+
+                    card.className =
+                        "schedule-card";
+
+
+                    const result =
+                        match.result
+                            ? teamScore(
+                                match.result
+                            )
+                            : "Pending";
+
+
+                    card.innerHTML = `
+
+            <div class="match-meta">
+
+                ${escapeHtml(
+                        formatDate(
+                            match.date
+                        )
+                    )}
+
+            </div>
+
+
+            <div class="schedule-teams">
+
+                <div class="team">
+
+                    ${escapeHtml(
+                        match.team1
+                    )}
+
+                </div>
+
+                <div class="${match.result
+                            ? "team-result"
+                            : "schedule-vs"
+                        }">
+
+                    ${match.result
+                            ? escapeHtml(
+                                result
+                            )
+                            : "VS"
+                        }
+
+                </div>
+
+                <div class="team team2">
+
+                    ${escapeHtml(
+                            match.team2
+                        )}
+
+                </div>
+
+            </div>
+
+
+            <div class="schedule-details">
+
+                <span>
+                    📍
+                    ${escapeHtml(
+                            match.venue
+                            || "Venue TBC"
+                        )}
+                </span>
+
+                <span>
+                    🕒
+                    ${escapeHtml(
+                            formatTime(
+                                match.time
+                            )
+                        )}
+                </span>
+
+                ${!match.result
+                            ? `
+                            <span class="pending">
+                                Result pending
+                            </span>
+                        `
+                            : ""
+                        }
+
+            </div>
+
+        `;
+
+                    scheduleMatches.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
 
         leagueFilter.addEventListener(
             "change",
@@ -1070,6 +1732,29 @@
         weekFilter.addEventListener(
             "change",
             renderMatches
+        );
+
+        scheduleLeagueFilter.addEventListener(
+            "change",
+            () => {
+
+                populateScheduleWeeks();
+                populateScheduleTeams();
+                renderSchedule();
+
+            }
+        );
+
+
+        scheduleWeekFilter.addEventListener(
+            "change",
+            renderSchedule
+        );
+
+
+        scheduleTeamFilter.addEventListener(
+            "change",
+            renderSchedule
         );
 
 
@@ -1292,6 +1977,62 @@
             }
         );
 
+        document.querySelectorAll(
+            ".tab-button"
+        ).forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        const target =
+                            button.dataset.tab;
+
+                        document
+                            .querySelectorAll(
+                                ".tab-button"
+                            )
+                            .forEach(
+                                tab => {
+                                    tab.classList.remove(
+                                        "active"
+                                    );
+                                }
+                            );
+
+                        document
+                            .querySelectorAll(
+                                ".tab-content"
+                            )
+                            .forEach(
+                                content => {
+                                    content.classList.remove(
+                                        "active"
+                                    );
+                                }
+                            );
+
+                        button.classList.add(
+                            "active"
+                        );
+
+                        document
+                            .getElementById(
+                                target
+                            )
+                            .classList.add(
+                                "active"
+                            );
+
+                        rankingPopup.hidden =
+                            true;
+
+                    }
+                );
+
+            }
+        );
 
         loadData();
 

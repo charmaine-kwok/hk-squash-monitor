@@ -1,0 +1,1572 @@
+{
+  "D15B": {
+    "24/10/2026|The Zero Squash Club D15B|Raimondi College|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Raimondi College",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": "5-0(3-1,3-2,3-0,CR,CR)"
+    },
+    "24/10/2026|Grit Squash-1|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "Grit Squash-1",
+      "team2": "Electrify Squash Club D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "24/10/2026|French Boast Club|Hong Kong International School D15|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "French Boast Club",
+      "team2": "Hong Kong International School D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": "5-0(3-0,3-0,3-1,3-0,3-0)"
+    },
+    "24/10/2026|North District Sports Association 3|Kwai Tsing District Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "North District Sports Association 3",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": "5-0(3-0,3-0,3-1,3-0,3-0)"
+    },
+    "24/10/2026|Star Squash Club 4|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "Star Squash Club 4",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "07/11/2026|Kinetic Squash Club 6|Kwai Tsing District Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 2",
+      "date": "07/11/2026",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "21/11/2026|Raimondi College|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Raimondi College",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "21/11/2026|Kwai Tsing District Squash Club D15|Star Squash Club 4|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "Star Squash Club 4",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "21/11/2026|Hong Kong International School D15|North District Sports Association 3|HK Squash Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Hong Kong International School D15",
+      "team2": "North District Sports Association 3",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "21/11/2026|Electrify Squash Club D15|French Boast Club|HK Squash Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Electrify Squash Club D15",
+      "team2": "French Boast Club",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "21/11/2026|The Zero Squash Club D15B|Grit Squash-1|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Grit Squash-1",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "28/11/2026|Grit Squash-1|Raimondi College|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 4",
+      "date": "28/11/2026",
+      "team1": "Grit Squash-1",
+      "team2": "Raimondi College",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "28/11/2026|French Boast Club|The Zero Squash Club D15B|Sir Denys Roberts Squash Court|17:00:00": {
+      "week": "week 4",
+      "date": "28/11/2026",
+      "team1": "French Boast Club",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "Sir Denys Roberts Squash Court",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "28/11/2026|North District Sports Association 3|Electrify Squash Club D15|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 4",
+      "date": "28/11/2026",
+      "team1": "North District Sports Association 3",
+      "team2": "Electrify Squash Club D15",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "28/11/2026|Star Squash Club 4|Hong Kong International School D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 4",
+      "date": "28/11/2026",
+      "team1": "Star Squash Club 4",
+      "team2": "Hong Kong International School D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "12/12/2026|Raimondi College|Kwai Tsing District Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 5",
+      "date": "12/12/2026",
+      "team1": "Raimondi College",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "12/12/2026|Hong Kong International School D15|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
+      "week": "week 5",
+      "date": "12/12/2026",
+      "team1": "Hong Kong International School D15",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "12/12/2026|Electrify Squash Club D15|Star Squash Club 4|HK Squash Centre|17:00:00": {
+      "week": "week 5",
+      "date": "12/12/2026",
+      "team1": "Electrify Squash Club D15",
+      "team2": "Star Squash Club 4",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "12/12/2026|The Zero Squash Club D15B|North District Sports Association 3|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 5",
+      "date": "12/12/2026",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "North District Sports Association 3",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "12/12/2026|Grit Squash-1|French Boast Club|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 5",
+      "date": "12/12/2026",
+      "team1": "Grit Squash-1",
+      "team2": "French Boast Club",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "19/12/2026|French Boast Club|Raimondi College|Sir Denys Roberts Squash Court|17:00:00": {
+      "week": "week 6",
+      "date": "19/12/2026",
+      "team1": "French Boast Club",
+      "team2": "Raimondi College",
+      "venue": "Sir Denys Roberts Squash Court",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "19/12/2026|North District Sports Association 3|Grit Squash-1|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 6",
+      "date": "19/12/2026",
+      "team1": "North District Sports Association 3",
+      "team2": "Grit Squash-1",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "19/12/2026|Star Squash Club 4|The Zero Squash Club D15B|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 6",
+      "date": "19/12/2026",
+      "team1": "Star Squash Club 4",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "19/12/2026|Kinetic Squash Club 6|Electrify Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 6",
+      "date": "19/12/2026",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "Electrify Squash Club D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "19/12/2026|Kwai Tsing District Squash Club D15|Hong Kong International School D15|HK Squash Centre|17:00:00": {
+      "week": "week 6",
+      "date": "19/12/2026",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "Hong Kong International School D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "09/01/2027|Raimondi College|Hong Kong International School D15|HK Squash Centre|17:00:00": {
+      "week": "week 7",
+      "date": "09/01/2027",
+      "team1": "Raimondi College",
+      "team2": "Hong Kong International School D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "09/01/2027|Electrify Squash Club D15|Kwai Tsing District Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 7",
+      "date": "09/01/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "09/01/2027|The Zero Squash Club D15B|Kinetic Squash Club 6|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 7",
+      "date": "09/01/2027",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "09/01/2027|Grit Squash-1|Star Squash Club 4|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 7",
+      "date": "09/01/2027",
+      "team1": "Grit Squash-1",
+      "team2": "Star Squash Club 4",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "09/01/2027|French Boast Club|North District Sports Association 3|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 7",
+      "date": "09/01/2027",
+      "team1": "French Boast Club",
+      "team2": "North District Sports Association 3",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "16/01/2027|North District Sports Association 3|Raimondi College|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 8",
+      "date": "16/01/2027",
+      "team1": "North District Sports Association 3",
+      "team2": "Raimondi College",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "16/01/2027|Star Squash Club 4|French Boast Club|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 8",
+      "date": "16/01/2027",
+      "team1": "Star Squash Club 4",
+      "team2": "French Boast Club",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "16/01/2027|Kinetic Squash Club 6|Grit Squash-1|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 8",
+      "date": "16/01/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "Grit Squash-1",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "16/01/2027|Kwai Tsing District Squash Club D15|The Zero Squash Club D15B|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 8",
+      "date": "16/01/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "16/01/2027|Hong Kong International School D15|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 8",
+      "date": "16/01/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "Electrify Squash Club D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "23/01/2027|Raimondi College|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 9",
+      "date": "23/01/2027",
+      "team1": "Raimondi College",
+      "team2": "Electrify Squash Club D15",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "23/01/2027|The Zero Squash Club D15B|Hong Kong International School D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 9",
+      "date": "23/01/2027",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Hong Kong International School D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "23/01/2027|Grit Squash-1|Kwai Tsing District Squash Club D15|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 9",
+      "date": "23/01/2027",
+      "team1": "Grit Squash-1",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "23/01/2027|French Boast Club|Kinetic Squash Club 6|Sir Denys Roberts Squash Court|17:00:00": {
+      "week": "week 9",
+      "date": "23/01/2027",
+      "team1": "French Boast Club",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "Sir Denys Roberts Squash Court",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "23/01/2027|North District Sports Association 3|Star Squash Club 4|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 9",
+      "date": "23/01/2027",
+      "team1": "North District Sports Association 3",
+      "team2": "Star Squash Club 4",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "30/01/2027|Star Squash Club 4|Raimondi College|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 10",
+      "date": "30/01/2027",
+      "team1": "Star Squash Club 4",
+      "team2": "Raimondi College",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "30/01/2027|Kinetic Squash Club 6|North District Sports Association 3|HK Squash Centre|17:00:00": {
+      "week": "week 10",
+      "date": "30/01/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "North District Sports Association 3",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "30/01/2027|Kwai Tsing District Squash Club D15|French Boast Club|HK Squash Centre|17:00:00": {
+      "week": "week 10",
+      "date": "30/01/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "French Boast Club",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "30/01/2027|Hong Kong International School D15|Grit Squash-1|HK Squash Centre|17:00:00": {
+      "week": "week 10",
+      "date": "30/01/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "Grit Squash-1",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "30/01/2027|Electrify Squash Club D15|The Zero Squash Club D15B|HK Squash Centre|17:00:00": {
+      "week": "week 10",
+      "date": "30/01/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/02/2027|Raimondi College|The Zero Squash Club D15B|HK Squash Centre|17:00:00": {
+      "week": "week 11",
+      "date": "13/02/2027",
+      "team1": "Raimondi College",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/02/2027|Electrify Squash Club D15|Grit Squash-1|HK Squash Centre|17:00:00": {
+      "week": "week 11",
+      "date": "13/02/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "Grit Squash-1",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/02/2027|Hong Kong International School D15|French Boast Club|HK Squash Centre|17:00:00": {
+      "week": "week 11",
+      "date": "13/02/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "French Boast Club",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/02/2027|Kwai Tsing District Squash Club D15|North District Sports Association 3|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 11",
+      "date": "13/02/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "North District Sports Association 3",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/02/2027|Kinetic Squash Club 6|Star Squash Club 4|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 11",
+      "date": "13/02/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "Star Squash Club 4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/02/2027|Kinetic Squash Club 6|Raimondi College|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 12",
+      "date": "20/02/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "Raimondi College",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/02/2027|Star Squash Club 4|Kwai Tsing District Squash Club D15|Java Road Sports Centre|17:00:00": {
+      "week": "week 12",
+      "date": "20/02/2027",
+      "team1": "Star Squash Club 4",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "Java Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/02/2027|North District Sports Association 3|Hong Kong International School D15|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 12",
+      "date": "20/02/2027",
+      "team1": "North District Sports Association 3",
+      "team2": "Hong Kong International School D15",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/02/2027|French Boast Club|Electrify Squash Club D15|Sir Denys Roberts Squash Court|17:00:00": {
+      "week": "week 12",
+      "date": "20/02/2027",
+      "team1": "French Boast Club",
+      "team2": "Electrify Squash Club D15",
+      "venue": "Sir Denys Roberts Squash Court",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/02/2027|Grit Squash-1|The Zero Squash Club D15B|HK Squash Centre|17:00:00": {
+      "week": "week 12",
+      "date": "20/02/2027",
+      "team1": "Grit Squash-1",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "27/02/2027|Raimondi College|Grit Squash-1|HK Squash Centre|17:00:00": {
+      "week": "week 13",
+      "date": "27/02/2027",
+      "team1": "Raimondi College",
+      "team2": "Grit Squash-1",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "27/02/2027|The Zero Squash Club D15B|French Boast Club|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 13",
+      "date": "27/02/2027",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "French Boast Club",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "27/02/2027|Electrify Squash Club D15|North District Sports Association 3|HK Squash Centre|17:00:00": {
+      "week": "week 13",
+      "date": "27/02/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "North District Sports Association 3",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "27/02/2027|Hong Kong International School D15|Star Squash Club 4|HK Squash Centre|17:00:00": {
+      "week": "week 13",
+      "date": "27/02/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "Star Squash Club 4",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "27/02/2027|Kwai Tsing District Squash Club D15|Kinetic Squash Club 6|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 13",
+      "date": "27/02/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "06/03/2027|Kwai Tsing District Squash Club D15|Raimondi College|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 14",
+      "date": "06/03/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "Raimondi College",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "06/03/2027|Kinetic Squash Club 6|Hong Kong International School D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 14",
+      "date": "06/03/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "Hong Kong International School D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "06/03/2027|Star Squash Club 4|Electrify Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 14",
+      "date": "06/03/2027",
+      "team1": "Star Squash Club 4",
+      "team2": "Electrify Squash Club D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "06/03/2027|North District Sports Association 3|The Zero Squash Club D15B|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 14",
+      "date": "06/03/2027",
+      "team1": "North District Sports Association 3",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "06/03/2027|French Boast Club|Grit Squash-1|Sir Denys Roberts Squash Court|17:00:00": {
+      "week": "week 14",
+      "date": "06/03/2027",
+      "team1": "French Boast Club",
+      "team2": "Grit Squash-1",
+      "venue": "Sir Denys Roberts Squash Court",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/03/2027|Raimondi College|French Boast Club|Java Road Sports Centre|17:00:00": {
+      "week": "week 15",
+      "date": "13/03/2027",
+      "team1": "Raimondi College",
+      "team2": "French Boast Club",
+      "venue": "Java Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/03/2027|Grit Squash-1|North District Sports Association 3|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 15",
+      "date": "13/03/2027",
+      "team1": "Grit Squash-1",
+      "team2": "North District Sports Association 3",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/03/2027|The Zero Squash Club D15B|Star Squash Club 4|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 15",
+      "date": "13/03/2027",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Star Squash Club 4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/03/2027|Electrify Squash Club D15|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
+      "week": "week 15",
+      "date": "13/03/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "HK Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "13/03/2027|Hong Kong International School D15|Kwai Tsing District Squash Club D15|Smithfield Road Sports Centre|17:00:00": {
+      "week": "week 15",
+      "date": "13/03/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/03/2027|Hong Kong International School D15|Raimondi College|Java Road Sports Centre|17:00:00": {
+      "week": "week 16",
+      "date": "20/03/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "Raimondi College",
+      "venue": "Java Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/03/2027|Kwai Tsing District Squash Club D15|Electrify Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 16",
+      "date": "20/03/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "Electrify Squash Club D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/03/2027|Kinetic Squash Club 6|The Zero Squash Club D15B|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 16",
+      "date": "20/03/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/03/2027|Star Squash Club 4|Grit Squash-1|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 16",
+      "date": "20/03/2027",
+      "team1": "Star Squash Club 4",
+      "team2": "Grit Squash-1",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "20/03/2027|North District Sports Association 3|French Boast Club|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 16",
+      "date": "20/03/2027",
+      "team1": "North District Sports Association 3",
+      "team2": "French Boast Club",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "03/04/2027|Raimondi College|North District Sports Association 3|Smithfield Road Sports Centre|17:00:00": {
+      "week": "week 17",
+      "date": "03/04/2027",
+      "team1": "Raimondi College",
+      "team2": "North District Sports Association 3",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "03/04/2027|French Boast Club|Star Squash Club 4|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 17",
+      "date": "03/04/2027",
+      "team1": "French Boast Club",
+      "team2": "Star Squash Club 4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "03/04/2027|Grit Squash-1|Kinetic Squash Club 6|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 17",
+      "date": "03/04/2027",
+      "team1": "Grit Squash-1",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "03/04/2027|The Zero Squash Club D15B|Kwai Tsing District Squash Club D15|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 17",
+      "date": "03/04/2027",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "03/04/2027|Electrify Squash Club D15|Hong Kong International School D15|Harbour Road Sports Centre|17:00:00": {
+      "week": "week 17",
+      "date": "03/04/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "Hong Kong International School D15",
+      "venue": "Harbour Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "10/04/2027|Electrify Squash Club D15|Raimondi College|Harbour Road Sports Centre|17:00:00": {
+      "week": "week 18",
+      "date": "10/04/2027",
+      "team1": "Electrify Squash Club D15",
+      "team2": "Raimondi College",
+      "venue": "Harbour Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "10/04/2027|Hong Kong International School D15|The Zero Squash Club D15B|Smithfield Road Sports Centre|17:00:00": {
+      "week": "week 18",
+      "date": "10/04/2027",
+      "team1": "Hong Kong International School D15",
+      "team2": "The Zero Squash Club D15B",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "10/04/2027|Kwai Tsing District Squash Club D15|Grit Squash-1|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 18",
+      "date": "10/04/2027",
+      "team1": "Kwai Tsing District Squash Club D15",
+      "team2": "Grit Squash-1",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "10/04/2027|Kinetic Squash Club 6|French Boast Club|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 18",
+      "date": "10/04/2027",
+      "team1": "Kinetic Squash Club 6",
+      "team2": "French Boast Club",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "10/04/2027|Star Squash Club 4|North District Sports Association 3|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 18",
+      "date": "10/04/2027",
+      "team1": "Star Squash Club 4",
+      "team2": "North District Sports Association 3",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "17/04/2027|Raimondi College|Star Squash Club 4|Harbour Road Sports Centre|17:00:00": {
+      "week": "week 19",
+      "date": "17/04/2027",
+      "team1": "Raimondi College",
+      "team2": "Star Squash Club 4",
+      "venue": "Harbour Road Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "17/04/2027|North District Sports Association 3|Kinetic Squash Club 6|Pei Ho Street Sports Centre|17:00:00": {
+      "week": "week 19",
+      "date": "17/04/2027",
+      "team1": "North District Sports Association 3",
+      "team2": "Kinetic Squash Club 6",
+      "venue": "Pei Ho Street Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "17/04/2027|French Boast Club|Kwai Tsing District Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 19",
+      "date": "17/04/2027",
+      "team1": "French Boast Club",
+      "team2": "Kwai Tsing District Squash Club D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "17/04/2027|Grit Squash-1|Hong Kong International School D15|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 19",
+      "date": "17/04/2027",
+      "team1": "Grit Squash-1",
+      "team2": "Hong Kong International School D15",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "17:00:00",
+      "result": ""
+    },
+    "17/04/2027|The Zero Squash Club D15B|Electrify Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
+      "week": "week 19",
+      "date": "17/04/2027",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Electrify Squash Club D15",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "17:00:00",
+      "result": ""
+    }
+  },
+  "L4": {
+    "23/10/2026|Squashathon Ladies|Kwai Tsing District Squash Club L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": "2-2(3-0,2-3,3-0,0-3)"
+    },
+    "23/10/2026|Hong Kong Cricket Club L4|Hong Kong Cricket Club L4 Rockettes|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": "3-1(0-3,3-0,3-0,3-0)"
+    },
+    "23/10/2026|Hong Kong Football Club L4A|Hong Kong Football Club L4B|Hong Kong Football Club|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": "4-0(3-0,3-0,3-0,3-0)"
+    },
+    "23/10/2026|JESSICA L4|JESSICA L4 Mochis|HK Squash Centre|19:00:00": {
+      "week": "week 1",
+      "date": "23/10/2026",
+      "team1": "JESSICA L4",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": "2-2(0-3,3-0,3-0,0-3)"
+    },
+    "30/10/2026|Hong Kong Cricket Club L4 Rockettes|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/10/2026|JESSICA L4 Mochis|Squashathon Ladies|HK Squash Centre|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Squashathon Ladies",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/10/2026|Hong Kong Football Club L4B|JESSICA L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "JESSICA L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/10/2026|Hong Kong Cricket Club L4|Hong Kong Football Club L4A|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "06/11/2026|Hong Kong Football Club L4A|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "06/11/2026|JESSICA L4|Hong Kong Cricket Club L4|HK Squash Centre|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "06/11/2026|Squashathon Ladies|Hong Kong Football Club L4B|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "06/11/2026|Kwai Tsing District Squash Club L4|JESSICA L4 Mochis|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "13/11/2026|Hong Kong Cricket Club L4 Rockettes|JESSICA L4 Mochis|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 4",
+      "date": "13/11/2026",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "13/11/2026|Hong Kong Football Club L4B|Kwai Tsing District Squash Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 4",
+      "date": "13/11/2026",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "13/11/2026|Hong Kong Cricket Club L4|Squashathon Ladies|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 4",
+      "date": "13/11/2026",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Squashathon Ladies",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "13/11/2026|Hong Kong Football Club L4A|JESSICA L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 4",
+      "date": "13/11/2026",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "JESSICA L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "20/11/2026|JESSICA L4|Hong Kong Cricket Club L4 Rockettes|HK Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "20/11/2026|Squashathon Ladies|Hong Kong Football Club L4A|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "20/11/2026|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "20/11/2026|JESSICA L4 Mochis|Hong Kong Football Club L4B|HK Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "27/11/2026|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club L4B|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 6",
+      "date": "27/11/2026",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "27/11/2026|JESSICA L4 Mochis|Hong Kong Cricket Club L4|Harbour Road Sports Centre|19:00:00": {
+      "week": "week 6",
+      "date": "27/11/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Harbour Road Sports Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "27/11/2026|Hong Kong Football Club L4A|Kwai Tsing District Squash Club L4|HK Squash Centre|19:00:00": {
+      "week": "week 6",
+      "date": "27/11/2026",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "27/11/2026|JESSICA L4|Squashathon Ladies|HK Squash Centre|19:00:00": {
+      "week": "week 6",
+      "date": "27/11/2026",
+      "team1": "JESSICA L4",
+      "team2": "Squashathon Ladies",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "11/12/2026|Squashathon Ladies|Hong Kong Cricket Club L4 Rockettes|HK Squash Centre|19:00:00": {
+      "week": "week 7",
+      "date": "11/12/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "11/12/2026|Kwai Tsing District Squash Club L4|JESSICA L4|Kwun Chung Sports Centre|19:00:00": {
+      "week": "week 7",
+      "date": "11/12/2026",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "JESSICA L4",
+      "venue": "Kwun Chung Sports Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "11/12/2026|JESSICA L4 Mochis|Hong Kong Football Club L4A|HK Squash Centre|19:00:00": {
+      "week": "week 7",
+      "date": "11/12/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "11/12/2026|Hong Kong Football Club L4B|Hong Kong Cricket Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 7",
+      "date": "11/12/2026",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "18/12/2026|Kwai Tsing District Squash Club L4|Squashathon Ladies|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 8",
+      "date": "18/12/2026",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "Squashathon Ladies",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "18/12/2026|Hong Kong Cricket Club L4 Rockettes|Hong Kong Cricket Club L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 8",
+      "date": "18/12/2026",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "18/12/2026|Hong Kong Football Club L4B|Hong Kong Football Club L4A|Hong Kong Football Club|19:00:00": {
+      "week": "week 8",
+      "date": "18/12/2026",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "18/12/2026|JESSICA L4 Mochis|JESSICA L4|HK Squash Centre|19:00:00": {
+      "week": "week 8",
+      "date": "18/12/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "JESSICA L4",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "08/01/2027|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club L4 Rockettes|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 9",
+      "date": "08/01/2027",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "08/01/2027|Squashathon Ladies|JESSICA L4 Mochis|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 9",
+      "date": "08/01/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "08/01/2027|JESSICA L4|Hong Kong Football Club L4B|HK Squash Centre|19:00:00": {
+      "week": "week 9",
+      "date": "08/01/2027",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "08/01/2027|Hong Kong Cricket Club L4|Hong Kong Football Club L4A|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 9",
+      "date": "08/01/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "15/01/2027|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club L4A|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 10",
+      "date": "15/01/2027",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "15/01/2027|Hong Kong Cricket Club L4|JESSICA L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 10",
+      "date": "15/01/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "JESSICA L4",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "15/01/2027|Hong Kong Football Club L4B|Squashathon Ladies|Hong Kong Football Club|19:00:00": {
+      "week": "week 10",
+      "date": "15/01/2027",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Squashathon Ladies",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "15/01/2027|JESSICA L4 Mochis|Kwai Tsing District Squash Club L4|HK Squash Centre|19:00:00": {
+      "week": "week 10",
+      "date": "15/01/2027",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "22/01/2027|JESSICA L4 Mochis|Hong Kong Cricket Club L4 Rockettes|HK Squash Centre|19:00:00": {
+      "week": "week 11",
+      "date": "22/01/2027",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "22/01/2027|Kwai Tsing District Squash Club L4|Hong Kong Football Club L4B|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 11",
+      "date": "22/01/2027",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "22/01/2027|Squashathon Ladies|Hong Kong Cricket Club L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 11",
+      "date": "22/01/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "22/01/2027|JESSICA L4|Hong Kong Football Club L4A|HK Squash Centre|19:00:00": {
+      "week": "week 11",
+      "date": "22/01/2027",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "29/01/2027|Hong Kong Cricket Club L4 Rockettes|JESSICA L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 12",
+      "date": "29/01/2027",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "JESSICA L4",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "29/01/2027|Hong Kong Football Club L4A|Squashathon Ladies|Hong Kong Football Club|19:00:00": {
+      "week": "week 12",
+      "date": "29/01/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Squashathon Ladies",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "29/01/2027|Hong Kong Cricket Club L4|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 12",
+      "date": "29/01/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "29/01/2027|Hong Kong Football Club L4B|JESSICA L4 Mochis|Hong Kong Football Club|19:00:00": {
+      "week": "week 12",
+      "date": "29/01/2027",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/02/2027|Hong Kong Football Club L4B|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club|19:00:00": {
+      "week": "week 13",
+      "date": "19/02/2027",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/02/2027|Hong Kong Cricket Club L4|JESSICA L4 Mochis|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 13",
+      "date": "19/02/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/02/2027|Kwai Tsing District Squash Club L4|Hong Kong Football Club L4A|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 13",
+      "date": "19/02/2027",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/02/2027|Squashathon Ladies|JESSICA L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 13",
+      "date": "19/02/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "JESSICA L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "26/02/2027|Hong Kong Cricket Club L4 Rockettes|Squashathon Ladies|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 14",
+      "date": "26/02/2027",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Squashathon Ladies",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "26/02/2027|JESSICA L4|Kwai Tsing District Squash Club L4|HK Squash Centre|19:00:00": {
+      "week": "week 14",
+      "date": "26/02/2027",
+      "team1": "JESSICA L4",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "26/02/2027|Hong Kong Football Club L4A|JESSICA L4 Mochis|Hong Kong Football Club|19:00:00": {
+      "week": "week 14",
+      "date": "26/02/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "26/02/2027|Hong Kong Cricket Club L4|Hong Kong Football Club L4B|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 14",
+      "date": "26/02/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "05/03/2027|Squashathon Ladies|Kwai Tsing District Squash Club L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 15",
+      "date": "05/03/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "05/03/2027|Hong Kong Cricket Club L4|Hong Kong Cricket Club L4 Rockettes|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 15",
+      "date": "05/03/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "05/03/2027|Hong Kong Football Club L4A|Hong Kong Football Club L4B|Hong Kong Football Club|19:00:00": {
+      "week": "week 15",
+      "date": "05/03/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "05/03/2027|JESSICA L4|JESSICA L4 Mochis|HK Squash Centre|19:00:00": {
+      "week": "week 15",
+      "date": "05/03/2027",
+      "team1": "JESSICA L4",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "12/03/2027|Hong Kong Cricket Club L4 Rockettes|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 16",
+      "date": "12/03/2027",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "12/03/2027|JESSICA L4 Mochis|Squashathon Ladies|HK Squash Centre|19:00:00": {
+      "week": "week 16",
+      "date": "12/03/2027",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Squashathon Ladies",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "12/03/2027|Hong Kong Football Club L4B|JESSICA L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 16",
+      "date": "12/03/2027",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "JESSICA L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "12/03/2027|Hong Kong Football Club L4A|Hong Kong Cricket Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 16",
+      "date": "12/03/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/03/2027|Hong Kong Football Club L4A|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club|19:00:00": {
+      "week": "week 17",
+      "date": "19/03/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/03/2027|JESSICA L4|Hong Kong Cricket Club L4|HK Squash Centre|19:00:00": {
+      "week": "week 17",
+      "date": "19/03/2027",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "HK Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/03/2027|Squashathon Ladies|Hong Kong Football Club L4B|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 17",
+      "date": "19/03/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "19/03/2027|Kwai Tsing District Squash Club L4|JESSICA L4 Mochis|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 17",
+      "date": "19/03/2027",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "09/04/2027|Hong Kong Cricket Club L4 Rockettes|JESSICA L4 Mochis|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 18",
+      "date": "09/04/2027",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "09/04/2027|Hong Kong Football Club L4B|Kwai Tsing District Squash Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 18",
+      "date": "09/04/2027",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "09/04/2027|Hong Kong Cricket Club L4|Squashathon Ladies|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 18",
+      "date": "09/04/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Squashathon Ladies",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "09/04/2027|Hong Kong Football Club L4A|JESSICA L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 18",
+      "date": "09/04/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "JESSICA L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "16/04/2027|JESSICA L4|Hong Kong Cricket Club L4 Rockettes|Smithfield Road Sports Centre|19:00:00": {
+      "week": "week 19",
+      "date": "16/04/2027",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "16/04/2027|Squashathon Ladies|Hong Kong Football Club L4A|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 19",
+      "date": "16/04/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "16/04/2027|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 19",
+      "date": "16/04/2027",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "16/04/2027|JESSICA L4 Mochis|Hong Kong Football Club L4B|Smithfield Road Sports Centre|19:00:00": {
+      "week": "week 19",
+      "date": "16/04/2027",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "23/04/2027|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club L4B|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 20",
+      "date": "23/04/2027",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Hong Kong Football Club L4B",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "23/04/2027|Hong Kong Cricket Club L4|JESSICA L4 Mochis|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 20",
+      "date": "23/04/2027",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "JESSICA L4 Mochis",
+      "venue": "Hong Kong Cricket Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "23/04/2027|Hong Kong Football Club L4A|Kwai Tsing District Squash Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 20",
+      "date": "23/04/2027",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "23/04/2027|JESSICA L4|Squashathon Ladies|Smithfield Road Sports Centre|19:00:00": {
+      "week": "week 20",
+      "date": "23/04/2027",
+      "team1": "JESSICA L4",
+      "team2": "Squashathon Ladies",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/04/2027|Squashathon Ladies|Hong Kong Cricket Club L4 Rockettes|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 21",
+      "date": "30/04/2027",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/04/2027|Kwai Tsing District Squash Club L4|JESSICA L4|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 21",
+      "date": "30/04/2027",
+      "team1": "Kwai Tsing District Squash Club L4",
+      "team2": "JESSICA L4",
+      "venue": "Cornwall Street Squash Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/04/2027|JESSICA L4 Mochis|Hong Kong Football Club L4A|Smithfield Road Sports Centre|19:00:00": {
+      "week": "week 21",
+      "date": "30/04/2027",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Football Club L4A",
+      "venue": "Smithfield Road Sports Centre",
+      "time": "19:00:00",
+      "result": ""
+    },
+    "30/04/2027|Hong Kong Football Club L4B|Hong Kong Cricket Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 21",
+      "date": "30/04/2027",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Hong Kong Cricket Club L4",
+      "venue": "Hong Kong Football Club",
+      "time": "19:00:00",
+      "result": ""
+    }
+  }
+}

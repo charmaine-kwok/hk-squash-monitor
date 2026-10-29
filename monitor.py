@@ -567,6 +567,22 @@ def main():
         current_results
     )
 
+    os.makedirs(
+        "docs",
+        exist_ok=True,
+    )
 
+    with open(
+        "docs/schedule.json",
+        "w",
+        encoding="utf-8",
+    ) as file:
+        json.dump(
+            current_results,
+            file,
+            indent=2,
+            ensure_ascii=False,
+        )
+        
 if __name__ == "__main__":
     main()
