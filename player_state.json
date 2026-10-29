@@ -44,6 +44,40 @@
         "matches_played": 1
       }
     },
+    "Grit Squash-1": {
+      "36417": {
+        "name": "Wong Hagios",
+        "average": 12.0,
+        "matches_played": 1
+      }
+    },
+    "Electrify Squash Club D15": {
+      "35827": {
+        "name": "Lau Man Kit",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "35351": {
+        "name": "Lai Man Po",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "34708": {
+        "name": "Cheng Ho Yan",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "36666": {
+        "name": "Tang Ranqi",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "36061": {
+        "name": "Ho Hoi Yan",
+        "average": 15.0,
+        "matches_played": 1
+      }
+    },
     "French Boast Club": {
       "36922": {
         "name": "Yim Tsz Kin",
@@ -152,10 +186,25 @@
         "matches_played": 1
       }
     },
-    "Electrify Squash Club D15": {
-      "35827": {
-        "name": "Lau Man Kit",
-        "average": 27.0,
+    "Star Squash Club 4": {
+      "36931": {
+        "name": "TSOI Hiu Tung",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "36934": {
+        "name": "Yue Hung Yuen",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "35846": {
+        "name": "Chan Yui Ching Kayden",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "35372": {
+        "name": "Yang Zi Kang",
+        "average": 3.0,
         "matches_played": 1
       }
     },
@@ -178,6 +227,11 @@
       "35272": {
         "name": "Wei Susan",
         "average": 18.0,
+        "matches_played": 1
+      },
+      "36899": {
+        "name": "Chan Man Wai",
+        "average": 15.0,
         "matches_played": 1
       }
     }

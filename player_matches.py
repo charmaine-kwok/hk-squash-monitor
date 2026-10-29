@@ -189,7 +189,7 @@ def get_players(league_name):
                 possible_points = tokens[next_index]
 
                 if re.fullmatch(
-                    r"-?\d+**\\.**\d+",
+                    r"-?\d+\.\d+",
                     possible_points,
                 ):
 

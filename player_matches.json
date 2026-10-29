@@ -39,18 +39,72 @@
           "score": "CR",
           "effective_score": "3-0",
           "result_type": "concession",
-          "player2": null,
           "player1": "Kwok Wai Yin",
-          "player1_hks_no": "35441"
+          "player1_hks_no": "35441",
+          "player2": null
         },
         {
           "position": 5,
           "score": "CR",
           "effective_score": "3-0",
           "result_type": "concession",
-          "player2": null,
           "player1": "Lau Ka Chun",
-          "player1_hks_no": "36529"
+          "player1_hks_no": "36529",
+          "player2": null
+        }
+      ]
+    },
+    "24/10/2026|Grit Squash-1|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
+      "week": "week 1",
+      "date": "24/10/2026",
+      "team1": "Grit Squash-1",
+      "team2": "Electrify Squash Club D15",
+      "team_result": "0-5(0-3,CR,CR,CR,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Wong Hagios",
+          "player1_hks_no": "36417",
+          "player2": "Lau Man Kit",
+          "player2_hks_no": "35827",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": null,
+          "player2": "Lai Man Po",
+          "player2_hks_no": "35351"
+        },
+        {
+          "position": 3,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": null,
+          "player2": "Cheng Ho Yan",
+          "player2_hks_no": "34708"
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": null,
+          "player2": "Tang Ranqi",
+          "player2_hks_no": "36666"
+        },
+        {
+          "position": 5,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": null,
+          "player2": "Ho Hoi Yan",
+          "player2_hks_no": "36061"
         }
       ]
     },
@@ -162,54 +216,6 @@
         }
       ]
     },
-    "24/10/2026|Grit Squash-1|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
-      "week": "week 1",
-      "date": "24/10/2026",
-      "team1": "Grit Squash-1",
-      "team2": "Electrify Squash Club D15",
-      "team_result": "0-5(0-3,CR,CR,CR,CR)",
-      "individual_matches": [
-        {
-          "position": 1,
-          "player1": null,
-          "player2": "Lau Man Kit",
-          "score": "0-3",
-          "status": "unresolved"
-        },
-        {
-          "position": 2,
-          "score": "CR",
-          "effective_score": "3-0",
-          "result_type": "concession",
-          "player2": null,
-          "player1": null
-        },
-        {
-          "position": 3,
-          "score": "CR",
-          "effective_score": "3-0",
-          "result_type": "concession",
-          "player2": null,
-          "player1": null
-        },
-        {
-          "position": 4,
-          "score": "CR",
-          "effective_score": "3-0",
-          "result_type": "concession",
-          "player2": null,
-          "player1": null
-        },
-        {
-          "position": 5,
-          "score": "CR",
-          "effective_score": "3-0",
-          "result_type": "concession",
-          "player2": null,
-          "player1": null
-        }
-      ]
-    },
     "24/10/2026|Star Squash Club 4|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
       "week": "week 1",
       "date": "24/10/2026",
@@ -219,39 +225,48 @@
       "individual_matches": [
         {
           "position": 1,
-          "player1": null,
+          "player1": "TSOI Hiu Tung",
+          "player1_hks_no": "36931",
           "player2": "Man Vincent Winn Siae",
+          "player2_hks_no": "35291",
           "score": "0-3",
-          "status": "unresolved"
+          "status": "confirmed"
         },
         {
           "position": 2,
-          "player1": null,
+          "player1": "Yue Hung Yuen",
+          "player1_hks_no": "36934",
           "player2": "Poon Ka Hei Joshua",
+          "player2_hks_no": "36670",
           "score": "3-0",
-          "status": "unresolved"
+          "status": "confirmed"
         },
         {
           "position": 3,
-          "player1": null,
+          "player1": "Chan Yui Ching Kayden",
+          "player1_hks_no": "35846",
           "player2": "HO KA IN",
+          "player2_hks_no": "36897",
           "score": "3-1",
-          "status": "unresolved"
+          "status": "confirmed"
         },
         {
           "position": 4,
-          "player1": null,
+          "player1": "Yang Zi Kang",
+          "player1_hks_no": "35372",
           "player2": "Wei Susan",
+          "player2_hks_no": "35272",
           "score": "0-3",
-          "status": "unresolved"
+          "status": "confirmed"
         },
         {
           "position": 5,
           "score": "CR",
           "effective_score": "3-0",
           "result_type": "concession",
-          "player2": null,
-          "player1": null
+          "player1": null,
+          "player2": "Chan Man Wai",
+          "player2_hks_no": "36899"
         }
       ]
     }
