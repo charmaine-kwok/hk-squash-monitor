@@ -346,6 +346,28 @@
             display: block;
         }
 
+        .selected-team {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .selected-team::before {
+            content: "•";
+            margin-right: 6px;
+            color: #2563eb;
+        }
+
+        .team.team2.selected-team::before {
+            content: "";
+            margin: 0;
+        }
+
+        .team.team2.selected-team::after {
+            content: "•";
+            margin-left: 6px;
+            color: #2563eb;
+        }
+
         .schedule-card {
             background: white;
             border: 1px solid #e5e7eb;
@@ -1627,6 +1649,13 @@
                             )
                             : "Pending";
 
+                    const team1Selected =
+                        selectedTeam !== "all"
+                        && match.team1 === selectedTeam;
+
+                    const team2Selected =
+                        selectedTeam !== "all"
+                        && match.team2 === selectedTeam;
 
                     card.innerHTML = `
 
@@ -1643,12 +1672,13 @@
 
             <div class="schedule-teams">
 
-                <div class="team">
-
+                <div class="team ${team1Selected
+                            ? "selected-team"
+                            : ""
+                        }">
                     ${escapeHtml(
-                        match.team1
-                    )}
-
+                            match.team1
+                        )}
                 </div>
 
                 <div class="${match.result
@@ -1665,12 +1695,13 @@
 
                 </div>
 
-                <div class="team team2">
-
+                <div class="team team2 ${team2Selected
+                            ? "selected-team"
+                            : ""
+                        }">
                     ${escapeHtml(
                             match.team2
                         )}
-
                 </div>
 
             </div>
