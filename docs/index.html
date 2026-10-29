@@ -47,10 +47,32 @@
             color: #6b7280;
         }
 
+        .clear-filters {
+            height: 42px;
+            padding: 0 16px;
+
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+
+            background: white;
+            color: #4b5563;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+        .clear-filters:hover {
+            background: #f9fafb;
+        }
+
         .filters {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
+
+            align-items: flex-end;
 
             margin-bottom: 24px;
         }
@@ -536,6 +558,12 @@
                     </select>
                 </div>
 
+                <div class="filter">
+                    <button type="button" id="clearMatchFilters" class="clear-filters">
+                        Clear filters
+                    </button>
+                </div>
+
             </div>
 
             <div id="summary" class="summary"></div>
@@ -583,6 +611,11 @@
                     </select>
                 </div>
 
+                <div class="filter">
+                    <button type="button" id="clearScheduleFilters" class="clear-filters">
+                        Clear filters
+                    </button>
+                </div>
             </div>
 
             <div id="scheduleSummary" class="summary"></div>
@@ -600,6 +633,15 @@
         let data = {};
         let scheduleData = {};
 
+        const clearMatchFilters =
+            document.getElementById(
+                "clearMatchFilters"
+            );
+
+        const clearScheduleFilters =
+            document.getElementById(
+                "clearScheduleFilters"
+            );
 
         const leagueFilter =
             document.getElementById(
@@ -2168,6 +2210,39 @@
             renderSchedule
         );
 
+        clearMatchFilters.addEventListener(
+            "click",
+            () => {
+
+                weekFilter.value =
+                    "all";
+
+                teamFilter.value =
+                    "all";
+
+                rankingPopup.hidden =
+                    true;
+
+                renderMatches();
+
+            }
+        );
+
+
+        clearScheduleFilters.addEventListener(
+            "click",
+            () => {
+
+                scheduleWeekFilter.value =
+                    "all";
+
+                scheduleTeamFilter.value =
+                    "all";
+
+                renderSchedule();
+
+            }
+        );
 
         async function loadRanking(memberId) {
             if (rankingCache.has(memberId)) {
