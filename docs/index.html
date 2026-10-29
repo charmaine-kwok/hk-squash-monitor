@@ -1257,11 +1257,30 @@
 
             if (isConcession) {
 
-                player2 = `
+                if (
+                    match.player1
+                    && !match.player2
+                ) {
+
+                    player2 = `
             <span class="unresolved">
                 No opponent
             </span>
         `;
+
+                }
+                else if (
+                    !match.player1
+                    && match.player2
+                ) {
+
+                    player1 = `
+            <span class="unresolved">
+                No opponent
+            </span>
+        `;
+
+                }
 
                 score = `
             <span class="cr">
