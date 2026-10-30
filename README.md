@@ -4,6 +4,22 @@ A lightweight Python automation project that monitors Hong Kong Squash league re
 
 It also provides on-demand Telegram commands for checking scores and viewing the latest league standings.
 
+## Why I built this
+
+Hong Kong Squash publishes league fixtures, team results and player information across several pages. Checking for updates, following a particular team, and identifying individual player results can therefore involve navigating between multiple pages and manually looking up information.
+
+I built the HK Squash Match Tracker to make this easier and more convenient by bringing the information I regularly check into one place.
+
+The project currently:
+
+- Monitors selected Hong Kong Squash Main League divisions for newly published or corrected results
+- Reconstructs individual player matchups from official team results and player data
+- Provides filters by division, week and team, making it easier to find relevant fixtures and player results
+- Displays live player ranking information by hovering over or tapping a player's name, without needing to manually search for or copy and paste an HKS player number
+- Sends Telegram notifications automatically when new league results are published
+
+This is an independent personal project and is not affiliated with the Squash Association of Hong Kong, China.
+
 ## Live Match Viewer
 
 Individual player match results can be viewed here:
