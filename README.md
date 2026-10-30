@@ -139,6 +139,31 @@ monitor.py
      └── docs/player_matches.json
 ```
 
+## Ranking Cache
+
+Live player ranking lookups use two cache layers:
+
+- Browser cache: 5 minutes
+- Cloudflare Workers KV: 24 hours
+
+When a ranking is requested, the browser may reuse a recent response for up to 5 minutes. After that, the Cloudflare Worker checks the KV cache. If the player's ranking is still cached, it is returned without requesting HK Squash again.
+
+Only when the 24-hour KV entry expires does the Worker fetch fresh ranking data from HK Squash and store the updated result again.
+
+```text
+Browser
+  ↓
+5-minute browser cache
+  ↓
+Cloudflare Worker
+  ↓
+24-hour Workers KV cache
+  ↓
+HK Squash ranking service
+```
+
+This reduces repeated requests to the HK Squash website while keeping ranking information reasonably up to date.
+
 ## Telegram Commands
 
 ### `/start`
