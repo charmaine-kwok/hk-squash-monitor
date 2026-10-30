@@ -2474,6 +2474,15 @@
         document.addEventListener(
             "mouseover",
             event => {
+
+                if (
+                    !window.matchMedia(
+                        "(hover: hover) and (pointer: fine)"
+                    ).matches
+                ) {
+                    return;
+                }
+
                 const button =
                     event.target.closest(
                         ".player-link"
@@ -2484,6 +2493,65 @@
                 }
 
                 showRanking(button);
+            }
+        );
+
+
+        // Desktop hover-out: close when leaving the player/popup area.
+        document.addEventListener(
+            "mouseout",
+            event => {
+
+                if (
+                    !window.matchMedia(
+                        "(hover: hover) and (pointer: fine)"
+                    ).matches
+                ) {
+                    return;
+                }
+
+                const button =
+                    event.target.closest(
+                        ".player-link"
+                    );
+
+                if (!button) {
+                    return;
+                }
+
+                const nextTarget =
+                    event.relatedTarget;
+
+                if (
+                    nextTarget
+                    && (
+                        nextTarget.closest?.(
+                            ".player-link"
+                        )
+                        || nextTarget.closest?.(
+                            "#rankingPopup"
+                        )
+                    )
+                ) {
+                    return;
+                }
+
+                rankingPopup.hidden = true;
+            }
+        );
+
+
+        rankingPopup.addEventListener(
+            "mouseleave",
+            () => {
+
+                if (
+                    window.matchMedia(
+                        "(hover: hover) and (pointer: fine)"
+                    ).matches
+                ) {
+                    rankingPopup.hidden = true;
+                }
             }
         );
 
