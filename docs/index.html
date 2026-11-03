@@ -185,6 +185,18 @@
             align-items: center;
         }
 
+        .ranking-up {
+            color: #16a34a;
+        }
+
+        .ranking-down {
+            color: #dc2626;
+        }
+
+        .ranking-neutral {
+            color: #6b7280;
+        }
+
         .team {
             font-size: 17px;
             font-weight: 600;
@@ -2432,16 +2444,28 @@
             `;
 
             try {
+                let changeText = "---";
+                let changeClass = "ranking-neutral";
+
                 const player =
                     await loadRanking(memberId);
 
                 const change =
-                    Number(player.change ?? 0);
+                    Number(player.change);
 
-                const changeText =
-                    change > 0
-                        ? `+${change}`
-                        : String(change);
+                if (Number.isFinite(change)) {
+                    if (change > 0) {
+                        changeText = `▲ ${change}`;
+                        changeClass = "ranking-up";
+                    }
+                    else if (change < 0) {
+                        changeText = `▼ ${Math.abs(change)}`;
+                        changeClass = "ranking-down";
+                    }
+                    else {
+                        changeText = "No change";
+                    }
+                }
 
                 rankingPopup.innerHTML = `
                     <div class="ranking-popup-title">
@@ -2458,7 +2482,7 @@
                     }
 
                     <div class="ranking-popup-row">
-                        HKS ${escapeHtml(player.memberId)}
+                        HKS No. ${escapeHtml(player.memberId)}
                     </div>
 
                     <div class="ranking-popup-row">
@@ -2476,8 +2500,8 @@
                     </div>
 
                     <div class="ranking-popup-row">
-                        Change:
-                        <strong>
+                        Ranking movement:
+                        <strong class="${changeClass}">
                             ${escapeHtml(changeText)}
                         </strong>
                     </div>
