@@ -2450,8 +2450,15 @@
                 const player =
                     await loadRanking(memberId);
 
+                const rawChange =
+                    player.change;
+
                 const change =
-                    Number(player.change);
+                    rawChange === null
+                    || rawChange === undefined
+                    || rawChange === ""
+                        ? NaN
+                        : Number(rawChange);
 
                 if (Number.isFinite(change)) {
                     if (change > 0) {
