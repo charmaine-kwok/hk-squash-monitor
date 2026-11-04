@@ -52,6 +52,7 @@ jobs:
             results.json \
             player_matches.json \
             player_state.json \
+            roster_history.json \
             docs/player_matches.json \
             docs/schedule.json
 

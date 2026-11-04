@@ -284,6 +284,11 @@
         "name": "Wong Chi Chi",
         "average": 12.0,
         "matches_played": 1
+      },
+      "29719": {
+        "name": "Chung Wai Ting",
+        "average": 18.0,
+        "matches_played": 1
       }
     },
     "Hong Kong Cricket Club L4": {
@@ -321,6 +326,11 @@
         "name": "Ng Aurelia Kiu Hei",
         "average": 21.0,
         "matches_played": 1
+      },
+      "34078": {
+        "name": "Adjemian Kasey",
+        "average": 12.0,
+        "matches_played": 1
       }
     },
     "Hong Kong Cricket Club L4 Rockettes": {
@@ -331,8 +341,8 @@
       },
       "32932": {
         "name": "Cumming Alison",
-        "average": 9.0,
-        "matches_played": 1
+        "average": 7.5,
+        "matches_played": 2
       },
       "35566": {
         "name": "Beyers Karli",
@@ -347,6 +357,11 @@
       "24255": {
         "name": "Cheung Helen Wai Ching",
         "average": 21.0,
+        "matches_played": 1
+      },
+      "34646": {
+        "name": "Mak Wing Sze",
+        "average": 3.0,
         "matches_played": 1
       }
     },

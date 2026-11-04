@@ -479,17 +479,21 @@
         },
         {
           "position": 3,
-          "player1": null,
+          "player1": "Cumming Alison",
           "player2": "Tam Sum Yi",
           "score": "0-3",
-          "status": "unresolved"
+          "status": "confirmed",
+          "player2_hks_no": "35464",
+          "player1_hks_no": "32932"
         },
         {
           "position": 4,
-          "player1": null,
-          "player2": null,
+          "player1": "Mak Wing Sze",
+          "player2": "Chung Wai Ting",
           "score": "0-3",
-          "status": "unresolved"
+          "status": "confirmed",
+          "player1_hks_no": "34646",
+          "player2_hks_no": "29719"
         }
       ]
     },
@@ -529,10 +533,12 @@
         },
         {
           "position": 4,
-          "player1": null,
+          "player1": "Adjemian Kasey",
           "player2": "Fong Chui Ping",
           "score": "3-2",
-          "status": "unresolved"
+          "status": "confirmed",
+          "player1_hks_no": "34078",
+          "player2_hks_no": "34138"
         }
       ]
     }
