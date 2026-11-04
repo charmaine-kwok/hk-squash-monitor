@@ -451,6 +451,90 @@
           "status": "confirmed"
         }
       ]
+    },
+    "30/10/2026|Hong Kong Cricket Club L4 Rockettes|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "team_result": "2-2(3-0,3-1,0-3,0-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Liang Shijing",
+          "player1_hks_no": "35019",
+          "player2": "Chow Hoi Ying",
+          "player2_hks_no": "35315",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Cheung Helen Wai Ching",
+          "player1_hks_no": "24255",
+          "player2": "Wong Chi Chi",
+          "player2_hks_no": "35471",
+          "score": "3-1",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": null,
+          "player2": "Tam Sum Yi",
+          "score": "0-3",
+          "status": "unresolved"
+        },
+        {
+          "position": 4,
+          "player1": null,
+          "player2": null,
+          "score": "0-3",
+          "status": "unresolved"
+        }
+      ]
+    },
+    "30/10/2026|Hong Kong Cricket Club L4|Hong Kong Football Club L4A|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "Hong Kong Cricket Club L4",
+      "team2": "Hong Kong Football Club L4A",
+      "team_result": "4-0(3-0,3-0,3-0,3-2)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Cheng Hiu Tung Kaley",
+          "player1_hks_no": "34026",
+          "player2": "Chui Jennifer",
+          "player2_hks_no": "33819",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Wang Youying",
+          "player1_hks_no": "34309",
+          "player2": "Law Tsz Ting",
+          "player2_hks_no": "34134",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Ng Aurelia Kiu Hei",
+          "player1_hks_no": "34302",
+          "player2": "Wan Esther",
+          "player2_hks_no": "33570",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": null,
+          "player2": "Fong Chui Ping",
+          "score": "3-2",
+          "status": "unresolved"
+        }
+      ]
     }
   }
 }

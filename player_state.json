@@ -263,7 +263,7 @@
       "35315": {
         "name": "Chow Hoi Ying",
         "average": 12.0,
-        "matches_played": 1
+        "matches_played": 2
       },
       "35392": {
         "name": "Yu Wing Tung",
@@ -272,12 +272,17 @@
       },
       "35464": {
         "name": "Tam Sum Yi",
-        "average": 6.0,
-        "matches_played": 1
+        "average": 13.5,
+        "matches_played": 2
       },
       "35441": {
         "name": "Kwok Wai Yin",
         "average": 18.0,
+        "matches_played": 1
+      },
+      "35471": {
+        "name": "Wong Chi Chi",
+        "average": 12.0,
         "matches_played": 1
       }
     },
@@ -301,13 +306,28 @@
         "name": "Krefman Kylie Judith",
         "average": 18.0,
         "matches_played": 1
+      },
+      "34026": {
+        "name": "Cheng Hiu Tung Kaley",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "34309": {
+        "name": "Wang Youying",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "34302": {
+        "name": "Ng Aurelia Kiu Hei",
+        "average": 21.0,
+        "matches_played": 1
       }
     },
     "Hong Kong Cricket Club L4 Rockettes": {
       "35019": {
         "name": "Liang Shijing",
         "average": 27.0,
-        "matches_played": 1
+        "matches_played": 2
       },
       "32932": {
         "name": "Cumming Alison",
@@ -323,18 +343,23 @@
         "name": "Potter Kathryn Jane",
         "average": 3.0,
         "matches_played": 1
+      },
+      "24255": {
+        "name": "Cheung Helen Wai Ching",
+        "average": 21.0,
+        "matches_played": 1
       }
     },
     "Hong Kong Football Club L4A": {
       "33819": {
         "name": "Chui Jennifer",
-        "average": 27.0,
-        "matches_played": 1
+        "average": 19.5,
+        "matches_played": 2
       },
       "34134": {
         "name": "Law Tsz Ting",
-        "average": 24.0,
-        "matches_played": 1
+        "average": 16.5,
+        "matches_played": 2
       },
       "34651": {
         "name": "Ho Suet Ying",
@@ -343,7 +368,12 @@
       },
       "33570": {
         "name": "Wan Esther",
-        "average": 18.0,
+        "average": 12.0,
+        "matches_played": 2
+      },
+      "34138": {
+        "name": "Fong Chui Ping",
+        "average": 9.0,
         "matches_played": 1
       }
     },
