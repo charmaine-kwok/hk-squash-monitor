@@ -395,13 +395,13 @@
     "Hong Kong Football Club L4B": {
       "33257": {
         "name": "Cheng Chen Kaja",
-        "average": 12.0,
-        "matches_played": 1
+        "average": 13.5,
+        "matches_played": 2
       },
       "26243": {
         "name": "Man Angela Pui Kei",
-        "average": 9.0,
-        "matches_played": 1
+        "average": 7.5,
+        "matches_played": 2
       },
       "34108": {
         "name": "Dua Jigyasa",
@@ -411,14 +411,19 @@
       "26526": {
         "name": "Tsang Lorita Yau Ching",
         "average": 3.0,
+        "matches_played": 2
+      },
+      "33884": {
+        "name": "Lin Zixuan Emma",
+        "average": 15.0,
         "matches_played": 1
       }
     },
     "JESSICA L4": {
       "34327": {
         "name": "Cai Yuxi Serena",
-        "average": 12.0,
-        "matches_played": 1
+        "average": 18.0,
+        "matches_played": 2
       },
       "34354": {
         "name": "Lam Ngo Sze Osee",
@@ -432,7 +437,17 @@
       },
       "34848": {
         "name": "Guttendorf Zoe",
-        "average": 3.0,
+        "average": 10.5,
+        "matches_played": 2
+      },
+      "35075": {
+        "name": "Yeung Hei Lo Keiko",
+        "average": 18.0,
+        "matches_played": 1
+      },
+      "34012": {
+        "name": "Pun Zhe Qiao Kimi",
+        "average": 21.0,
         "matches_played": 1
       }
     },

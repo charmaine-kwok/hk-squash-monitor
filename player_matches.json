@@ -541,6 +541,51 @@
           "player2_hks_no": "34138"
         }
       ]
+    },
+    "30/10/2026|Hong Kong Football Club L4B|JESSICA L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "JESSICA L4",
+      "team_result": "0-4(1-3,2-3,0-3,0-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Lin Zixuan Emma",
+          "player2": "Cai Yuxi Serena",
+          "score": "1-3",
+          "status": "confirmed",
+          "player1_hks_no": "33884",
+          "player2_hks_no": "34327"
+        },
+        {
+          "position": 2,
+          "player1": "Cheng Chen Kaja",
+          "player1_hks_no": "33257",
+          "player2": "Yeung Hei Lo Keiko",
+          "player2_hks_no": "35075",
+          "score": "2-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Man Angela Pui Kei",
+          "player2": "Pun Zhe Qiao Kimi",
+          "score": "0-3",
+          "status": "confirmed",
+          "player1_hks_no": "26243",
+          "player2_hks_no": "34012"
+        },
+        {
+          "position": 4,
+          "player1": "Tsang Lorita Yau Ching",
+          "player1_hks_no": "26526",
+          "player2": "Guttendorf Zoe",
+          "player2_hks_no": "34848",
+          "score": "0-3",
+          "status": "confirmed"
+        }
+      ]
     }
   }
 }
