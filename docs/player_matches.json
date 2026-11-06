@@ -52,7 +52,8 @@
           "player1_hks_no": "36529",
           "player2": null
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "24/10/2026|Grit Squash-1|Electrify Squash Club D15|HK Squash Centre|17:00:00": {
       "week": "week 1",
@@ -106,7 +107,8 @@
           "player2": "Ho Hoi Yan",
           "player2_hks_no": "36061"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "24/10/2026|French Boast Club|Hong Kong International School D15|HK Squash Centre|17:00:00": {
       "week": "week 1",
@@ -160,7 +162,8 @@
           "score": "3-0",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "24/10/2026|North District Sports Association 3|Kwai Tsing District Squash Club D15|Cornwall Street Squash Centre|17:00:00": {
       "week": "week 1",
@@ -214,7 +217,8 @@
           "score": "3-0",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "24/10/2026|Star Squash Club 4|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
       "week": "week 1",
@@ -268,7 +272,8 @@
           "player2": "Chan Man Wai",
           "player2_hks_no": "36899"
         }
-      ]
+      ],
+      "notification_sent": true
     }
   },
   "L4": {
@@ -315,7 +320,8 @@
           "score": "0-3",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "23/10/2026|Hong Kong Cricket Club L4|Hong Kong Cricket Club L4 Rockettes|Hong Kong Cricket Club|19:00:00": {
       "week": "week 1",
@@ -360,7 +366,8 @@
           "score": "3-0",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "23/10/2026|Hong Kong Football Club L4A|Hong Kong Football Club L4B|Hong Kong Football Club|19:00:00": {
       "week": "week 1",
@@ -405,7 +412,8 @@
           "score": "3-0",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "23/10/2026|JESSICA L4|JESSICA L4 Mochis|HK Squash Centre|19:00:00": {
       "week": "week 1",
@@ -450,7 +458,8 @@
           "score": "0-3",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "30/10/2026|Hong Kong Cricket Club L4 Rockettes|Kwai Tsing District Squash Club L4|Hong Kong Cricket Club|19:00:00": {
       "week": "week 2",
@@ -495,7 +504,8 @@
           "player1_hks_no": "34646",
           "player2_hks_no": "29719"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "30/10/2026|Hong Kong Cricket Club L4|Hong Kong Football Club L4A|Hong Kong Cricket Club|19:00:00": {
       "week": "week 2",
@@ -540,7 +550,8 @@
           "player1_hks_no": "34078",
           "player2_hks_no": "34138"
         }
-      ]
+      ],
+      "notification_sent": true
     },
     "30/10/2026|Hong Kong Football Club L4B|JESSICA L4|Hong Kong Football Club|19:00:00": {
       "week": "week 2",
@@ -585,7 +596,8 @@
           "score": "0-3",
           "status": "confirmed"
         }
-      ]
+      ],
+      "notification_sent": true
     }
   }
 }

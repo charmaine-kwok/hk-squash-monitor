@@ -1,15 +1,10 @@
 import json
-
 import os
-
 import re
-
 import requests
 
 from bs4 import BeautifulSoup
-
 from config import players_url
-
 from datetime import datetime
 
 ROSTER_HISTORY_FILE = "roster_history.json"
@@ -131,7 +126,6 @@ def find_effective_date(tokens):
     """
     Find an effective date in a section of
     HK Squash player-page text.
-
     HK Squash normally uses YYYY-MM-DD,
     but DD/MM/YYYY is also accepted.
     """
@@ -139,24 +133,28 @@ def find_effective_date(tokens):
     date_pattern = r"(\d{4}-\d{1,2}-\d{1,2}" r"|\d{1,2}/\d{1,2}/\d{4})"
 
     for index, token in enumerate(tokens):
+
         text = token.strip()
 
         match = re.search(
-            r"effective\s*date\s*:?\s*" + date_pattern,
+            r"effective\s\*date\s\*:?\s\*" + date_pattern,
             text,
             flags=re.IGNORECASE,
         )
 
         if match:
+
             return normalise_date(match.group(1))
 
         if "effective date" in text.lower() and index + 1 < len(tokens):
+
             match = re.search(
                 date_pattern,
                 tokens[index + 1],
             )
 
             if match:
+
                 return normalise_date(match.group(1))
 
     return None
@@ -392,15 +390,11 @@ def get_historical_team_players(
 
     is <= the match date.
 
-
-
     Historical roster supplies:
 
       - membership
 
       - registered order
-
-
 
     Live page supplies:
 
@@ -505,31 +499,14 @@ def reverse_score(score):
 
 def resolve_cr_scores(result):
     """
-
-
-
     Convert the result into separate score lists for team1 and team2.
 
+    ``CR`` by itself does not identify which side conceded.
+    Infer the concession winner from the overall team score
+    and the non-CR matches.
 
-
-
-
-    ``CR`` by itself does not identify which side conceded. Infer the
-
-
-
-    concession winner from the overall team score and the non-CR matches.
-
-
-
-    The winning side receives ``"CR"`` and the conceding side receives
-
-
-
-    ``None`` for that position.
-
-
-
+    The winning side receives "CR" and the conceding side
+    receives None for that position.
     """
 
     scores = extract_individual_scores(result)
@@ -663,23 +640,8 @@ def build_candidates_for_position(
     state,
 ):
     """
-
-
-
-
-
     Return all players whose current average
-
-
-
-
-
     is compatible with this position/result.
-
-
-
-
-
     """
 
     if score is None:
@@ -763,69 +725,29 @@ def solve_team_lineup(
     state,
 ):
     """
-
-
-
-
-
     Find all valid ascending-order lineups.
-
-
-
     Important rule:
-
-
-
     registered player order must remain ascending.
-
-
 
     Example:
 
-
-
     valid:
-
-
 
         order 1 -> position 1
 
-
-
         order 3 -> position 2
-
-
 
         order 5 -> position 3
 
-
-
-
-
     invalid:
-
-
 
         order 3 -> position 1
 
-
-
         order 2 -> position 2
 
-
-
     If multiple complete lineups are possible,
-
-
-
     a position is confirmed only when every valid
-
-
-
     lineup contains the same player there.
-
-
-
     """
 
     playable_positions = []
@@ -1110,6 +1032,14 @@ def reconstruct_fixture(
 
                     record["player2_hks_no"] = player2["hks_no"]
 
+            if record.get("player1") or record.get("player2"):
+
+                record["status"] = "confirmed"
+
+            else:
+
+                record["status"] = "unresolved"
+
             individual_matches.append(record)
 
             continue
@@ -1179,20 +1109,74 @@ def reconstruct_fixture(
             )
 
     return {
-        "week": update.get("week", ""),
-        "date": update.get("date", ""),
+        "week": update.get(
+            "week",
+            "",
+        ),
+        "date": update.get(
+            "date",
+            "",
+        ),
         "team1": team1,
         "team2": team2,
         "team_result": update["result"],
         "individual_matches": individual_matches,
+        "notification_sent": False,
     }
 
 
-def fixture_has_unresolved(fixture):
+def fixture_has_unresolved(
+    fixture,
+):
 
-    return any(
-        match.get("status") == "unresolved"
-        for match in fixture.get("individual_matches", [])
+    for match in fixture.get(
+        "individual_matches",
+        [],
+    ):
+
+        if match.get("status") == "unresolved":
+
+            return True
+
+        if (
+            match.get("result_type") == "concession"
+            and not match.get("player1")
+            and not match.get("player2")
+        ):
+
+            return True
+
+    return False
+
+
+def mark_fixture_notified(
+    league_name,
+    match_id,
+):
+
+    player_matches = load_json(PLAYER_MATCHES_FILE)
+
+    fixture = player_matches.get(league_name, {}).get(match_id)
+
+    if fixture is None:
+
+        return
+
+    fixture["notification_sent"] = True
+
+    save_json(
+        PLAYER_MATCHES_FILE,
+        player_matches,
+    )
+
+    os.makedirs(
+        "docs",
+        exist_ok=True,
+    )
+
+    save_json(
+        "docs/player_matches.json",
+        player_matches,
     )
 
 
@@ -1247,14 +1231,9 @@ def solve_missing_positions(
     side,
 ):
     """
-
     Retry only previously unresolved player slots.
 
-
-
     Existing identified players are fixed.
-
-
 
     Missing positions are allowed to remain unresolved.
 
@@ -1262,12 +1241,9 @@ def solve_missing_positions(
 
     resolve the maximum number of positions.
 
-
-
     A position is confirmed only when every best solution
 
     identifies the same player at that position.
-
     """
 
     player_key = "player1" if side == 1 else "player2"
@@ -1634,20 +1610,27 @@ def solve_missing_positions(
 def retry_unresolved_fixtures(
     current_results,
 ):
+
     player_matches = load_json(PLAYER_MATCHES_FILE)
+
     state = load_json(PLAYER_STATE_FILE)
+
     roster_history = load_json(ROSTER_HISTORY_FILE)
 
     unresolved = []
 
     for league_name, fixtures in player_matches.items():
+
         for match_id, fixture in fixtures.items():
+
             if not fixture_has_unresolved(fixture):
+
                 continue
 
             source_match = current_results.get(league_name, {}).get(match_id)
 
             if not source_match or not source_match.get("result"):
+
                 continue
 
             unresolved.append(
@@ -1660,20 +1643,25 @@ def retry_unresolved_fixtures(
             )
 
     if not unresolved:
-        return 0
+
+        return 0, []
 
     leagues_needed = {item[0] for item in unresolved}
 
     league_players = {}
 
     for league_name in leagues_needed:
+
         print(f"Retrying unresolved " f"Division {league_name} " f"player matches...")
 
         league_players[league_name] = get_players(league_name)
 
         # Persist the currently published roster using its
+
         # effective date. This snapshot is used only for
+
         # membership/order; current points remain live.
+
         roster_history = save_roster_snapshot(
             league_name,
             league_players[league_name],
@@ -1681,16 +1669,21 @@ def retry_unresolved_fixtures(
 
     improved_count = 0
 
+    resolved_for_notification = []
+
     for (
         league_name,
         match_id,
         fixture,
         source_match,
     ) in unresolved:
+
         live_players = league_players[league_name]
 
         team1 = fixture["team1"]
+
         team2 = fixture["team2"]
+
         match_date = fixture.get("date") or source_match.get("date")
 
         team1_players = get_historical_team_players(
@@ -1710,13 +1703,17 @@ def retry_unresolved_fixtures(
         )
 
         # If no roster effective on/before the match date
+
         # is available, do not fall back to today's order.
+
         if team1_players is None or team2_players is None:
+
             continue
 
         scores1, scores2 = resolve_cr_scores(source_match["result"])
 
         if not scores1 or not scores2:
+
             continue
 
         matches = fixture.get(
@@ -1747,11 +1744,15 @@ def retry_unresolved_fixtures(
         fixture_improved = False
 
         for match in matches:
+
             position = match["position"]
 
             if not match.get("player1") and position in resolved1:
+
                 player = resolved1[position]
+
                 match["player1"] = player["name"]
+
                 match["player1_hks_no"] = player["hks_no"]
 
                 update_player_state(
@@ -1764,8 +1765,11 @@ def retry_unresolved_fixtures(
                 fixture_improved = True
 
             if not match.get("player2") and position in resolved2:
+
                 player = resolved2[position]
+
                 match["player2"] = player["name"]
+
                 match["player2_hks_no"] = player["hks_no"]
 
                 update_player_state(
@@ -1777,14 +1781,22 @@ def retry_unresolved_fixtures(
 
                 fixture_improved = True
 
-            if (
+            if match.get("result_type") == "concession" and (
+                match.get("player1") or match.get("player2")
+            ):
+
+                match["status"] = "confirmed"
+
+            elif (
                 match.get("status") == "unresolved"
                 and match.get("player1")
                 and match.get("player2")
             ):
+
                 match["status"] = "confirmed"
 
         if fixture_improved:
+
             improved_count += 1
 
             print(
@@ -1793,7 +1805,21 @@ def retry_unresolved_fixtures(
                 f"{fixture['team2']}"
             )
 
+            if not fixture_has_unresolved(fixture) and not fixture.get(
+                "notification_sent",
+                False,
+            ):
+
+                resolved_for_notification.append(
+                    {
+                        "league": league_name,
+                        "match_id": match_id,
+                        "fixture": fixture,
+                    }
+                )
+
     if improved_count:
+
         save_json(
             PLAYER_MATCHES_FILE,
             player_matches,
@@ -1814,7 +1840,10 @@ def retry_unresolved_fixtures(
             state,
         )
 
-    return improved_count
+    return (
+        improved_count,
+        resolved_for_notification,
+    )
 
 
 def process_result_updates(
