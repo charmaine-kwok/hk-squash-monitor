@@ -745,6 +745,98 @@
         }
       ],
       "notification_sent": false
+    },
+    "06/11/2026|JESSICA L4|Hong Kong Cricket Club L4|HK Squash Centre|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Cricket Club L4",
+      "team_result": "4-0(3-1,3-0,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Cai Yuxi Serena",
+          "player2": "Leung Lilian Wai Shan",
+          "score": "3-1",
+          "status": "confirmed",
+          "player2_hks_no": "28446",
+          "player1_hks_no": "34327"
+        },
+        {
+          "position": 2,
+          "player1": "Yeung Hei Lo Keiko",
+          "player2": "Verma Tara",
+          "score": "3-0",
+          "status": "confirmed",
+          "player2_hks_no": "34598",
+          "player1_hks_no": "35075"
+        },
+        {
+          "position": 3,
+          "player1": "Pun Zhe Qiao Kimi",
+          "player1_hks_no": "34012",
+          "player2": "Chiu Amber Elisabeth",
+          "player2_hks_no": "35173",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Chiu Yuet Yi",
+          "player1_hks_no": "34206",
+          "player2": "Krefman Kylie Judith",
+          "player2_hks_no": "34789",
+          "score": "3-0",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
+    },
+    "06/11/2026|Squashathon Ladies|Hong Kong Football Club L4B|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Football Club L4B",
+      "team_result": "2-2(3-0,3-0,0-3,2-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Chak Wai Suen",
+          "player2": "Man Angela Pui Kei",
+          "score": "3-0",
+          "status": "confirmed",
+          "player2_hks_no": "26243",
+          "player1_hks_no": "34870"
+        },
+        {
+          "position": 2,
+          "player1": "Tsang Ka Lei Carrie",
+          "player1_hks_no": "30714",
+          "player2": "Lim Zi Xuan Leanna",
+          "player2_hks_no": "37251",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Wong Chor Wai",
+          "player1_hks_no": "35854",
+          "player2": "Leung Suen Yan Tiffany",
+          "player2_hks_no": "33758",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Cheung Diana",
+          "player1_hks_no": "35085",
+          "player2": "Hui Kristal",
+          "player2_hks_no": "34937",
+          "score": "2-3",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
     }
   }
 }

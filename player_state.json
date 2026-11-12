@@ -270,12 +270,22 @@
       },
       "34870": {
         "name": "Chak Wai Suen",
-        "average": 21.0,
-        "matches_played": 1
+        "average": 24.0,
+        "matches_played": 2
       },
       "30714": {
         "name": "Tsang Ka Lei Carrie",
-        "average": 3.0,
+        "average": 13.5,
+        "matches_played": 2
+      },
+      "35854": {
+        "name": "Wong Chor Wai",
+        "average": 6.0,
+        "matches_played": 1
+      },
+      "35085": {
+        "name": "Cheung Diana",
+        "average": 9.0,
         "matches_played": 1
       }
     },
@@ -314,8 +324,8 @@
     "Hong Kong Cricket Club L4": {
       "28446": {
         "name": "Leung Lilian Wai Shan",
-        "average": 12.0,
-        "matches_played": 1
+        "average": 13.5,
+        "matches_played": 2
       },
       "34589": {
         "name": "Jue Emily Xiao Ran",
@@ -324,13 +334,13 @@
       },
       "35173": {
         "name": "Chiu Amber Elisabeth",
-        "average": 21.0,
-        "matches_played": 1
+        "average": 13.5,
+        "matches_played": 2
       },
       "34789": {
         "name": "Krefman Kylie Judith",
-        "average": 18.0,
-        "matches_played": 1
+        "average": 10.5,
+        "matches_played": 2
       },
       "34026": {
         "name": "Cheng Hiu Tung Kaley",
@@ -350,6 +360,11 @@
       "34078": {
         "name": "Adjemian Kasey",
         "average": 12.0,
+        "matches_played": 1
+      },
+      "34598": {
+        "name": "Verma Tara",
+        "average": 9.0,
         "matches_played": 1
       }
     },
@@ -440,8 +455,8 @@
       },
       "26243": {
         "name": "Man Angela Pui Kei",
-        "average": 7.5,
-        "matches_played": 2
+        "average": 9.0,
+        "matches_played": 3
       },
       "34108": {
         "name": "Dua Jigyasa",
@@ -457,13 +472,28 @@
         "name": "Lin Zixuan Emma",
         "average": 15.0,
         "matches_played": 1
+      },
+      "37251": {
+        "name": "Lim Zi Xuan Leanna",
+        "average": 9.0,
+        "matches_played": 1
+      },
+      "33758": {
+        "name": "Leung Suen Yan Tiffany",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "34937": {
+        "name": "Hui Kristal",
+        "average": 12.0,
+        "matches_played": 1
       }
     },
     "JESSICA L4": {
       "34327": {
         "name": "Cai Yuxi Serena",
-        "average": 18.0,
-        "matches_played": 2
+        "average": 20.0,
+        "matches_played": 3
       },
       "34354": {
         "name": "Lam Ngo Sze Osee",
@@ -472,8 +502,8 @@
       },
       "34206": {
         "name": "Chiu Yuet Yi",
-        "average": 21.0,
-        "matches_played": 1
+        "average": 19.5,
+        "matches_played": 2
       },
       "34848": {
         "name": "Guttendorf Zoe",
@@ -482,13 +512,13 @@
       },
       "35075": {
         "name": "Yeung Hei Lo Keiko",
-        "average": 18.0,
-        "matches_played": 1
+        "average": 21.0,
+        "matches_played": 2
       },
       "34012": {
         "name": "Pun Zhe Qiao Kimi",
         "average": 21.0,
-        "matches_played": 1
+        "matches_played": 2
       }
     },
     "JESSICA L4 Mochis": {
