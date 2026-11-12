@@ -738,13 +738,14 @@
         {
           "position": 4,
           "player1": "Ooi Hui Hoon",
-          "player2": null,
+          "player2": "Potter Kathryn Jane",
           "score": "3-0",
-          "status": "unresolved",
-          "player1_hks_no": "33757"
+          "status": "confirmed",
+          "player1_hks_no": "33757",
+          "player2_hks_no": "37073"
         }
       ],
-      "notification_sent": false
+      "notification_sent": true
     },
     "06/11/2026|JESSICA L4|Hong Kong Cricket Club L4|HK Squash Centre|19:00:00": {
       "week": "week 3",

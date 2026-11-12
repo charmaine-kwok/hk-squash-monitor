@@ -1,10 +1,21 @@
 import json
+
+
 import os
+
+
 import re
+
+
 import requests
 
+
 from bs4 import BeautifulSoup
+
+
 from config import players_url
+
+
 from datetime import datetime
 
 ROSTER_HISTORY_FILE = "roster_history.json"
@@ -124,10 +135,17 @@ def normalise_date(date_text):
 
 def find_effective_date(tokens):
     """
+
     Find an effective date in a section of
+
     HK Squash player-page text.
+
+
+
     HK Squash normally uses YYYY-MM-DD,
+
     but DD/MM/YYYY is also accepted.
+
     """
 
     date_pattern = r"(\d{4}-\d{1,2}-\d{1,2}" r"|\d{1,2}/\d{1,2}/\d{4})"
@@ -158,6 +176,98 @@ def find_effective_date(tokens):
                 return normalise_date(match.group(1))
 
     return None
+
+
+def get_ranking_url(league_name):
+    """Return the divisional ranking URL for a configured league."""
+    return players_url(league_name).replace(
+        "/players/",
+        "/ranking/",
+        1,
+    )
+
+
+def get_division_ranking(league_name, known_teams=None):
+    """
+    Fetch published divisional-ranking statistics.
+
+    Each HK Squash ranking row is rendered as a
+    ``div.ranking-content-list`` containing seven columns:
+
+        position, player name, team, average points,
+        total game points, games played, won, lost
+
+    The position column may be blank. The ranking page does not publish
+    HKS membership numbers, so rows are keyed by team name + exact player
+    name and merged back into the roster returned by ``get_players()``.
+    """
+    response = requests.get(
+        get_ranking_url(league_name),
+        timeout=45,
+    )
+    response.raise_for_status()
+
+    soup = BeautifulSoup(
+        response.text,
+        "html.parser",
+    )
+
+    known_teams = set(known_teams or [])
+    ranking = {}
+
+    for row in soup.select("div.ranking-content-list"):
+        columns = row.find_all("div", recursive=False)
+
+        # Normal player rows contain exactly 8 columns.  The NO DATA row
+        # contains only one and is intentionally ignored.
+        if len(columns) != 8:
+            continue
+
+        values = [column.get_text(" ", strip=True) for column in columns]
+
+        player_name = values[1]
+        team_name = values[2]
+        average_text = values[3]
+        total_points_text = values[4]
+        games_text = values[5]
+        won_text = values[6]
+        lost_text = values[7]
+
+        if not player_name or not team_name:
+            continue
+
+        if known_teams and team_name not in known_teams:
+            continue
+
+        try:
+            games_played = int(games_text or 0)
+            won = int(won_text or 0)
+            lost = int(lost_text or 0)
+        except ValueError:
+            continue
+
+        # HK Squash leaves average/total blank for players with 0 games.
+        try:
+            average = float(average_text) if average_text else None
+            total_game_points = float(total_points_text) if total_points_text else 0.0
+        except ValueError:
+            continue
+
+        if games_played < 0 or won < 0 or lost < 0:
+            continue
+
+        if won + lost != games_played:
+            continue
+
+        ranking.setdefault(team_name, {})[player_name] = {
+            "average": average,
+            "total_game_points": total_game_points,
+            "games_played": games_played,
+            "won": won,
+            "lost": lost,
+        }
+
+    return ranking
 
 
 def get_players(league_name):
@@ -289,6 +399,48 @@ def get_players(league_name):
 
             i = next_index
 
+    # Merge the divisional ranking page into the roster.
+    # This gives us games played / total points / W-L evidence,
+    # while the roster page remains the source of HKS number and order.
+    try:
+        ranking_stats = get_division_ranking(
+            league_name,
+            known_teams=teams.keys(),
+        )
+    except Exception as error:
+        print(
+            "Division ranking fetch failed for "
+            f"{league_name}: {error}. "
+            "Falling back to roster averages only."
+        )
+        ranking_stats = {}
+
+    for team_name, team_data in teams.items():
+        team_ranking = ranking_stats.get(team_name, {})
+
+        for player in team_data.get("players", {}).values():
+            published = team_ranking.get(player["name"])
+
+            if not published:
+                continue
+
+            player["ranking_average"] = published["average"]
+            player["total_game_points"] = published["total_game_points"]
+            player["games_played"] = published["games_played"]
+            player["won"] = published["won"]
+            player["lost"] = published["lost"]
+
+    merged_count = sum(
+        1
+        for team_data in teams.values()
+        for player in team_data.get("players", {}).values()
+        if player.get("games_played") is not None
+    )
+    print(
+        f"Division {league_name}: merged ranking stats for "
+        f"{merged_count} player(s)."
+    )
+
     return teams
 
 
@@ -386,19 +538,43 @@ def get_historical_team_players(
 ):
     """
 
+
+
     Use the latest roster whose effective date
+
+
 
     is <= the match date.
 
+
+
+
+
+
+
     Historical roster supplies:
+
+
 
       - membership
 
+
+
       - registered order
+
+
+
+
+
+
 
     Live page supplies:
 
+
+
       - current points / average
+
+
 
     """
 
@@ -446,9 +622,16 @@ def get_historical_team_players(
             "name": historical["name"],
             "order": historical["order"],
             "ranking": historical.get("ranking"),
-            # Latest points if player is
-            # still published by HK Squash.
+            # Latest live values from HK Squash.
+            # Membership/order come from the historical snapshot,
+            # but ranking statistics must remain live so the retry
+            # resolver can detect who actually played.
             "points": (live.get("points") if live else None),
+            "ranking_average": (live.get("ranking_average") if live else None),
+            "total_game_points": (live.get("total_game_points") if live else None),
+            "games_played": (live.get("games_played") if live else None),
+            "won": (live.get("won") if live else None),
+            "lost": (live.get("lost") if live else None),
         }
 
     print(
@@ -499,14 +682,57 @@ def reverse_score(score):
 
 def resolve_cr_scores(result):
     """
+
+
+
+
+
+
+
     Convert the result into separate score lists for team1 and team2.
 
-    ``CR`` by itself does not identify which side conceded.
-    Infer the concession winner from the overall team score
-    and the non-CR matches.
 
-    The winning side receives "CR" and the conceding side
-    receives None for that position.
+
+
+
+
+
+
+
+
+
+    ``CR`` by itself does not identify which side conceded. Infer the
+
+
+
+
+
+
+
+    concession winner from the overall team score and the non-CR matches.
+
+
+
+
+
+
+
+    The winning side receives "CR" and the conceding side receives
+
+
+
+
+
+
+
+    None for that position.
+
+
+
+
+
+
+
     """
 
     scores = extract_individual_scores(result)
@@ -640,60 +866,35 @@ def build_candidates_for_position(
     state,
 ):
     """
-    Return all players whose current average
-    is compatible with this position/result.
+    Return players compatible with this position/result.
+
+    The roster-page average is still the mathematical compatibility
+    check.  Divisional-ranking statistics add stronger participation
+    evidence: an increase in games played is the strongest signal, and
+    the corresponding total-game-points / W-L changes can corroborate it.
     """
-
     if score is None:
-
         return []
 
     effective_score = "3-0" if score == "CR" else score
 
     if position not in POINTS_TABLE or effective_score not in POINTS_TABLE[position]:
-
         return []
 
     match_points = POINTS_TABLE[position][effective_score]
-
     team_state = state.get(league_name, {}).get(team_name, {})
-
     candidates = []
 
     for hks_no, player in players.items():
-
         observed_points = player.get("points")
 
-        # Blank points means the player has no
-
-        # recorded result yet, so they cannot
-
-        # be a candidate for this completed match.
-
         if observed_points is None:
-
             continue
 
         observed_average = float(observed_points)
-
-        old_player = team_state.get(
-            hks_no,
-            {},
-        )
-
-        old_average = float(
-            old_player.get(
-                "average",
-                0,
-            )
-        )
-
-        matches_played = int(
-            old_player.get(
-                "matches_played",
-                0,
-            )
-        )
+        old_player = team_state.get(str(hks_no), {})
+        old_average = float(old_player.get("average", 0))
+        matches_played = int(old_player.get("matches_played", 0))
 
         calculated_average = expected_average(
             old_average,
@@ -701,18 +902,90 @@ def build_candidates_for_position(
             match_points,
         )
 
-        if abs(observed_average - calculated_average) < 0.011:
+        if abs(observed_average - calculated_average) >= 0.011:
+            continue
 
-            candidates.append(
-                {
-                    "hks_no": hks_no,
-                    "name": player["name"],
-                    "order": player["order"],
-                    "average": observed_average,
-                    "match_points": match_points,
-                    "matches_played_before": matches_played,
-                }
+        ranking_evidence = 0
+
+        published_games = player.get("games_played")
+        previous_published_games = int(
+            old_player.get(
+                "published_games_played",
+                matches_played,
             )
+        )
+
+        games_delta = None
+        if published_games is not None:
+            published_games = int(published_games)
+            games_delta = published_games - previous_published_games
+
+            # Exact +1 is direct evidence that this player appeared in
+            # one newly published fixture since our previous known state.
+            if games_delta == 1:
+                ranking_evidence += 100
+
+        published_total = player.get("total_game_points")
+        previous_total = old_player.get("total_game_points")
+
+        if previous_total is None and matches_played > 0:
+            # Backward-compatible estimate for state files created before
+            # total-game-points were stored.  Use a slightly wider tolerance
+            # because the published average is rounded to two decimals.
+            previous_total = old_average * matches_played
+
+        points_delta = None
+        if published_total is not None and previous_total is not None:
+            published_total = float(published_total)
+            previous_total = float(previous_total)
+            points_delta = published_total - previous_total
+
+            if games_delta == 1 and abs(points_delta - match_points) < 0.06:
+                ranking_evidence += 25
+
+        published_won = player.get("won")
+        published_lost = player.get("lost")
+        previous_won = old_player.get("won")
+        previous_lost = old_player.get("lost")
+
+        if (
+            games_delta == 1
+            and published_won is not None
+            and published_lost is not None
+            and previous_won is not None
+            and previous_lost is not None
+        ):
+            left, right = [int(value) for value in effective_score.split("-", 1)]
+            expected_win_delta = 1 if left > right else 0
+            expected_loss_delta = 1 if left < right else 0
+
+            if (
+                int(published_won) - int(previous_won) == expected_win_delta
+                and int(published_lost) - int(previous_lost) == expected_loss_delta
+            ):
+                ranking_evidence += 10
+
+        # Existing average-change signal remains as a small fallback.
+        if matches_played == 0:
+            ranking_evidence += 2
+        elif abs(observed_average - old_average) >= 0.011:
+            ranking_evidence += 2
+
+        candidates.append(
+            {
+                "hks_no": str(hks_no),
+                "name": player["name"],
+                "order": player["order"],
+                "average": observed_average,
+                "match_points": match_points,
+                "matches_played_before": matches_played,
+                "ranking_evidence": ranking_evidence,
+                "published_games_played": published_games,
+                "total_game_points": published_total,
+                "won": published_won,
+                "lost": published_lost,
+            }
+        )
 
     return candidates
 
@@ -725,29 +998,133 @@ def solve_team_lineup(
     state,
 ):
     """
+
+
+
+
+
+
+
+
+
+
+
     Find all valid ascending-order lineups.
+
+
+
+
+
+
+
     Important rule:
+
+
+
+
+
+
+
     registered player order must remain ascending.
+
+
+
+
+
+
 
     Example:
 
+
+
+
+
+
+
     valid:
+
+
+
+
+
+
 
         order 1 -> position 1
 
+
+
+
+
+
+
         order 3 -> position 2
+
+
+
+
+
+
 
         order 5 -> position 3
 
+
+
+
+
+
+
+
+
+
+
     invalid:
+
+
+
+
+
+
 
         order 3 -> position 1
 
+
+
+
+
+
+
         order 2 -> position 2
 
+
+
+
+
+
+
     If multiple complete lineups are possible,
+
+
+
+
+
+
+
     a position is confirmed only when every valid
+
+
+
+
+
+
+
     lineup contains the same player there.
+
+
+
+
+
+
+
     """
 
     playable_positions = []
@@ -852,12 +1229,25 @@ def solve_team_lineup(
 
         return solutions[0]
 
-    # Multiple possible lineups.
+    # Multiple mathematically valid lineups may remain.  Prefer lineups
+    # with the strongest divisional-ranking participation evidence.
+    best_evidence = max(
+        sum(player.get("ranking_evidence", 0) for player in solution.values())
+        for solution in solutions
+    )
 
-    # Confirm only positions where every
+    if best_evidence > 0:
+        solutions = [
+            solution
+            for solution in solutions
+            if sum(player.get("ranking_evidence", 0) for player in solution.values())
+            == best_evidence
+        ]
 
-    # valid lineup uses the same player.
+        if len(solutions) == 1:
+            return solutions[0]
 
+    # Confirm only positions where every best solution agrees.
     confirmed = {}
 
     for position in playable_positions:
@@ -918,6 +1308,13 @@ def update_player_state(
         "name": player["name"],
         "average": player["average"],
         "matches_played": player["matches_played_before"] + 1,
+        "published_games_played": player.get(
+            "published_games_played",
+            player["matches_played_before"] + 1,
+        ),
+        "total_game_points": player.get("total_game_points"),
+        "won": player.get("won"),
+        "lost": player.get("lost"),
     }
 
 
@@ -1231,19 +1628,49 @@ def solve_missing_positions(
     side,
 ):
     """
+
+
+
     Retry only previously unresolved player slots.
+
+
+
+
+
+
 
     Existing identified players are fixed.
 
+
+
+
+
+
+
     Missing positions are allowed to remain unresolved.
+
+
 
     Among all valid possibilities, prefer solutions that
 
+
+
     resolve the maximum number of positions.
+
+
+
+
+
+
 
     A position is confirmed only when every best solution
 
+
+
     identifies the same player at that position.
+
+
+
     """
 
     player_key = "player1" if side == 1 else "player2"
@@ -1370,85 +1797,10 @@ def solve_missing_positions(
 
         return {}
 
-    # Use changes in published ranking averages as additional
-
-    # evidence that a player participated in the newly published
-
-    # fixture. There are two strong signals:
-
-    #
-
-    # 1. No previous recorded match -> current points exist.
-
-    #    Example: blank -> 18.00.
-
-    #
-
-    # 2. A previously recorded player's average changed.
-
-    #    Example: 9.00 -> 7.50.
-
-    #
-
-    # An unchanged average can still be mathematically compatible
-
-    # with playing (for example 18 -> 18), but it is weaker evidence
-
-    # than an observable state change.
-
-    team_state = state.get(league_name, {}).get(team_name, {})
-
-    participation_evidence_hks = set()
-
-    for hks_no, player in players.items():
-
-        observed_points = player.get("points")
-
-        if observed_points is None:
-
-            continue
-
-        hks_no = str(hks_no)
-
-        old_player = team_state.get(hks_no, {})
-
-        matches_played = int(old_player.get("matches_played", 0))
-
-        # Newly activated player: previously no recorded match,
-
-        # but now has a published ranking average.
-
-        if matches_played == 0:
-
-            participation_evidence_hks.add(hks_no)
-
-            continue
-
-        old_average = float(old_player.get("average", 0))
-
-        observed_average = float(observed_points)
-
-        # Existing player's average visibly changed.
-
-        if abs(observed_average - old_average) >= 0.011:
-
-            participation_evidence_hks.add(hks_no)
-
-    # Compare solutions by two criteria:
-
-    # 1. resolve as many missing positions as possible;
-
-    # 2. among equally complete solutions, include as many players
-
-    #    with observable participation evidence as possible.
-
-    #
-
-    # The normal score maths and registered-order constraints still
-
-    # have to be satisfied. This only breaks ties between otherwise
-
-    # valid lineups.
+    # Candidate objects already contain a position-aware ranking_evidence
+    # score.  It strongly rewards a +1 published games-played change, then
+    # corroborates that with total points and W-L changes.  If ranking data
+    # is unavailable, the small average-change fallback still works.
 
     best_solutions = []
 
@@ -1462,15 +1814,13 @@ def solve_missing_positions(
 
         resolved_count = len(chosen)
 
-        evidence_count = sum(
-            1
-            for player in chosen.values()
-            if str(player["hks_no"]) in participation_evidence_hks
+        evidence_score = sum(
+            player.get("ranking_evidence", 0) for player in chosen.values()
         )
 
         score = (
             resolved_count,
-            evidence_count,
+            evidence_score,
         )
 
         if score > best_score:
