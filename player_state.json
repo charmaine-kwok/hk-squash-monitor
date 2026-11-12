@@ -162,13 +162,13 @@
     "Kwai Tsing District Squash Club D15": {
       "36903": {
         "name": "Ho Hing Kin",
-        "average": 12.0,
-        "matches_played": 1
+        "average": 10.5,
+        "matches_played": 2
       },
       "36525": {
         "name": "Cheung Kwok Po Aurora",
-        "average": 9.0,
-        "matches_played": 1
+        "average": 7.5,
+        "matches_played": 2
       },
       "36526": {
         "name": "Tsang Kwong Keung",
@@ -177,12 +177,22 @@
       },
       "36527": {
         "name": "Po Wing Yan",
-        "average": 3.0,
-        "matches_played": 1
+        "average": 9.0,
+        "matches_played": 2
       },
       "36893": {
         "name": "Wong Tak Yu",
         "average": 0.0,
+        "matches_played": 1
+      },
+      "34846": {
+        "name": "Wong Chi Kit",
+        "average": 15.0,
+        "matches_played": 1
+      },
+      "35268": {
+        "name": "Hung Lee Wun",
+        "average": 15.0,
         "matches_played": 1
       }
     },
@@ -211,18 +221,18 @@
     "Kinetic Squash Club 6": {
       "35291": {
         "name": "Man Vincent Winn Siae",
-        "average": 27.0,
-        "matches_played": 1
+        "average": 25.5,
+        "matches_played": 2
       },
       "36670": {
         "name": "Poon Ka Hei Joshua",
-        "average": 9.0,
-        "matches_played": 1
+        "average": 15.0,
+        "matches_played": 2
       },
       "36897": {
         "name": "HO KA IN",
-        "average": 9.0,
-        "matches_played": 1
+        "average": 7.5,
+        "matches_played": 2
       },
       "35272": {
         "name": "Wei Susan",
@@ -232,6 +242,16 @@
       "36899": {
         "name": "Chan Man Wai",
         "average": 15.0,
+        "matches_played": 1
+      },
+      "36442": {
+        "name": "Chan Wing Lun",
+        "average": 24.0,
+        "matches_played": 1
+      },
+      "36904": {
+        "name": "Wong Po Yu",
+        "average": 0.0,
         "matches_played": 1
       }
     }
@@ -263,17 +283,17 @@
       "35315": {
         "name": "Chow Hoi Ying",
         "average": 12.0,
-        "matches_played": 2
+        "matches_played": 3
       },
       "35392": {
         "name": "Yu Wing Tung",
-        "average": 18.0,
-        "matches_played": 1
+        "average": 12.0,
+        "matches_played": 2
       },
       "35464": {
         "name": "Tam Sum Yi",
-        "average": 13.5,
-        "matches_played": 2
+        "average": 15.0,
+        "matches_played": 3
       },
       "35441": {
         "name": "Kwok Wai Yin",
@@ -282,8 +302,8 @@
       },
       "35471": {
         "name": "Wong Chi Chi",
-        "average": 12.0,
-        "matches_played": 1
+        "average": 10.5,
+        "matches_played": 2
       },
       "29719": {
         "name": "Chung Wai Ting",
@@ -469,7 +489,17 @@
       },
       "35141": {
         "name": "Ng Hei Ching",
-        "average": 18.0,
+        "average": 21.0,
+        "matches_played": 2
+      },
+      "35157": {
+        "name": "Pang Sze Yiu",
+        "average": 21.0,
+        "matches_played": 1
+      },
+      "34039": {
+        "name": "Wong Wun Yin",
+        "average": 27.0,
         "matches_played": 1
       }
     }
