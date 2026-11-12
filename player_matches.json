@@ -700,6 +700,51 @@
         }
       ],
       "notification_sent": true
+    },
+    "06/11/2026|Hong Kong Football Club L4A|Hong Kong Cricket Club L4 Rockettes|Hong Kong Football Club|19:00:00": {
+      "week": "week 3",
+      "date": "06/11/2026",
+      "team1": "Hong Kong Football Club L4A",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "team_result": "4-0(3-0,3-0,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Yu Bella",
+          "player1_hks_no": "35352",
+          "player2": "Lam Ka Yin",
+          "player2_hks_no": "35004",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Law Tsz Ting",
+          "player1_hks_no": "34134",
+          "player2": "Cooke Anna",
+          "player2_hks_no": "34107",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Wan Esther",
+          "player2": "Beyers Karli",
+          "score": "3-0",
+          "status": "confirmed",
+          "player2_hks_no": "35566",
+          "player1_hks_no": "33570"
+        },
+        {
+          "position": 4,
+          "player1": "Ooi Hui Hoon",
+          "player2": null,
+          "score": "3-0",
+          "status": "unresolved",
+          "player1_hks_no": "33757"
+        }
+      ],
+      "notification_sent": false
     }
   }
 }

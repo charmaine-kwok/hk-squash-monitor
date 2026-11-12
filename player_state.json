@@ -367,7 +367,7 @@
       "35566": {
         "name": "Beyers Karli",
         "average": 6.0,
-        "matches_played": 1
+        "matches_played": 2
       },
       "37073": {
         "name": "Potter Kathryn Jane",
@@ -383,6 +383,16 @@
         "name": "Mak Wing Sze",
         "average": 3.0,
         "matches_played": 1
+      },
+      "35004": {
+        "name": "Lam Ka Yin",
+        "average": 12.0,
+        "matches_played": 1
+      },
+      "34107": {
+        "name": "Cooke Anna",
+        "average": 9.0,
+        "matches_played": 1
       }
     },
     "Hong Kong Football Club L4A": {
@@ -393,8 +403,8 @@
       },
       "34134": {
         "name": "Law Tsz Ting",
-        "average": 16.5,
-        "matches_played": 2
+        "average": 19.0,
+        "matches_played": 3
       },
       "34651": {
         "name": "Ho Suet Ying",
@@ -403,12 +413,22 @@
       },
       "33570": {
         "name": "Wan Esther",
-        "average": 12.0,
-        "matches_played": 2
+        "average": 15.0,
+        "matches_played": 3
       },
       "34138": {
         "name": "Fong Chui Ping",
         "average": 9.0,
+        "matches_played": 1
+      },
+      "35352": {
+        "name": "Yu Bella",
+        "average": 27.0,
+        "matches_played": 1
+      },
+      "33757": {
+        "name": "Ooi Hui Hoon",
+        "average": 18.0,
         "matches_played": 1
       }
     },
