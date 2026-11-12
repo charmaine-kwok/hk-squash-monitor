@@ -838,6 +838,52 @@
         }
       ],
       "notification_sent": true
+    },
+    "30/10/2026|JESSICA L4 Mochis|Squashathon Ladies|HK Squash Centre|19:00:00": {
+      "week": "week 2",
+      "date": "30/10/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Squashathon Ladies",
+      "team_result": "4-0(3-0,3-0,3-0,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Jin Olivia",
+          "player1_hks_no": "34461",
+          "player2": "Chung Wing Yin",
+          "player2_hks_no": "32610",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Kwok To Yan",
+          "player1_hks_no": "34258",
+          "player2": "Yuen Wai Ting",
+          "player2_hks_no": "31848",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Ng Hei Ching",
+          "player1_hks_no": "35141",
+          "player2": "Chak Wai Suen",
+          "player2_hks_no": "34870",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Pang Sze Yiu",
+          "player1_hks_no": "35157",
+          "player2": "Wong Chor Wai",
+          "player2_hks_no": "35854",
+          "score": "3-0",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
     }
   }
 }
