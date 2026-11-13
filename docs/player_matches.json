@@ -11,10 +11,10 @@
           "position": 1,
           "player1": "Yu Tak Gi",
           "player1_hks_no": "35267",
-          "player2": "Tang Yat Ming",
-          "player2_hks_no": "34867",
+          "player2": "Tang Tin Ming Helios",
           "score": "3-1",
-          "status": "confirmed"
+          "status": "confirmed",
+          "player2_hks_no": "34414"
         },
         {
           "position": 2,
@@ -41,7 +41,8 @@
           "result_type": "concession",
           "player1": "Kwok Wai Yin",
           "player1_hks_no": "35441",
-          "player2": null
+          "player2": null,
+          "status": "confirmed"
         },
         {
           "position": 5,
@@ -50,7 +51,8 @@
           "result_type": "concession",
           "player1": "Lau Ka Chun",
           "player1_hks_no": "36529",
-          "player2": null
+          "player2": null,
+          "status": "confirmed"
         }
       ],
       "notification_sent": true

@@ -28,11 +28,6 @@
       }
     },
     "Raimondi College": {
-      "34867": {
-        "name": "Tang Yat Ming",
-        "average": 15.0,
-        "matches_played": 1
-      },
       "34418": {
         "name": "Chan Yu Hin",
         "average": 15.0,
@@ -42,6 +37,15 @@
         "name": "Cheng Hoi Him",
         "average": 6.0,
         "matches_played": 1
+      },
+      "34414": {
+        "name": "Tang Tin Ming Helios",
+        "average": 15.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 15.0,
+        "won": 0,
+        "lost": 1
       }
     },
     "Grit Squash-1": {
@@ -261,29 +265,17 @@
       "32610": {
         "name": "Chung Wing Yin",
         "average": 19.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 39.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "31848": {
         "name": "Yuen Wai Ting",
         "average": 12.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 24.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "34870": {
         "name": "Chak Wai Suen",
         "average": 18.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 54.0,
-        "won": 2,
-        "lost": 1
+        "matches_played": 3
       },
       "30714": {
         "name": "Tsang Ka Lei Carrie",
@@ -293,11 +285,7 @@
       "35854": {
         "name": "Wong Chor Wai",
         "average": 4.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 9.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "35085": {
         "name": "Cheung Diana",
@@ -403,11 +391,7 @@
       "37073": {
         "name": "Potter Kathryn Jane",
         "average": 3.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 6.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "24255": {
         "name": "Cheung Helen Wai Ching",
@@ -545,20 +529,12 @@
       "34461": {
         "name": "Jin Olivia",
         "average": 27.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 54.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "34258": {
         "name": "Kwok To Yan",
         "average": 16.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 33.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "32125": {
         "name": "Chan Siu Yuen",
@@ -568,20 +544,12 @@
       "35141": {
         "name": "Ng Hei Ching",
         "average": 21.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 63.0,
-        "won": 3,
-        "lost": 0
+        "matches_played": 3
       },
       "35157": {
         "name": "Pang Sze Yiu",
         "average": 19.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 39.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "34039": {
         "name": "Wong Wun Yin",

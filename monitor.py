@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 from config import LEAGUES, results_url
 from player_matches import (
+    audit_and_reopen_corrections,
     fixture_has_unresolved,
     mark_fixture_notified,
     process_result_updates,
@@ -482,54 +483,22 @@ def main():
 
             send_telegram_message("\n".join(lines))
 
+    # Check whether previously confirmed player assignments
+    # now disagree with the latest divisional ranking.
+    try:
+        correction_found = audit_and_reopen_corrections(current_results)
+
+        if correction_found:
+            print("\nHistorical player correction " "detected and reopened.")
+
+    except Exception as error:
+        print("Historical correction audit failed: " f"{error}")
+
     try:
         (
             retry_count,
             resolved_notifications,
         ) = retry_unresolved_fixtures(current_results)
-
-        if retry_count:
-            print(f"\nImproved " f"{retry_count} " f"unresolved " f"fixture(s).")
-
-        for item in resolved_notifications:
-            league_name = item["league"]
-
-            match_id = item["match_id"]
-
-            fixture = item["fixture"]
-
-            message = (
-                "🚨 HK Squash result "
-                "updated!\n\n"
-                f"Division "
-                f"{league_name}\n\n"
-                f'{fixture["team1"]}'
-                "\n"
-                "vs\n"
-                f'{fixture["team2"]}'
-                "\n\n"
-                f"Result: "
-                f'{fixture["team_result"]}'
-            )
-
-            message = add_individual_matches_to_message(
-                message,
-                fixture,
-            )
-
-            if send_telegram_message(message):
-                mark_fixture_notified(
-                    league_name,
-                    match_id,
-                )
-
-                print(
-                    "Telegram notification "
-                    "sent: "
-                    f'{fixture["team1"]}'
-                    " vs "
-                    f'{fixture["team2"]}'
-                )
 
     except Exception as error:
         print("Unresolved match retry " "failed: " f"{error}")

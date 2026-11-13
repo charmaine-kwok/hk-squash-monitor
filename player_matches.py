@@ -2328,6 +2328,455 @@ def bootstrap_week_1():
     print(f"Saved " f"{len(reconstructed)} " f"fixture records.")
 
 
+def rebuild_player_state_from_matches(
+    player_matches,
+):
+    """
+    Rebuild player_state.json entirely from
+    confirmed fixtures in player_matches.json.
+
+    player_matches.json is treated as the
+    source of truth.
+    """
+
+    rebuilt = {}
+
+    def add_player_result(
+        league_name,
+        team_name,
+        hks_no,
+        player_name,
+        match_points,
+    ):
+        if not hks_no:
+            return
+
+        rebuilt.setdefault(
+            league_name,
+            {},
+        )
+
+        rebuilt[league_name].setdefault(
+            team_name,
+            {},
+        )
+
+        team_state = rebuilt[league_name][team_name]
+
+        player_state = team_state.setdefault(
+            str(hks_no),
+            {
+                "name": player_name,
+                "total_points": 0.0,
+                "matches_played": 0,
+            },
+        )
+
+        player_state["total_points"] += float(match_points)
+
+        player_state["matches_played"] += 1
+
+    for (
+        league_name,
+        fixtures,
+    ) in player_matches.items():
+
+        sorted_fixtures = sorted(
+            fixtures.values(),
+            key=lambda fixture: (normalise_date(fixture.get("date")) or "9999-99-99"),
+        )
+
+        for fixture in sorted_fixtures:
+            team1 = fixture.get("team1")
+            team2 = fixture.get("team2")
+
+            for match in fixture.get(
+                "individual_matches",
+                [],
+            ):
+                position = match.get("position")
+
+                if position not in POINTS_TABLE:
+                    continue
+
+                result_type = match.get("result_type")
+
+                # -------------------------
+                # CONCESSION
+                # -------------------------
+                if result_type == "concession":
+                    if match.get("player1"):
+                        points = POINTS_TABLE[position]["3-0"]
+
+                        add_player_result(
+                            league_name,
+                            team1,
+                            match.get("player1_hks_no"),
+                            match.get("player1"),
+                            points,
+                        )
+
+                    elif match.get("player2"):
+                        points = POINTS_TABLE[position]["3-0"]
+
+                        add_player_result(
+                            league_name,
+                            team2,
+                            match.get("player2_hks_no"),
+                            match.get("player2"),
+                            points,
+                        )
+
+                    continue
+
+                # -------------------------
+                # NORMAL MATCH
+                # -------------------------
+                score1 = match.get("score")
+
+                if not score1 or score1 not in POINTS_TABLE[position]:
+                    continue
+
+                score2 = reverse_score(score1)
+
+                player1 = match.get("player1")
+
+                player2 = match.get("player2")
+
+                if player1:
+                    add_player_result(
+                        league_name,
+                        team1,
+                        match.get("player1_hks_no"),
+                        player1,
+                        POINTS_TABLE[position][score1],
+                    )
+
+                if player2 and score2 in POINTS_TABLE[position]:
+                    add_player_result(
+                        league_name,
+                        team2,
+                        match.get("player2_hks_no"),
+                        player2,
+                        POINTS_TABLE[position][score2],
+                    )
+
+    # Convert internal totals into the
+    # existing player_state.json format.
+    final_state = {}
+
+    for (
+        league_name,
+        teams,
+    ) in rebuilt.items():
+
+        final_state.setdefault(
+            league_name,
+            {},
+        )
+
+        for (
+            team_name,
+            players,
+        ) in teams.items():
+
+            final_state[league_name].setdefault(
+                team_name,
+                {},
+            )
+
+            for (
+                hks_no,
+                player,
+            ) in players.items():
+
+                matches_played = player["matches_played"]
+
+                average = player["total_points"] / matches_played
+
+                final_state[league_name][team_name][hks_no] = {
+                    "name": player["name"],
+                    "average": average,
+                    "matches_played": matches_played,
+                }
+
+    return final_state
+
+
+def rebuild_and_save_player_state():
+    player_matches = load_json(PLAYER_MATCHES_FILE)
+
+    state = rebuild_player_state_from_matches(player_matches)
+
+    save_json(
+        PLAYER_STATE_FILE,
+        state,
+    )
+
+    print("Rebuilt player_state.json " "from player match history.")
+
+    return state
+
+
+def reopen_match_position(
+    fixture,
+    position,
+    side,
+):
+    for match in fixture.get(
+        "individual_matches",
+        [],
+    ):
+        if match.get("position") != position:
+            continue
+
+        if side == 1:
+            match["player1"] = None
+            match.pop(
+                "player1_hks_no",
+                None,
+            )
+
+        else:
+            match["player2"] = None
+            match.pop(
+                "player2_hks_no",
+                None,
+            )
+
+        match["status"] = "unresolved"
+
+        return True
+
+    return False
+
+
+def find_ranking_inconsistencies(
+    league_name,
+    player_matches,
+    league_players,
+):
+    """
+    Compare our reconstructed history with the
+    current HK Squash divisional ranking.
+
+    Return players whose reconstructed number of
+    matches / total points differs from published
+    values.
+    """
+
+    rebuilt = rebuild_player_state_from_matches(
+        {league_name: player_matches.get(league_name, {})}
+    )
+
+    differences = []
+
+    for team_name, team_data in league_players.items():
+        reconstructed_team = rebuilt.get(league_name, {}).get(team_name, {})
+
+        for hks_no, player in team_data.get(
+            "players",
+            {},
+        ).items():
+            published_games = player.get("games_played")
+
+            published_total = player.get("total_game_points")
+
+            if published_games is None:
+                continue
+
+            reconstructed = reconstructed_team.get(
+                str(hks_no),
+                {},
+            )
+
+            reconstructed_games = int(
+                reconstructed.get(
+                    "matches_played",
+                    0,
+                )
+            )
+
+            reconstructed_average = float(
+                reconstructed.get(
+                    "average",
+                    0,
+                )
+            )
+
+            reconstructed_total = reconstructed_average * reconstructed_games
+
+            games_delta = int(published_games) - reconstructed_games
+
+            points_delta = None
+
+            if published_total is not None:
+                points_delta = float(published_total) - reconstructed_total
+
+            if games_delta != 0 or (
+                points_delta is not None and abs(points_delta) >= 0.06
+            ):
+                differences.append(
+                    {
+                        "team": team_name,
+                        "hks_no": str(hks_no),
+                        "name": player["name"],
+                        "published_games": int(published_games),
+                        "reconstructed_games": reconstructed_games,
+                        "games_delta": games_delta,
+                        "published_total": published_total,
+                        "reconstructed_total": reconstructed_total,
+                        "points_delta": points_delta,
+                    }
+                )
+
+    return differences
+
+
+def audit_and_reopen_corrections(
+    current_results,
+):
+    player_matches = load_json(PLAYER_MATCHES_FILE)
+
+    changed = False
+
+    for league_name in player_matches:
+        league_players = get_players(league_name)
+
+        differences = find_ranking_inconsistencies(
+            league_name,
+            player_matches,
+            league_players,
+        )
+
+        if not differences:
+            continue
+
+        negative = [item for item in differences if item["games_delta"] == -1]
+
+        positive = [item for item in differences if item["games_delta"] == 1]
+
+        for old_player in negative:
+            for new_player in positive:
+                if old_player["team"] != new_player["team"]:
+                    continue
+
+                for (
+                    match_id,
+                    fixture,
+                ) in player_matches[league_name].items():
+
+                    team1 = fixture.get("team1")
+                    team2 = fixture.get("team2")
+
+                    for match in fixture.get(
+                        "individual_matches",
+                        [],
+                    ):
+                        position = match.get("position")
+
+                        if position not in POINTS_TABLE:
+                            continue
+
+                        side = None
+                        score = None
+
+                        if (
+                            team1 == old_player["team"]
+                            and match.get("player1_hks_no") == old_player["hks_no"]
+                        ):
+                            side = 1
+                            score = match.get("score")
+
+                        elif (
+                            team2 == old_player["team"]
+                            and match.get("player2_hks_no") == old_player["hks_no"]
+                        ):
+                            side = 2
+
+                            if match.get("result_type") == "concession":
+                                score = "CR"
+                            else:
+                                score = reverse_score(match.get("score"))
+
+                        if side is None or not score:
+                            continue
+
+                        effective_score = "3-0" if score == "CR" else score
+
+                        if effective_score not in POINTS_TABLE[position]:
+                            continue
+
+                        expected_points = POINTS_TABLE[position][effective_score]
+
+                        new_points_delta = new_player.get("points_delta")
+
+                        old_points_delta = old_player.get("points_delta")
+
+                        if new_points_delta is None or old_points_delta is None:
+                            continue
+
+                        if abs(new_points_delta - expected_points) >= 0.06:
+                            continue
+
+                        if abs(old_points_delta + expected_points) >= 0.06:
+                            continue
+
+                        if reopen_match_position(
+                            fixture,
+                            position,
+                            side,
+                        ):
+                            print(
+                                "Reopened historical "
+                                "player assignment: "
+                                f"{old_player['name']} "
+                                "→ "
+                                f"{new_player['name']} "
+                                f"({fixture['team1']} "
+                                "vs "
+                                f"{fixture['team2']}, "
+                                f"position {position})"
+                            )
+
+                            changed = True
+                            break
+
+                    if changed:
+                        break
+
+                if changed:
+                    break
+
+            if changed:
+                break
+
+        if changed:
+            break
+
+    if not changed:
+        return False
+
+    save_json(
+        PLAYER_MATCHES_FILE,
+        player_matches,
+    )
+
+    os.makedirs(
+        "docs",
+        exist_ok=True,
+    )
+
+    save_json(
+        "docs/player_matches.json",
+        player_matches,
+    )
+
+    rebuild_and_save_player_state()
+
+    return True
+
+
 if __name__ == "__main__":
 
     bootstrap_week_1()
