@@ -296,8 +296,12 @@
     "Kwai Tsing District Squash Club L4": {
       "35315": {
         "name": "Chow Hoi Ying",
-        "average": 12.0,
-        "matches_played": 3
+        "average": 14.25,
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 57.0,
+        "won": 1,
+        "lost": 3
       },
       "35392": {
         "name": "Yu Wing Tung",
@@ -307,12 +311,20 @@
       "35464": {
         "name": "Tam Sum Yi",
         "average": 15.0,
-        "matches_played": 3
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 60.0,
+        "won": 2,
+        "lost": 2
       },
       "35441": {
         "name": "Kwok Wai Yin",
-        "average": 18.0,
-        "matches_played": 1
+        "average": 19.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 39.0,
+        "won": 2,
+        "lost": 0
       },
       "35471": {
         "name": "Wong Chi Chi",
@@ -323,6 +335,15 @@
         "name": "Chung Wai Ting",
         "average": 18.0,
         "matches_played": 1
+      },
+      "35467": {
+        "name": "Lau Yuk Yee",
+        "average": 6.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 6.0,
+        "won": 0,
+        "lost": 1
       }
     },
     "Hong Kong Cricket Club L4": {
@@ -376,17 +397,29 @@
       "35019": {
         "name": "Liang Shijing",
         "average": 27.0,
-        "matches_played": 2
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 81.0,
+        "won": 3,
+        "lost": 0
       },
       "32932": {
         "name": "Cumming Alison",
-        "average": 7.5,
-        "matches_played": 2
+        "average": 8.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 24.0,
+        "won": 0,
+        "lost": 3
       },
       "35566": {
         "name": "Beyers Karli",
-        "average": 6.0,
-        "matches_played": 2
+        "average": 11.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 33.0,
+        "won": 1,
+        "lost": 2
       },
       "37073": {
         "name": "Potter Kathryn Jane",
@@ -400,8 +433,12 @@
       },
       "34646": {
         "name": "Mak Wing Sze",
-        "average": 3.0,
-        "matches_played": 1
+        "average": 10.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 21.0,
+        "won": 1,
+        "lost": 1
       },
       "35004": {
         "name": "Lam Ka Yin",
@@ -454,13 +491,21 @@
     "Hong Kong Football Club L4B": {
       "33257": {
         "name": "Cheng Chen Kaja",
-        "average": 13.5,
-        "matches_played": 2
+        "average": 15.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 45.0,
+        "won": 0,
+        "lost": 3
       },
       "26243": {
         "name": "Man Angela Pui Kei",
-        "average": 9.0,
-        "matches_played": 3
+        "average": 11.25,
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 45.0,
+        "won": 1,
+        "lost": 3
       },
       "34108": {
         "name": "Dua Jigyasa",
@@ -469,8 +514,12 @@
       },
       "26526": {
         "name": "Tsang Lorita Yau Ching",
-        "average": 3.0,
-        "matches_played": 2
+        "average": 7.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 21.0,
+        "won": 1,
+        "lost": 2
       },
       "33884": {
         "name": "Lin Zixuan Emma",
@@ -479,8 +528,12 @@
       },
       "37251": {
         "name": "Lim Zi Xuan Leanna",
-        "average": 9.0,
-        "matches_played": 1
+        "average": 7.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 15.0,
+        "won": 0,
+        "lost": 2
       },
       "33758": {
         "name": "Leung Suen Yan Tiffany",
@@ -548,13 +601,26 @@
       },
       "35157": {
         "name": "Pang Sze Yiu",
-        "average": 19.5,
-        "matches_played": 2
+        "average": 21.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 63.0,
+        "won": 3,
+        "lost": 0
       },
       "34039": {
         "name": "Wong Wun Yin",
         "average": 27.0,
         "matches_played": 1
+      },
+      "27974": {
+        "name": "Ho Chin Pik",
+        "average": 12.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 12.0,
+        "won": 0,
+        "lost": 1
       }
     }
   }

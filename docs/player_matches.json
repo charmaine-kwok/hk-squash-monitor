@@ -886,6 +886,100 @@
         }
       ],
       "notification_sent": true
+    },
+    "13/11/2026|Hong Kong Cricket Club L4 Rockettes|JESSICA L4 Mochis|Hong Kong Cricket Club|19:00:00": {
+      "week": "week 4",
+      "date": "13/11/2026",
+      "team1": "Hong Kong Cricket Club L4 Rockettes",
+      "team2": "JESSICA L4 Mochis",
+      "team_result": "3-1(3-0,0-3,CR,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Liang Shijing",
+          "player1_hks_no": "35019",
+          "player2": "Ho Chin Pik",
+          "player2_hks_no": "27974",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Cumming Alison",
+          "player1_hks_no": "32932",
+          "player2": "Pang Sze Yiu",
+          "player2_hks_no": "35157",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": "Beyers Karli",
+          "player1_hks_no": "35566",
+          "player2": null,
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": "Mak Wing Sze",
+          "player1_hks_no": "34646",
+          "player2": null,
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
+    },
+    "13/11/2026|Hong Kong Football Club L4B|Kwai Tsing District Squash Club L4|Hong Kong Football Club|19:00:00": {
+      "week": "week 4",
+      "date": "13/11/2026",
+      "team1": "Hong Kong Football Club L4B",
+      "team2": "Kwai Tsing District Squash Club L4",
+      "team_result": "2-2(2-3,3-2,0-3,3-1)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Cheng Chen Kaja",
+          "player1_hks_no": "33257",
+          "player2": "Chow Hoi Ying",
+          "player2_hks_no": "35315",
+          "score": "2-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Man Angela Pui Kei",
+          "player1_hks_no": "26243",
+          "player2": "Tam Sum Yi",
+          "player2_hks_no": "35464",
+          "score": "3-2",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Lim Zi Xuan Leanna",
+          "player1_hks_no": "37251",
+          "player2": "Kwok Wai Yin",
+          "player2_hks_no": "35441",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Tsang Lorita Yau Ching",
+          "player1_hks_no": "26526",
+          "player2": "Lau Yuk Yee",
+          "player2_hks_no": "35467",
+          "score": "3-1",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
     }
   }
 }
