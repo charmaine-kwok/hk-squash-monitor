@@ -16,6 +16,7 @@ The project currently:
 - Reconstructs individual player matchups from official team results and player data
 - Provides filters by division, week and team, making it easier to find relevant fixtures and player results
 - Displays live player ranking information by hovering over or tapping a player's name, without needing to manually search for or copy and paste an HKS player number
+- Provides a Players tab for viewing current team rosters, player order, points, games played, wins, losses and divisional ranking data
 - Sends Telegram notifications automatically when new league results are published
 
 This is an independent personal project and is not affiliated with the Squash Association of Hong Kong, China.
@@ -26,7 +27,7 @@ Individual player match results can be viewed here:
 
 **https://charmaine-kwok.github.io/hk-squash-monitor/**
 
-The web interface is powered by GitHub Pages and automatically reads the latest reconstructed player match data.
+The web interface is powered by GitHub Pages and automatically reads the latest reconstructed player matches, schedule and player roster/ranking data.
 
 ## Features
 
@@ -42,6 +43,8 @@ The web interface is powered by GitHub Pages and automatically reads the latest 
 - Stores reconstructed individual matches in `player_matches.json`
 - Stores player history/state in `player_state.json`
 - Publishes individual match results through GitHub Pages
+- Publishes league schedules through GitHub Pages
+- Publishes current team rosters and player statistics through GitHub Pages
 - Provides `/checkscore` for an on-demand score check
 - Provides `/standings` for the latest league standings
 - Uses a Telegram webhook for immediate command handling
@@ -58,13 +61,11 @@ The web interface is powered by GitHub Pages and automatically reads the latest 
 League IDs, season and year are configured in `config.py`.
 
 Current season:
-
 ```text
 2026–2027 Main League
 ```
 
 ## Architecture
-
 ```text
                          ┌─────────────────────┐
                          │      Telegram       │
@@ -119,7 +120,6 @@ Current season:
 ```
 
 Scheduled monitoring uses:
-
 ```text
 cron-job.org
      │
@@ -149,7 +149,6 @@ Live player ranking lookups use two cache layers:
 When a ranking is requested, the browser may reuse a recent response for up to 5 minutes. After that, the Cloudflare Worker checks the KV cache. If the player's ranking is still cached, it is returned without requesting HK Squash again.
 
 Only when the 24-hour KV entry expires does the Worker fetch fresh ranking data from HK Squash and store the updated result again.
-
 ```text
 Browser
   ↓
@@ -179,31 +178,23 @@ Displays the available commands.
 Immediately triggers a GitHub Action to check the latest HK Squash results.
 
 Example:
-
 ```text
 ✅ Score check complete
-
 Division D15B: 87 results pending
 Division L4: 60 results pending
-
 No new results since the previous check.
 ```
 
 If a new result is found, the bot sends the team result together with reconstructed individual player matches where available.
 
 Example:
-
 ```text
 🚨 HK Squash result updated!
-
 Division L4
-
 Squashathon Ladies
 vs
 Kwai Tsing District Squash Club L4
-
 Result: 2-2(3-0,2-3,3-0,0-3)
-
 Individual matches:
 1. Chung Wing Yin vs Chow Hoi Ying — 3-0
 2. Yuen Wai Ting vs Yu Wing Tung — 2-3
@@ -232,13 +223,14 @@ The scheduled job:
 9. Updates `player_matches.json`.
 10. Updates `player_state.json`.
 11. Updates `docs/player_matches.json`.
-12. Commits the latest data back to the repository.
-13. GitHub Pages automatically serves the updated player match data.
+12. Updates `docs/schedule.json`.
+13. Updates `docs/players.json`.
+14. Commits the latest data back to the repository.
+15. GitHub Pages automatically serves the updated match, schedule and player data.
 
 ## Result Change Detection
 
 Each fixture is identified using:
-
 ```text
 date | team1 | team2 | venue | time
 ```
@@ -246,13 +238,11 @@ date | team1 | team2 | venue | time
 Including the date prevents return fixtures involving the same teams, venue and time from overwriting earlier fixtures.
 
 The monitor detects:
-
 ```text
 blank result → published result
 ```
 
 and:
-
 ```text
 existing result → corrected result
 ```
@@ -260,7 +250,6 @@ existing result → corrected result
 ## Individual Player Match Reconstruction
 
 HK Squash publishes team results containing individual game scores, for example:
-
 ```text
 2-2(3-0,2-3,3-0,0-3)
 ```
@@ -278,13 +267,11 @@ to reconstruct which players participated at each position.
 Player order is treated as an ascending constraint.
 
 For example, if selected players have registered orders:
-
 ```text
 1, 3, 5, 7
 ```
 
 they may play positions:
-
 ```text
 1 → order 1
 2 → order 3
@@ -297,7 +284,6 @@ but the order cannot reverse.
 ### Player average calculation
 
 For later weeks, the expected new average is calculated using:
-
 ```text
 (previous average × previous matches played + new match points)
 ÷
@@ -309,13 +295,11 @@ This allows the monitor to identify which player participated even after multipl
 ### Blank points vs 0.00
 
 The tracker distinguishes between:
-
 ```text
 blank points
 ```
 
 and:
-
 ```text
 0.00 points
 ```
@@ -329,42 +313,47 @@ This distinction is important for identifying players at lower playing positions
 `CR` is treated as a concession resulting in an effective 3–0 win.
 
 Example:
-
 ```text
 4. Kwok Wai Yin — CR (3-0)
 ```
 
 The original `CR` result is preserved in the stored data.
 
-## Player Match Web Interface
+## GitHub Pages Web Interface
 
-The player match viewer is published through GitHub Pages:
+The web interface is published through GitHub Pages:
 
 **https://charmaine-kwok.github.io/hk-squash-monitor/**
 
 The interface supports:
 
-- division selection
-- week selection
-- team match results
+- Player Matches tab with division, week and team filters
+- Schedule tab with division, week and team filters
+- Players tab with division and team filters
 - individual player-vs-player results
 - concession results
 - unresolved or partially reconstructed matches
+- current team rosters
+- player order, HKS number and points
+- games played, wins and losses
+- divisional ranking information
+- live player ranking details by hovering over or tapping a player's name
 
 The page reads:
 
 ```text
 docs/player_matches.json
+docs/schedule.json
+docs/players.json
 ```
 
-which is automatically generated whenever player match data changes.
+These files are automatically generated or refreshed by the monitoring workflow.
 
 ## League Configuration
 
 League information is stored in `config.py`.
 
 Example:
-
 ```python
 LEAGUES = {
     "D15B": {
@@ -387,7 +376,6 @@ The application automatically generates the results, standings and player URLs f
 To monitor another league, add another entry to `LEAGUES`.
 
 ## Project Structure
-
 ```text
 hk-squash-monitor/
 ├── .github/
@@ -423,13 +411,11 @@ hk-squash-monitor/
 ## Local Setup
 
 Install dependencies:
-
 ```bash
 python -m pip install -r requirements.txt
 ```
 
 Create a local `.env` file:
-
 ```env
 TELEGRAM_BOT_TOKEN=your_bot_token
 TELEGRAM_CHAT_ID=your_chat_id
@@ -438,31 +424,26 @@ TELEGRAM_CHAT_ID=your_chat_id
 The `.env` file must not be committed to GitHub.
 
 Run a score check locally:
-
 ```bash
 python monitor.py
 ```
 
 Run a standings check locally:
-
 ```bash
 python standings.py
 ```
 
 Reconstruct existing completed player matches:
-
 ```bash
 python player_matches.py
 ```
 
 Test the web interface locally:
-
 ```bash
 python -m http.server 8000
 ```
 
 Then open:
-
 ```text
 http://localhost:8000/docs/
 ```
@@ -470,7 +451,6 @@ http://localhost:8000/docs/
 ## GitHub Secrets
 
 The GitHub Actions workflow uses:
-
 ```text
 TELEGRAM_BOT_TOKEN
 TELEGRAM_CHAT_ID
