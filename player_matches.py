@@ -225,6 +225,7 @@ def get_division_ranking(league_name, known_teams=None):
 
         values = [column.get_text(" ", strip=True) for column in columns]
 
+        position_text = values[0]
         player_name = values[1]
         team_name = values[2]
         average_text = values[3]
@@ -246,6 +247,11 @@ def get_division_ranking(league_name, known_teams=None):
         except ValueError:
             continue
 
+        try:
+            overall_rank = int(position_text) if position_text else None
+        except ValueError:
+            overall_rank = None
+
         # HK Squash leaves average/total blank for players with 0 games.
         try:
             average = float(average_text) if average_text else None
@@ -260,6 +266,7 @@ def get_division_ranking(league_name, known_teams=None):
             continue
 
         ranking.setdefault(team_name, {})[player_name] = {
+            "overall_rank": overall_rank,
             "average": average,
             "total_game_points": total_game_points,
             "games_played": games_played,
@@ -424,6 +431,7 @@ def get_players(league_name):
             if not published:
                 continue
 
+            player["overall_rank"] = published["overall_rank"]
             player["ranking_average"] = published["average"]
             player["total_game_points"] = published["total_game_points"]
             player["games_played"] = published["games_played"]
@@ -442,6 +450,85 @@ def get_players(league_name):
     )
 
     return teams
+
+
+def save_players_for_website(
+    league_names=("L4", "D15B"),
+):
+    output = {
+        "divisions": {},
+    }
+
+    for league_name in league_names:
+        league_players = get_players(league_name)
+
+        division_output = {
+            "teams": {},
+        }
+
+        for (
+            team_name,
+            team_data,
+        ) in league_players.items():
+
+            players_output = []
+
+            players = sorted(
+                team_data.get(
+                    "players",
+                    {},
+                ).items(),
+                key=lambda item: item[1]["order"],
+            )
+
+            for hks_no, player in players:
+                players_output.append(
+                    {
+                        "order": player.get("order"),
+                        "hks_no": str(hks_no),
+                        "name": player.get("name"),
+                        "ranking": player.get("ranking"),
+                        "points": player.get("points"),
+                        "overall_rank": player.get("overall_rank"),
+                        "games_played": player.get(
+                            "games_played",
+                            0,
+                        ),
+                        "won": player.get(
+                            "won",
+                            0,
+                        ),
+                        "lost": player.get(
+                            "lost",
+                            0,
+                        ),
+                        "total_game_points": player.get(
+                            "total_game_points",
+                            0,
+                        ),
+                    }
+                )
+
+            division_output["teams"][team_name] = {
+                "effective_date": team_data.get("effective_date"),
+                "players": players_output,
+            }
+
+        output["divisions"][league_name] = division_output
+
+    os.makedirs(
+        "docs",
+        exist_ok=True,
+    )
+
+    save_json(
+        "docs/players.json",
+        output,
+    )
+
+    print("Saved player data for " + ", ".join(league_names) + " to docs/players.json.")
+
+    return output
 
 
 def save_roster_snapshot(

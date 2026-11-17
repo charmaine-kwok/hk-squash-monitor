@@ -12,6 +12,7 @@ from player_matches import (
     mark_fixture_notified,
     process_result_updates,
     retry_unresolved_fixtures,
+    save_players_for_website,
 )
 
 RESULTS_FILE = "results.json"
@@ -502,6 +503,11 @@ def main():
 
     except Exception as error:
         print("Unresolved match retry " "failed: " f"{error}")
+
+    try:
+        save_players_for_website(("L4", "D15B"))
+    except Exception as error:
+        print("Player page update failed: " f"{error}")
 
     save_results(current_results)
 

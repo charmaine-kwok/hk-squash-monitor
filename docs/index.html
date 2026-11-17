@@ -493,6 +493,40 @@
             font-style: italic;
         }
 
+        .players-team-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .players-team-header {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .players-team-name {
+            margin: 0 0 4px;
+            font-size: 17px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .players-team-meta {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .players-table-wrap { overflow-x: auto; }
+        .players-table { width: 100%; border-collapse: collapse; min-width: 650px; }
+        .players-table th, .players-table td { padding: 11px 12px; border-top: 1px solid #f0f0f0; text-align: left; white-space: nowrap; }
+        .players-table thead th { border-top: 0; background: #fafafa; color: #6b7280; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+        .players-table td { font-size: 14px; }
+        .players-table .number { text-align: right; }
+        .players-table .player-name-cell { min-width: 180px; }
+        .players-note { margin-bottom: 16px; color: #6b7280; font-size: 13px; }
+
         @media (max-width: 650px) {
             h1 {
                 font-size: 23px;
@@ -575,6 +609,10 @@
 
             <button type="button" class="tab-button" data-tab="scheduleTab">
                 Schedule
+            </button>
+
+            <button type="button" class="tab-button" data-tab="playersTab">
+                Players
             </button>
 
         </div>
@@ -684,6 +722,55 @@
 
         </div>
 
+        <!-- PLAYERS -->
+
+        <div id="playersTab" class="tab-content">
+
+            <div class="filters">
+
+                <div class="filter">
+                    <label for="playersLeagueFilter">
+                        Division
+                    </label>
+
+                    <select id="playersLeagueFilter"></select>
+                </div>
+
+                <div class="filter">
+                    <label for="playersTeamFilter">
+                        Team
+                    </label>
+
+                    <select id="playersTeamFilter">
+                        <option value="all">
+                            All teams
+                        </option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <button
+                        type="button"
+                        id="clearPlayersFilters"
+                        class="clear-filters"
+                    >
+                        Clear filters
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="playersSummary" class="summary"></div>
+
+            <div class="players-note">
+                Hover or tap a player name to view live ranking details.
+            </div>
+
+            <div id="playersContainer"></div>
+
+        </div>
+
+
         <footer class="site-footer">
             HK Squash Match Tracker · Developed by Charmaine Kwok
         </footer>
@@ -696,6 +783,7 @@
 
         let data = {};
         let scheduleData = {};
+        let playersData = {};
 
         const clearMatchFilters =
             document.getElementById(
@@ -757,6 +845,11 @@
                 "scheduleSummary"
             );
 
+        const playersContainer =
+            document.getElementById(
+                "playersContainer"
+            );
+
         const RANKING_API =
             "https://hk-squash-bot.mickeymousekwok97.workers.dev/ranking";
 
@@ -765,8 +858,120 @@
                 "rankingPopup"
             );
 
+        const playersLeagueFilter =
+            document.getElementById(
+                "playersLeagueFilter"
+            );
+
+        const playersTeamFilter =
+            document.getElementById(
+                "playersTeamFilter"
+            );
+
+        const clearPlayersFilters =
+            document.getElementById(
+                "clearPlayersFilters"
+            );
+
+        const playersSummary =
+            document.getElementById(
+                "playersSummary"
+            );
+
         const rankingCache = new Map();
 
+        function populatePlayersLeagues() {
+
+            playersLeagueFilter.innerHTML =
+                "";
+
+            const divisions =
+                Object.keys(
+                    playersData.divisions || {}
+                );
+
+            divisions.forEach(
+                division => {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+                    option.value =
+                        division;
+
+                    option.textContent =
+                        `Division ${division}`;
+
+                    playersLeagueFilter
+                        .appendChild(
+                            option
+                        );
+                }
+            );
+
+        }
+
+
+        function populatePlayersTeams() {
+
+            playersTeamFilter.innerHTML =
+                "";
+
+            const allOption =
+                document.createElement(
+                    "option"
+                );
+
+            allOption.value =
+                "all";
+
+            allOption.textContent =
+                "All teams";
+
+            playersTeamFilter.appendChild(
+                allOption
+            );
+
+            const division =
+                playersLeagueFilter.value;
+
+            const teams =
+                Object.keys(
+                    playersData
+                        .divisions?.[
+                            division
+                        ]?.teams || {}
+                );
+
+            teams
+                .sort(
+                    (a, b) =>
+                        a.localeCompare(b)
+                )
+                .forEach(
+                    team => {
+
+                        const option =
+                            document.createElement(
+                                "option"
+                            );
+
+                        option.value =
+                            team;
+
+                        option.textContent =
+                            team;
+
+                        playersTeamFilter
+                            .appendChild(
+                                option
+                            );
+                    }
+                );
+
+        }
 
         async function loadData() {
 
@@ -774,20 +979,20 @@
 
                 const [
                     playerResponse,
-                    scheduleResponse
+                    scheduleResponse,
+                    playersResponse
                 ] = await Promise.all([
                     fetch(
                         "./player_matches.json",
-                        {
-                            cache: "no-store"
-                        }
+                        { cache: "no-store" }
                     ),
-
                     fetch(
                         "./schedule.json",
-                        {
-                            cache: "no-store"
-                        }
+                        { cache: "no-store" }
+                    ),
+                    fetch(
+                        "./players.json",
+                        { cache: "no-store" }
                     )
                 ]);
 
@@ -803,11 +1008,20 @@
                     );
                 }
 
+                if (!playersResponse.ok) {
+                    throw new Error(
+                        "Unable to load players.json"
+                    );
+                }
+
                 data =
                     await playerResponse.json();
 
                 scheduleData =
                     await scheduleResponse.json();
+
+                playersData =
+                    await playersResponse.json();
 
 
                 // Player matches
@@ -823,6 +1037,11 @@
                 populateScheduleTeams();
                 renderSchedule();
 
+                // Players
+                populatePlayersLeagues();
+                populatePlayersTeams();
+                renderPlayers();
+
             }
             catch (error) {
 
@@ -837,6 +1056,12 @@
                 scheduleMatches.innerHTML = `
             <div class="error">
                 Unable to load schedule data.
+            </div>
+        `;
+
+                playersContainer.innerHTML = `
+            <div class="error">
+                Unable to load player data.
             </div>
         `;
 
@@ -2283,6 +2508,239 @@
 
         }
 
+        function renderPlayers() {
+
+            playersContainer.innerHTML = "";
+
+            const division =
+                playersLeagueFilter.value;
+
+            const selectedTeam =
+                playersTeamFilter.value;
+
+            const teams =
+                playersData
+                    .divisions?.[
+                        division
+                    ]?.teams || {};
+
+            let teamEntries =
+                Object.entries(teams);
+
+            if (
+                selectedTeam !== "all"
+            ) {
+                teamEntries =
+                    teamEntries.filter(
+                        ([teamName]) =>
+                            teamName === selectedTeam
+                    );
+            }
+
+            const totalPlayers =
+                teamEntries.reduce(
+                    (total, [_, team]) =>
+                        total
+                        + (
+                            Array.isArray(
+                                team.players
+                            )
+                                ? team.players.length
+                                : 0
+                        ),
+                    0
+                );
+
+            playersSummary.textContent =
+                `${teamEntries.length} team${
+                    teamEntries.length === 1
+                        ? ""
+                        : "s"
+                } · ${totalPlayers} player${
+                    totalPlayers === 1
+                        ? ""
+                        : "s"
+                }`;
+
+            if (!teamEntries.length) {
+                playersContainer.innerHTML = `
+                    <div class="empty">
+                        No player data found.
+                    </div>
+                `;
+                return;
+            }
+
+            teamEntries.forEach(
+                ([teamName, team]) => {
+
+                    const card =
+                        document.createElement(
+                            "section"
+                        );
+
+                    card.className =
+                        "players-team-card";
+
+                    const players =
+                        Array.isArray(
+                            team.players
+                        )
+                            ? team.players
+                            : [];
+
+                    const rows =
+                        players
+                            .map(
+                                player => {
+
+                                    const points =
+                                        player.points === null
+                                        || player.points === undefined
+                                            ? "—"
+                                            : Number(
+                                                player.points
+                                            ).toFixed(2);
+
+                                    const rank =
+                                        player.overall_rank === null
+                                        || player.overall_rank === undefined
+                                            ? "—"
+                                            : player.overall_rank;
+
+                                    return `
+                                        <tr>
+                                            <td class="number">
+                                                ${escapeHtml(
+                                                    player.order
+                                                )}
+                                            </td>
+
+                                            <td>
+                                                ${escapeHtml(
+                                                    player.hks_no
+                                                )}
+                                            </td>
+
+                                            <td class="player-name-cell">
+                                                ${playerHtml(
+                                                    player.name,
+                                                    player.hks_no
+                                                )}
+                                            </td>
+
+                                            <td class="number">
+                                                ${escapeHtml(
+                                                    rank
+                                                )}
+                                            </td>
+
+                                            <td class="number">
+                                                ${escapeHtml(
+                                                    points
+                                                )}
+                                            </td>
+
+                                            <td class="number">
+                                                ${escapeHtml(
+                                                    player.games_played ?? 0
+                                                )}
+                                            </td>
+
+                                            <td class="number">
+                                                ${escapeHtml(
+                                                    player.won ?? 0
+                                                )}
+                                            </td>
+
+                                            <td class="number">
+                                                ${escapeHtml(
+                                                    player.lost ?? 0
+                                                )}
+                                            </td>
+                                        </tr>
+                                    `;
+                                }
+                            )
+                            .join("");
+
+                    card.innerHTML = `
+                        <div class="players-team-header">
+
+                            <div class="players-team-name">
+                                ${escapeHtml(
+                                    teamName
+                                )}
+                            </div>
+
+                            <div class="players-team-meta">
+                                Effective date:
+                                ${escapeHtml(
+                                    team.effective_date
+                                    || "—"
+                                )}
+                            </div>
+
+                        </div>
+
+                        <div class="players-table-wrap">
+
+                            <table class="players-table">
+
+                                <thead>
+                                    <tr>
+                                        <th class="number">
+                                            Order
+                                        </th>
+
+                                        <th>
+                                            HKS No.
+                                        </th>
+
+                                        <th>
+                                            Player
+                                        </th>
+
+                                        <th class="number">
+                                            Rank
+                                        </th>
+
+                                        <th class="number">
+                                            Points
+                                        </th>
+
+                                        <th class="number">
+                                            Played
+                                        </th>
+
+                                        <th class="number">
+                                            Won
+                                        </th>
+
+                                        <th class="number">
+                                            Lost
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    ${rows}
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    `;
+
+                    playersContainer.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
+
         leagueFilter.addEventListener(
             "change",
             () => {
@@ -2328,6 +2786,53 @@
             "change",
             renderSchedule
         );
+
+        playersLeagueFilter.addEventListener(
+            "change",
+            () => {
+
+                populatePlayersTeams();
+
+                playersTeamFilter.value =
+                    "all";
+
+                rankingPopup.hidden =
+                    true;
+
+                renderPlayers();
+
+            }
+        );
+
+
+        playersTeamFilter.addEventListener(
+            "change",
+            () => {
+
+                rankingPopup.hidden =
+                    true;
+
+                renderPlayers();
+
+            }
+        );
+
+
+        clearPlayersFilters.addEventListener(
+            "click",
+            () => {
+
+                playersTeamFilter.value =
+                    "all";
+
+                rankingPopup.hidden =
+                    true;
+
+                renderPlayers();
+
+            }
+        );
+
 
         clearMatchFilters.addEventListener(
             "click",

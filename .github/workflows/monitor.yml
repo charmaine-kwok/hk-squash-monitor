@@ -54,7 +54,8 @@ jobs:
             player_state.json \
             roster_history.json \
             docs/player_matches.json \
-            docs/schedule.json
+            docs/schedule.json \
+            docs/players.json
 
           if git diff --cached --quiet; then
             echo "No data changes."
