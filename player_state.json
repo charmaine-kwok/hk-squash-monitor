@@ -270,12 +270,20 @@
       "31848": {
         "name": "Yuen Wai Ting",
         "average": 12.0,
-        "matches_played": 2
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 36.0,
+        "won": 0,
+        "lost": 3
       },
       "34870": {
         "name": "Chak Wai Suen",
-        "average": 18.0,
-        "matches_played": 3
+        "average": 19.5,
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 78.0,
+        "won": 3,
+        "lost": 1
       },
       "30714": {
         "name": "Tsang Ka Lei Carrie",
@@ -284,8 +292,12 @@
       },
       "35854": {
         "name": "Wong Chor Wai",
-        "average": 4.5,
-        "matches_played": 2
+        "average": 6.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 18.0,
+        "won": 0,
+        "lost": 3
       },
       "35085": {
         "name": "Cheung Diana",
@@ -354,13 +366,21 @@
       },
       "34589": {
         "name": "Jue Emily Xiao Ran",
-        "average": 24.0,
-        "matches_played": 1
+        "average": 25.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 51.0,
+        "won": 2,
+        "lost": 0
       },
       "35173": {
         "name": "Chiu Amber Elisabeth",
-        "average": 13.5,
-        "matches_played": 2
+        "average": 15.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 45.0,
+        "won": 2,
+        "lost": 1
       },
       "34789": {
         "name": "Krefman Kylie Judith",
@@ -390,7 +410,20 @@
       "34598": {
         "name": "Verma Tara",
         "average": 9.0,
-        "matches_played": 1
+        "matches_played": 2,
+        "published_games_played": 1,
+        "total_game_points": 9.0,
+        "won": 0,
+        "lost": 1
+      },
+      "34788": {
+        "name": "Carlsson Rosa",
+        "average": 18.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 18.0,
+        "won": 1,
+        "lost": 0
       }
     },
     "Hong Kong Cricket Club L4 Rockettes": {
