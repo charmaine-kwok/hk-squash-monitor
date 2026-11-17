@@ -657,8 +657,8 @@
                 </div>
 
                 <div class="filter">
-                    <button type="button" id="clearMatchFilters" class="clear-filters">
-                        Clear filters
+                    <button type="button" id="clearMatchFilters" disabled class="clear-filters">
+                        Reset all filters
                     </button>
                 </div>
 
@@ -710,8 +710,8 @@
                 </div>
 
                 <div class="filter">
-                    <button type="button" id="clearScheduleFilters" class="clear-filters">
-                        Clear filters
+                    <button type="button" id="clearScheduleFilters" disabled class="clear-filters">
+                        Reset all filters
                     </button>
                 </div>
             </div>
@@ -751,10 +751,10 @@
                 <div class="filter">
                     <button
                         type="button"
-                        id="clearPlayersFilters"
+                        id="clearPlayersFilters" disabled
                         class="clear-filters"
                     >
-                        Clear filters
+                        Reset all filters
                     </button>
                 </div>
 
@@ -880,37 +880,23 @@
 
         const rankingCache = new Map();
 
-        function populatePlayersLeagues() {
+        const DEFAULT_LEAGUE = "L4";
 
-            playersLeagueFilter.innerHTML =
-                "";
+        function populateLeagueOptions(select, leaguesByName) {
+            const leagues = Object.keys(leaguesByName);
+            const orderedLeagues = leagues.includes(DEFAULT_LEAGUE)
+                ? [DEFAULT_LEAGUE, ...leagues.filter(league => league !== DEFAULT_LEAGUE)]
+                : leagues;
 
-            const divisions =
-                Object.keys(
-                    playersData.divisions || {}
-                );
+            select.replaceChildren();
+            for (const league of orderedLeagues) {
+                const option = document.createElement("option");
+                option.value = league;
+                option.textContent = `Division ${league}`;
+                select.appendChild(option);
+            }
 
-            divisions.forEach(
-                division => {
-
-                    const option =
-                        document.createElement(
-                            "option"
-                        );
-
-                    option.value =
-                        division;
-
-                    option.textContent =
-                        `Division ${division}`;
-
-                    playersLeagueFilter
-                        .appendChild(
-                            option
-                        );
-                }
-            );
-
+            select.selectedIndex = orderedLeagues.length ? 0 : -1;
         }
 
 
@@ -1024,23 +1010,11 @@
                     await playersResponse.json();
 
 
-                // Player matches
-                populateLeagues();
-                populateWeeks();
-                populateTeams();
-                renderMatches();
+                resetAllFilters();
 
-
-                // Schedule
-                populateScheduleLeagues();
-                populateScheduleWeeks();
-                populateScheduleTeams();
-                renderSchedule();
-
-                // Players
-                populatePlayersLeagues();
-                populatePlayersTeams();
-                renderPlayers();
+                clearMatchFilters.disabled = false;
+                clearScheduleFilters.disabled = false;
+                clearPlayersFilters.disabled = false;
 
             }
             catch (error) {
@@ -1086,37 +1060,6 @@
                         && Array.isArray(
                             match.individual_matches
                         )
-                    );
-
-                }
-            );
-
-        }
-
-
-        function populateLeagues() {
-
-            leagueFilter.innerHTML = "";
-
-            const leagues =
-                Object.keys(data);
-
-            leagues.forEach(
-                league => {
-
-                    const option =
-                        document.createElement(
-                            "option"
-                        );
-
-                    option.value =
-                        league;
-
-                    option.textContent =
-                        `Division ${league}`;
-
-                    leagueFilter.appendChild(
-                        option
                     );
 
                 }
@@ -2030,38 +1973,6 @@
         }
 
 
-        function populateScheduleLeagues() {
-
-            scheduleLeagueFilter.innerHTML =
-                "";
-
-            Object.keys(
-                scheduleData
-            ).forEach(
-                league => {
-
-                    const option =
-                        document.createElement(
-                            "option"
-                        );
-
-                    option.value =
-                        league;
-
-                    option.textContent =
-                        `Division ${league}`;
-
-                    scheduleLeagueFilter
-                        .appendChild(
-                            option
-                        );
-
-                }
-            );
-
-        }
-
-
         function populateScheduleWeeks() {
 
             const league =
@@ -2527,6 +2438,11 @@
             let teamEntries =
                 Object.entries(teams);
 
+            teamEntries.sort(
+                ([teamA], [teamB]) =>
+                    teamA.localeCompare(teamB)
+            );
+
             if (
                 selectedTeam !== "all"
             ) {
@@ -2818,55 +2734,27 @@
         );
 
 
-        clearPlayersFilters.addEventListener(
-            "click",
-            () => {
+        function resetAllFilters() {
+            populateLeagueOptions(leagueFilter, data);
+            populateWeeks();
+            populateTeams();
+            renderMatches();
 
-                playersTeamFilter.value =
-                    "all";
+            populateLeagueOptions(scheduleLeagueFilter, scheduleData);
+            populateScheduleWeeks();
+            populateScheduleTeams();
+            renderSchedule();
 
-                rankingPopup.hidden =
-                    true;
+            populateLeagueOptions(playersLeagueFilter, playersData.divisions || {});
+            populatePlayersTeams();
+            renderPlayers();
 
-                renderPlayers();
+            rankingPopup.hidden = true;
+        }
 
-            }
-        );
-
-
-        clearMatchFilters.addEventListener(
-            "click",
-            () => {
-
-                weekFilter.value =
-                    "all";
-
-                teamFilter.value =
-                    "all";
-
-                rankingPopup.hidden =
-                    true;
-
-                renderMatches();
-
-            }
-        );
-
-
-        clearScheduleFilters.addEventListener(
-            "click",
-            () => {
-
-                scheduleWeekFilter.value =
-                    "all";
-
-                scheduleTeamFilter.value =
-                    "all";
-
-                renderSchedule();
-
-            }
-        );
+        clearMatchFilters.addEventListener("click", resetAllFilters);
+        clearScheduleFilters.addEventListener("click", resetAllFilters);
+        clearPlayersFilters.addEventListener("click", resetAllFilters);
 
         async function loadRanking(memberId) {
             if (rankingCache.has(memberId)) {
