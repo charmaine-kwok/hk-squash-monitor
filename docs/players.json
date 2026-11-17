@@ -349,12 +349,12 @@
               "hks_no": "34327",
               "name": "Cai Yuxi Serena",
               "ranking": "0",
-              "points": 20.0,
+              "points": 21.75,
               "overall_rank": null,
-              "games_played": 3,
-              "won": 2,
+              "games_played": 4,
+              "won": 3,
               "lost": 1,
-              "total_game_points": 60.0
+              "total_game_points": 87.0
             },
             {
               "order": 2,
@@ -385,12 +385,12 @@
               "hks_no": "34012",
               "name": "Pun Zhe Qiao Kimi",
               "ranking": "0",
-              "points": 21.0,
+              "points": 17.0,
               "overall_rank": null,
-              "games_played": 2,
+              "games_played": 3,
               "won": 2,
-              "lost": 0,
-              "total_game_points": 42.0
+              "lost": 1,
+              "total_game_points": 51.0
             },
             {
               "order": 5,
@@ -409,24 +409,24 @@
               "hks_no": "34206",
               "name": "Chiu Yuet Yi",
               "ranking": "0",
-              "points": 19.5,
+              "points": 18.0,
               "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
+              "games_played": 3,
+              "won": 3,
               "lost": 0,
-              "total_game_points": 39.0
+              "total_game_points": 54.0
             },
             {
               "order": 7,
               "hks_no": "34848",
               "name": "Guttendorf Zoe",
               "ranking": "0",
-              "points": 10.5,
+              "points": 8.0,
               "overall_rank": null,
-              "games_played": 2,
+              "games_played": 3,
               "won": 1,
-              "lost": 1,
-              "total_game_points": 21.0
+              "lost": 2,
+              "total_game_points": 24.0
             },
             {
               "order": 8,
@@ -712,48 +712,48 @@
               "hks_no": "33819",
               "name": "Chui Jennifer",
               "ranking": "0",
-              "points": 19.5,
+              "points": 17.0,
               "overall_rank": null,
-              "games_played": 2,
+              "games_played": 3,
               "won": 1,
-              "lost": 1,
-              "total_game_points": 39.0
+              "lost": 2,
+              "total_game_points": 51.0
             },
             {
               "order": 2,
               "hks_no": "35352",
               "name": "Yu Bella",
               "ranking": "0",
-              "points": 27.0,
+              "points": 25.5,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
+              "games_played": 2,
+              "won": 2,
               "lost": 0,
-              "total_game_points": 27.0
+              "total_game_points": 51.0
             },
             {
               "order": 3,
               "hks_no": "34134",
               "name": "Law Tsz Ting",
               "ranking": "0",
-              "points": 19.0,
+              "points": 17.25,
               "overall_rank": null,
-              "games_played": 3,
+              "games_played": 4,
               "won": 2,
-              "lost": 1,
-              "total_game_points": 57.0
+              "lost": 2,
+              "total_game_points": 69.0
             },
             {
               "order": 4,
               "hks_no": "34651",
               "name": "Ho Suet Ying",
               "ranking": "0",
-              "points": 21.0,
+              "points": 19.5,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
+              "games_played": 2,
+              "won": 2,
               "lost": 0,
-              "total_game_points": 21.0
+              "total_game_points": 39.0
             },
             {
               "order": 5,
