@@ -3047,6 +3047,20 @@
         );
 
 
+        // Capture scrolls from both the page and the Players table.
+        const playersTab = document.getElementById("playersTab");
+
+        window.addEventListener(
+            "scroll",
+            () => {
+                if (playersTab.classList.contains("active")) {
+                    rankingPopup.hidden = true;
+                }
+            },
+            { capture: true, passive: true }
+        );
+
+
         // Close popup when changing filters.
         leagueFilter.addEventListener(
             "change",
