@@ -1,5 +1,961 @@
 {
   "divisions": {
+    "L4": {
+      "teams": {
+        "Kwai Tsing District Squash Club L4": {
+          "effective_date": "2026-10-02",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "35315",
+              "name": "Chow Hoi Ying",
+              "ranking": "0",
+              "points": 14.25,
+              "overall_rank": null,
+              "games_played": 4,
+              "won": 1,
+              "lost": 3,
+              "total_game_points": 57.0
+            },
+            {
+              "order": 2,
+              "hks_no": "35471",
+              "name": "Wong Chi Chi",
+              "ranking": "0",
+              "points": 10.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 0,
+              "lost": 2,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 3,
+              "hks_no": "35392",
+              "name": "Yu Wing Tung",
+              "ranking": "0",
+              "points": 12.0,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 24.0
+            },
+            {
+              "order": 4,
+              "hks_no": "35464",
+              "name": "Tam Sum Yi",
+              "ranking": "0",
+              "points": 15.0,
+              "overall_rank": null,
+              "games_played": 4,
+              "won": 2,
+              "lost": 2,
+              "total_game_points": 60.0
+            },
+            {
+              "order": 5,
+              "hks_no": "35441",
+              "name": "Kwok Wai Yin",
+              "ranking": "0",
+              "points": 19.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 2,
+              "lost": 0,
+              "total_game_points": 39.0
+            },
+            {
+              "order": 6,
+              "hks_no": "29719",
+              "name": "Chung Wai Ting",
+              "ranking": "0",
+              "points": 18.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 18.0
+            },
+            {
+              "order": 7,
+              "hks_no": "35467",
+              "name": "Lau Yuk Yee",
+              "ranking": "0",
+              "points": 6.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 6.0
+            },
+            {
+              "order": 8,
+              "hks_no": "35271",
+              "name": "Lam Lai Kuen",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            }
+          ]
+        },
+        "Squashathon Ladies": {
+          "effective_date": "2026-11-23",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "32610",
+              "name": "Chung Wing Yin",
+              "ranking": "0",
+              "points": 19.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 39.0
+            },
+            {
+              "order": 2,
+              "hks_no": "29533",
+              "name": "Cheung Hoi Suen",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 3,
+              "hks_no": "31848",
+              "name": "Yuen Wai Ting",
+              "ranking": "0",
+              "points": 12.0,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 0,
+              "lost": 2,
+              "total_game_points": 24.0
+            },
+            {
+              "order": 4,
+              "hks_no": "34870",
+              "name": "Chak Wai Suen",
+              "ranking": "0",
+              "points": 18.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 2,
+              "lost": 1,
+              "total_game_points": 54.0
+            },
+            {
+              "order": 5,
+              "hks_no": "35473",
+              "name": "Lin Jia Li",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 6,
+              "hks_no": "30714",
+              "name": "Tsang Ka Lei Carrie",
+              "ranking": "0",
+              "points": 13.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 27.0
+            },
+            {
+              "order": 7,
+              "hks_no": "35854",
+              "name": "Wong Chor Wai",
+              "ranking": "0",
+              "points": 4.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 0,
+              "lost": 2,
+              "total_game_points": 9.0
+            },
+            {
+              "order": 8,
+              "hks_no": "35085",
+              "name": "Cheung Diana",
+              "ranking": "0",
+              "points": 9.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 9.0
+            },
+            {
+              "order": 9,
+              "hks_no": "36135",
+              "name": "Chan Tat Ki",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 10,
+              "hks_no": "36061",
+              "name": "Ho Hoi Yan",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            }
+          ]
+        },
+        "JESSICA L4 Mochis": {
+          "effective_date": "2026-11-13",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "34461",
+              "name": "Jin Olivia",
+              "ranking": "0",
+              "points": 27.0,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 2,
+              "lost": 0,
+              "total_game_points": 54.0
+            },
+            {
+              "order": 2,
+              "hks_no": "34258",
+              "name": "Kwok To Yan",
+              "ranking": "0",
+              "points": 16.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 33.0
+            },
+            {
+              "order": 3,
+              "hks_no": "34284",
+              "name": "Lau Cheuk Yan",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 4,
+              "hks_no": "33953",
+              "name": "Man Yu Ching",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 5,
+              "hks_no": "34039",
+              "name": "Wong Wun Yin",
+              "ranking": "0",
+              "points": 27.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 27.0
+            },
+            {
+              "order": 6,
+              "hks_no": "27974",
+              "name": "Ho Chin Pik",
+              "ranking": "0",
+              "points": 12.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 12.0
+            },
+            {
+              "order": 7,
+              "hks_no": "32125",
+              "name": "Chan Siu Yuen",
+              "ranking": "0",
+              "points": 6.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 6.0
+            },
+            {
+              "order": 8,
+              "hks_no": "35141",
+              "name": "Ng Hei Ching",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 3,
+              "lost": 0,
+              "total_game_points": 63.0
+            },
+            {
+              "order": 9,
+              "hks_no": "35157",
+              "name": "Pang Sze Yiu",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 3,
+              "lost": 0,
+              "total_game_points": 63.0
+            }
+          ]
+        },
+        "JESSICA L4": {
+          "effective_date": "2026-10-02",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "34327",
+              "name": "Cai Yuxi Serena",
+              "ranking": "0",
+              "points": 20.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 2,
+              "lost": 1,
+              "total_game_points": 60.0
+            },
+            {
+              "order": 2,
+              "hks_no": "34354",
+              "name": "Lam Ngo Sze Osee",
+              "ranking": "0",
+              "points": 24.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 24.0
+            },
+            {
+              "order": 3,
+              "hks_no": "35075",
+              "name": "Yeung Hei Lo Keiko",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 2,
+              "lost": 0,
+              "total_game_points": 42.0
+            },
+            {
+              "order": 4,
+              "hks_no": "34012",
+              "name": "Pun Zhe Qiao Kimi",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 2,
+              "lost": 0,
+              "total_game_points": 42.0
+            },
+            {
+              "order": 5,
+              "hks_no": "23946",
+              "name": "Ng Jessica Yuk Mui",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 6,
+              "hks_no": "34206",
+              "name": "Chiu Yuet Yi",
+              "ranking": "0",
+              "points": 19.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 2,
+              "lost": 0,
+              "total_game_points": 39.0
+            },
+            {
+              "order": 7,
+              "hks_no": "34848",
+              "name": "Guttendorf Zoe",
+              "ranking": "0",
+              "points": 10.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 8,
+              "hks_no": "34013",
+              "name": "Pun Zhe Xi Jasmine",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            }
+          ]
+        },
+        "Hong Kong Cricket Club L4 Rockettes": {
+          "effective_date": "2026-10-02",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "35019",
+              "name": "Liang Shijing",
+              "ranking": "0",
+              "points": 27.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 3,
+              "lost": 0,
+              "total_game_points": 81.0
+            },
+            {
+              "order": 2,
+              "hks_no": "34672",
+              "name": "Simmons Shirndre-Lee",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 3,
+              "hks_no": "31436",
+              "name": "Tse Kathleen Sarah",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 4,
+              "hks_no": "24255",
+              "name": "Cheung Helen Wai Ching",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 5,
+              "hks_no": "32224",
+              "name": "Peters Vivien",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 6,
+              "hks_no": "32932",
+              "name": "Cumming Alison",
+              "ranking": "0",
+              "points": 8.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 0,
+              "lost": 3,
+              "total_game_points": 24.0
+            },
+            {
+              "order": 7,
+              "hks_no": "35004",
+              "name": "Lam Ka Yin",
+              "ranking": "0",
+              "points": 12.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 12.0
+            },
+            {
+              "order": 8,
+              "hks_no": "34107",
+              "name": "Cooke Anna",
+              "ranking": "0",
+              "points": 9.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 9.0
+            },
+            {
+              "order": 9,
+              "hks_no": "35566",
+              "name": "Beyers Karli",
+              "ranking": "0",
+              "points": 11.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 1,
+              "lost": 2,
+              "total_game_points": 33.0
+            },
+            {
+              "order": 10,
+              "hks_no": "34646",
+              "name": "Mak Wing Sze",
+              "ranking": "0",
+              "points": 10.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 11,
+              "hks_no": "37073",
+              "name": "Potter Kathryn Jane",
+              "ranking": "0",
+              "points": 3.0,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 0,
+              "lost": 2,
+              "total_game_points": 6.0
+            }
+          ]
+        },
+        "Hong Kong Cricket Club L4": {
+          "effective_date": "2026-11-02",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "34026",
+              "name": "Cheng Hiu Tung Kaley",
+              "ranking": "0",
+              "points": 27.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 27.0
+            },
+            {
+              "order": 2,
+              "hks_no": "34309",
+              "name": "Wang Youying",
+              "ranking": "0",
+              "points": 24.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 24.0
+            },
+            {
+              "order": 3,
+              "hks_no": "34302",
+              "name": "Ng Aurelia Kiu Hei",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 4,
+              "hks_no": "34589",
+              "name": "Jue Emily Xiao Ran",
+              "ranking": "0",
+              "points": 24.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 24.0
+            },
+            {
+              "order": 5,
+              "hks_no": "28446",
+              "name": "Leung Lilian Wai Shan",
+              "ranking": "0",
+              "points": 13.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 0,
+              "lost": 2,
+              "total_game_points": 27.0
+            },
+            {
+              "order": 6,
+              "hks_no": "34078",
+              "name": "Adjemian Kasey",
+              "ranking": "0",
+              "points": 12.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 12.0
+            },
+            {
+              "order": 7,
+              "hks_no": "34598",
+              "name": "Verma Tara",
+              "ranking": "0",
+              "points": 9.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 9.0
+            },
+            {
+              "order": 8,
+              "hks_no": "35173",
+              "name": "Chiu Amber Elisabeth",
+              "ranking": "0",
+              "points": 13.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 27.0
+            },
+            {
+              "order": 9,
+              "hks_no": "34789",
+              "name": "Krefman Kylie Judith",
+              "ranking": "0",
+              "points": 10.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 10,
+              "hks_no": "34788",
+              "name": "Carlsson Rosa",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            }
+          ]
+        },
+        "Hong Kong Football Club L4A": {
+          "effective_date": "2026-10-02",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "33819",
+              "name": "Chui Jennifer",
+              "ranking": "0",
+              "points": 19.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 1,
+              "lost": 1,
+              "total_game_points": 39.0
+            },
+            {
+              "order": 2,
+              "hks_no": "35352",
+              "name": "Yu Bella",
+              "ranking": "0",
+              "points": 27.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 27.0
+            },
+            {
+              "order": 3,
+              "hks_no": "34134",
+              "name": "Law Tsz Ting",
+              "ranking": "0",
+              "points": 19.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 2,
+              "lost": 1,
+              "total_game_points": 57.0
+            },
+            {
+              "order": 4,
+              "hks_no": "34651",
+              "name": "Ho Suet Ying",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 5,
+              "hks_no": "33570",
+              "name": "Wan Esther",
+              "ranking": "0",
+              "points": 15.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 2,
+              "lost": 1,
+              "total_game_points": 45.0
+            },
+            {
+              "order": 6,
+              "hks_no": "32151",
+              "name": "Tang Genevieve",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 7,
+              "hks_no": "33757",
+              "name": "Ooi Hui Hoon",
+              "ranking": "0",
+              "points": 18.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 18.0
+            },
+            {
+              "order": 8,
+              "hks_no": "34138",
+              "name": "Fong Chui Ping",
+              "ranking": "0",
+              "points": 9.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 9.0
+            },
+            {
+              "order": 9,
+              "hks_no": "34952",
+              "name": "Souza Suzanne",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 10,
+              "hks_no": "34940",
+              "name": "Ng Samantha Ting Tung",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            }
+          ]
+        },
+        "Hong Kong Football Club L4B": {
+          "effective_date": "2026-10-15",
+          "players": [
+            {
+              "order": 1,
+              "hks_no": "33884",
+              "name": "Lin Zixuan Emma",
+              "ranking": "0",
+              "points": 15.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 15.0
+            },
+            {
+              "order": 2,
+              "hks_no": "33257",
+              "name": "Cheng Chen Kaja",
+              "ranking": "0",
+              "points": 15.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 0,
+              "lost": 3,
+              "total_game_points": 45.0
+            },
+            {
+              "order": 3,
+              "hks_no": "26243",
+              "name": "Man Angela Pui Kei",
+              "ranking": "0",
+              "points": 11.25,
+              "overall_rank": null,
+              "games_played": 4,
+              "won": 1,
+              "lost": 3,
+              "total_game_points": 45.0
+            },
+            {
+              "order": 4,
+              "hks_no": "34108",
+              "name": "Dua Jigyasa",
+              "ranking": "0",
+              "points": 6.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 0,
+              "lost": 1,
+              "total_game_points": 6.0
+            },
+            {
+              "order": 5,
+              "hks_no": "37251",
+              "name": "Lim Zi Xuan Leanna",
+              "ranking": "0",
+              "points": 7.5,
+              "overall_rank": null,
+              "games_played": 2,
+              "won": 0,
+              "lost": 2,
+              "total_game_points": 15.0
+            },
+            {
+              "order": 6,
+              "hks_no": "26526",
+              "name": "Tsang Lorita Yau Ching",
+              "ranking": "0",
+              "points": 7.0,
+              "overall_rank": null,
+              "games_played": 3,
+              "won": 1,
+              "lost": 2,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 7,
+              "hks_no": "33758",
+              "name": "Leung Suen Yan Tiffany",
+              "ranking": "0",
+              "points": 21.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 21.0
+            },
+            {
+              "order": 8,
+              "hks_no": "33877",
+              "name": "Morton Mavis",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 9,
+              "hks_no": "34937",
+              "name": "Hui Kristal",
+              "ranking": "0",
+              "points": 12.0,
+              "overall_rank": null,
+              "games_played": 1,
+              "won": 1,
+              "lost": 0,
+              "total_game_points": 12.0
+            },
+            {
+              "order": 10,
+              "hks_no": "18995",
+              "name": "Chan Peggy",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            }
+          ]
+        }
+      }
+    },
     "D15B": {
       "teams": {
         "The Zero Squash Club D15B": {
@@ -1357,938 +2313,6 @@
               "won": 0,
               "lost": 1,
               "total_game_points": 6.0
-            }
-          ]
-        }
-      }
-    },
-    "L4": {
-      "teams": {
-        "Kwai Tsing District Squash Club L4": {
-          "effective_date": "2026-10-02",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "35315",
-              "name": "Chow Hoi Ying",
-              "ranking": "0",
-              "points": 14.25,
-              "overall_rank": null,
-              "games_played": 4,
-              "won": 1,
-              "lost": 3,
-              "total_game_points": 57.0
-            },
-            {
-              "order": 2,
-              "hks_no": "35471",
-              "name": "Wong Chi Chi",
-              "ranking": "0",
-              "points": 10.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
-              "lost": 2,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 3,
-              "hks_no": "35392",
-              "name": "Yu Wing Tung",
-              "ranking": "0",
-              "points": 12.0,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 24.0
-            },
-            {
-              "order": 4,
-              "hks_no": "35464",
-              "name": "Tam Sum Yi",
-              "ranking": "0",
-              "points": 15.0,
-              "overall_rank": null,
-              "games_played": 4,
-              "won": 2,
-              "lost": 2,
-              "total_game_points": 60.0
-            },
-            {
-              "order": 5,
-              "hks_no": "35441",
-              "name": "Kwok Wai Yin",
-              "ranking": "0",
-              "points": 19.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
-              "lost": 0,
-              "total_game_points": 39.0
-            },
-            {
-              "order": 6,
-              "hks_no": "29719",
-              "name": "Chung Wai Ting",
-              "ranking": "0",
-              "points": 18.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 18.0
-            },
-            {
-              "order": 7,
-              "hks_no": "35467",
-              "name": "Lau Yuk Yee",
-              "ranking": "0",
-              "points": 6.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 6.0
-            },
-            {
-              "order": 8,
-              "hks_no": "35271",
-              "name": "Lam Lai Kuen",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            }
-          ]
-        },
-        "Squashathon Ladies": {
-          "effective_date": "2026-10-02",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "32610",
-              "name": "Chung Wing Yin",
-              "ranking": "0",
-              "points": 19.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 39.0
-            },
-            {
-              "order": 2,
-              "hks_no": "29533",
-              "name": "Cheung Hoi Suen",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 3,
-              "hks_no": "31848",
-              "name": "Yuen Wai Ting",
-              "ranking": "0",
-              "points": 12.0,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
-              "lost": 2,
-              "total_game_points": 24.0
-            },
-            {
-              "order": 4,
-              "hks_no": "34870",
-              "name": "Chak Wai Suen",
-              "ranking": "0",
-              "points": 18.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 2,
-              "lost": 1,
-              "total_game_points": 54.0
-            },
-            {
-              "order": 5,
-              "hks_no": "35473",
-              "name": "Lin Jia Li",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 6,
-              "hks_no": "30714",
-              "name": "Tsang Ka Lei Carrie",
-              "ranking": "0",
-              "points": 13.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 27.0
-            },
-            {
-              "order": 7,
-              "hks_no": "35854",
-              "name": "Wong Chor Wai",
-              "ranking": "0",
-              "points": 4.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
-              "lost": 2,
-              "total_game_points": 9.0
-            },
-            {
-              "order": 8,
-              "hks_no": "35085",
-              "name": "Cheung Diana",
-              "ranking": "0",
-              "points": 9.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 9.0
-            }
-          ]
-        },
-        "JESSICA L4 Mochis": {
-          "effective_date": "2026-11-13",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "34461",
-              "name": "Jin Olivia",
-              "ranking": "0",
-              "points": 27.0,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
-              "lost": 0,
-              "total_game_points": 54.0
-            },
-            {
-              "order": 2,
-              "hks_no": "34258",
-              "name": "Kwok To Yan",
-              "ranking": "0",
-              "points": 16.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 33.0
-            },
-            {
-              "order": 3,
-              "hks_no": "34284",
-              "name": "Lau Cheuk Yan",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 4,
-              "hks_no": "33953",
-              "name": "Man Yu Ching",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 5,
-              "hks_no": "34039",
-              "name": "Wong Wun Yin",
-              "ranking": "0",
-              "points": 27.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 27.0
-            },
-            {
-              "order": 6,
-              "hks_no": "27974",
-              "name": "Ho Chin Pik",
-              "ranking": "0",
-              "points": 12.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 12.0
-            },
-            {
-              "order": 7,
-              "hks_no": "32125",
-              "name": "Chan Siu Yuen",
-              "ranking": "0",
-              "points": 6.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 6.0
-            },
-            {
-              "order": 8,
-              "hks_no": "35141",
-              "name": "Ng Hei Ching",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 3,
-              "lost": 0,
-              "total_game_points": 63.0
-            },
-            {
-              "order": 9,
-              "hks_no": "35157",
-              "name": "Pang Sze Yiu",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 3,
-              "lost": 0,
-              "total_game_points": 63.0
-            }
-          ]
-        },
-        "JESSICA L4": {
-          "effective_date": "2026-10-02",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "34327",
-              "name": "Cai Yuxi Serena",
-              "ranking": "0",
-              "points": 20.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 2,
-              "lost": 1,
-              "total_game_points": 60.0
-            },
-            {
-              "order": 2,
-              "hks_no": "34354",
-              "name": "Lam Ngo Sze Osee",
-              "ranking": "0",
-              "points": 24.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 24.0
-            },
-            {
-              "order": 3,
-              "hks_no": "35075",
-              "name": "Yeung Hei Lo Keiko",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
-              "lost": 0,
-              "total_game_points": 42.0
-            },
-            {
-              "order": 4,
-              "hks_no": "34012",
-              "name": "Pun Zhe Qiao Kimi",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
-              "lost": 0,
-              "total_game_points": 42.0
-            },
-            {
-              "order": 5,
-              "hks_no": "23946",
-              "name": "Ng Jessica Yuk Mui",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 6,
-              "hks_no": "34206",
-              "name": "Chiu Yuet Yi",
-              "ranking": "0",
-              "points": 19.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
-              "lost": 0,
-              "total_game_points": 39.0
-            },
-            {
-              "order": 7,
-              "hks_no": "34848",
-              "name": "Guttendorf Zoe",
-              "ranking": "0",
-              "points": 10.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 8,
-              "hks_no": "34013",
-              "name": "Pun Zhe Xi Jasmine",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            }
-          ]
-        },
-        "Hong Kong Cricket Club L4 Rockettes": {
-          "effective_date": "2026-10-02",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "35019",
-              "name": "Liang Shijing",
-              "ranking": "0",
-              "points": 27.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 3,
-              "lost": 0,
-              "total_game_points": 81.0
-            },
-            {
-              "order": 2,
-              "hks_no": "34672",
-              "name": "Simmons Shirndre-Lee",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 3,
-              "hks_no": "31436",
-              "name": "Tse Kathleen Sarah",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 4,
-              "hks_no": "24255",
-              "name": "Cheung Helen Wai Ching",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 5,
-              "hks_no": "32224",
-              "name": "Peters Vivien",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 6,
-              "hks_no": "32932",
-              "name": "Cumming Alison",
-              "ranking": "0",
-              "points": 8.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 0,
-              "lost": 3,
-              "total_game_points": 24.0
-            },
-            {
-              "order": 7,
-              "hks_no": "35004",
-              "name": "Lam Ka Yin",
-              "ranking": "0",
-              "points": 12.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 12.0
-            },
-            {
-              "order": 8,
-              "hks_no": "34107",
-              "name": "Cooke Anna",
-              "ranking": "0",
-              "points": 9.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 9.0
-            },
-            {
-              "order": 9,
-              "hks_no": "35566",
-              "name": "Beyers Karli",
-              "ranking": "0",
-              "points": 11.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 1,
-              "lost": 2,
-              "total_game_points": 33.0
-            },
-            {
-              "order": 10,
-              "hks_no": "34646",
-              "name": "Mak Wing Sze",
-              "ranking": "0",
-              "points": 10.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 11,
-              "hks_no": "37073",
-              "name": "Potter Kathryn Jane",
-              "ranking": "0",
-              "points": 3.0,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
-              "lost": 2,
-              "total_game_points": 6.0
-            }
-          ]
-        },
-        "Hong Kong Cricket Club L4": {
-          "effective_date": "2026-11-02",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "34026",
-              "name": "Cheng Hiu Tung Kaley",
-              "ranking": "0",
-              "points": 27.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 27.0
-            },
-            {
-              "order": 2,
-              "hks_no": "34309",
-              "name": "Wang Youying",
-              "ranking": "0",
-              "points": 24.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 24.0
-            },
-            {
-              "order": 3,
-              "hks_no": "34302",
-              "name": "Ng Aurelia Kiu Hei",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 4,
-              "hks_no": "34589",
-              "name": "Jue Emily Xiao Ran",
-              "ranking": "0",
-              "points": 24.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 24.0
-            },
-            {
-              "order": 5,
-              "hks_no": "28446",
-              "name": "Leung Lilian Wai Shan",
-              "ranking": "0",
-              "points": 13.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
-              "lost": 2,
-              "total_game_points": 27.0
-            },
-            {
-              "order": 6,
-              "hks_no": "34078",
-              "name": "Adjemian Kasey",
-              "ranking": "0",
-              "points": 12.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 12.0
-            },
-            {
-              "order": 7,
-              "hks_no": "34598",
-              "name": "Verma Tara",
-              "ranking": "0",
-              "points": 9.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 9.0
-            },
-            {
-              "order": 8,
-              "hks_no": "35173",
-              "name": "Chiu Amber Elisabeth",
-              "ranking": "0",
-              "points": 13.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 27.0
-            },
-            {
-              "order": 9,
-              "hks_no": "34789",
-              "name": "Krefman Kylie Judith",
-              "ranking": "0",
-              "points": 10.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 10,
-              "hks_no": "34788",
-              "name": "Carlsson Rosa",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            }
-          ]
-        },
-        "Hong Kong Football Club L4A": {
-          "effective_date": "2026-10-02",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "33819",
-              "name": "Chui Jennifer",
-              "ranking": "0",
-              "points": 19.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
-              "lost": 1,
-              "total_game_points": 39.0
-            },
-            {
-              "order": 2,
-              "hks_no": "35352",
-              "name": "Yu Bella",
-              "ranking": "0",
-              "points": 27.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 27.0
-            },
-            {
-              "order": 3,
-              "hks_no": "34134",
-              "name": "Law Tsz Ting",
-              "ranking": "0",
-              "points": 19.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 2,
-              "lost": 1,
-              "total_game_points": 57.0
-            },
-            {
-              "order": 4,
-              "hks_no": "34651",
-              "name": "Ho Suet Ying",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 5,
-              "hks_no": "33570",
-              "name": "Wan Esther",
-              "ranking": "0",
-              "points": 15.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 2,
-              "lost": 1,
-              "total_game_points": 45.0
-            },
-            {
-              "order": 6,
-              "hks_no": "32151",
-              "name": "Tang Genevieve",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 7,
-              "hks_no": "33757",
-              "name": "Ooi Hui Hoon",
-              "ranking": "0",
-              "points": 18.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 18.0
-            },
-            {
-              "order": 8,
-              "hks_no": "34138",
-              "name": "Fong Chui Ping",
-              "ranking": "0",
-              "points": 9.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 9.0
-            },
-            {
-              "order": 9,
-              "hks_no": "34952",
-              "name": "Souza Suzanne",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 10,
-              "hks_no": "34940",
-              "name": "Ng Samantha Ting Tung",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            }
-          ]
-        },
-        "Hong Kong Football Club L4B": {
-          "effective_date": "2026-10-15",
-          "players": [
-            {
-              "order": 1,
-              "hks_no": "33884",
-              "name": "Lin Zixuan Emma",
-              "ranking": "0",
-              "points": 15.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 15.0
-            },
-            {
-              "order": 2,
-              "hks_no": "33257",
-              "name": "Cheng Chen Kaja",
-              "ranking": "0",
-              "points": 15.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 0,
-              "lost": 3,
-              "total_game_points": 45.0
-            },
-            {
-              "order": 3,
-              "hks_no": "26243",
-              "name": "Man Angela Pui Kei",
-              "ranking": "0",
-              "points": 11.25,
-              "overall_rank": null,
-              "games_played": 4,
-              "won": 1,
-              "lost": 3,
-              "total_game_points": 45.0
-            },
-            {
-              "order": 4,
-              "hks_no": "34108",
-              "name": "Dua Jigyasa",
-              "ranking": "0",
-              "points": 6.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
-              "lost": 1,
-              "total_game_points": 6.0
-            },
-            {
-              "order": 5,
-              "hks_no": "37251",
-              "name": "Lim Zi Xuan Leanna",
-              "ranking": "0",
-              "points": 7.5,
-              "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
-              "lost": 2,
-              "total_game_points": 15.0
-            },
-            {
-              "order": 6,
-              "hks_no": "26526",
-              "name": "Tsang Lorita Yau Ching",
-              "ranking": "0",
-              "points": 7.0,
-              "overall_rank": null,
-              "games_played": 3,
-              "won": 1,
-              "lost": 2,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 7,
-              "hks_no": "33758",
-              "name": "Leung Suen Yan Tiffany",
-              "ranking": "0",
-              "points": 21.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 21.0
-            },
-            {
-              "order": 8,
-              "hks_no": "33877",
-              "name": "Morton Mavis",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
-            },
-            {
-              "order": 9,
-              "hks_no": "34937",
-              "name": "Hui Kristal",
-              "ranking": "0",
-              "points": 12.0,
-              "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
-              "lost": 0,
-              "total_game_points": 12.0
-            },
-            {
-              "order": 10,
-              "hks_no": "18995",
-              "name": "Chan Peggy",
-              "ranking": "0",
-              "points": null,
-              "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
             }
           ]
         }
