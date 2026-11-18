@@ -266,7 +266,11 @@
       "31848": {
         "name": "Yuen Wai Ting",
         "average": 12.0,
-        "matches_played": 3
+        "matches_played": 4,
+        "published_games_played": 3,
+        "total_game_points": 36.0,
+        "won": 0,
+        "lost": 3
       },
       "34870": {
         "name": "Chak Wai Suen",
@@ -286,7 +290,11 @@
       "35085": {
         "name": "Cheung Diana",
         "average": 9.0,
-        "matches_played": 1
+        "matches_played": 2,
+        "published_games_played": 1,
+        "total_game_points": 9.0,
+        "won": 0,
+        "lost": 1
       }
     },
     "Kwai Tsing District Squash Club L4": {
@@ -344,13 +352,21 @@
       },
       "34789": {
         "name": "Krefman Kylie Judith",
-        "average": 10.5,
-        "matches_played": 2
+        "average": 10.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 30.0,
+        "won": 1,
+        "lost": 2
       },
       "34026": {
         "name": "Cheng Hiu Tung Kaley",
         "average": 27.0,
-        "matches_played": 1
+        "matches_played": 2,
+        "published_games_played": 1,
+        "total_game_points": 27.0,
+        "won": 1,
+        "lost": 0
       },
       "34309": {
         "name": "Wang Youying",

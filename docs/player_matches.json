@@ -986,50 +986,40 @@
       "date": "13/11/2026",
       "team1": "Hong Kong Cricket Club L4",
       "team2": "Squashathon Ladies",
-      "team_result": "3-2(3-0,0-3,3-1,CR,0-3)",
+      "team_result": "3-1(3-0,0-3,3-1,CR)",
       "individual_matches": [
         {
           "position": 1,
-          "player1": "Jue Emily Xiao Ran",
+          "player1": "Cheng Hiu Tung Kaley",
           "player2": "Yuen Wai Ting",
           "score": "3-0",
           "status": "confirmed",
-          "player1_hks_no": "34589",
+          "player1_hks_no": "34026",
           "player2_hks_no": "31848"
         },
         {
           "position": 2,
-          "player1": "Verma Tara",
-          "player2": "Chak Wai Suen",
+          "player1": "Krefman Kylie Judith",
+          "player2": null,
           "score": "0-3",
-          "status": "confirmed",
-          "player1_hks_no": "34598",
-          "player2_hks_no": "34870"
+          "status": "unresolved",
+          "player1_hks_no": "34789"
         },
         {
           "position": 3,
-          "player1": "Chiu Amber Elisabeth",
-          "player2": "Wong Chor Wai",
+          "player1": null,
+          "player2": "Cheung Diana",
           "score": "3-1",
-          "status": "confirmed",
-          "player1_hks_no": "35173",
-          "player2_hks_no": "35854"
+          "status": "unresolved",
+          "player2_hks_no": "35085"
         },
         {
           "position": 4,
           "score": "CR",
           "effective_score": "3-0",
           "result_type": "concession",
-          "player1": "Carlsson Rosa",
-          "player2": null,
-          "status": "confirmed",
-          "player1_hks_no": "34788"
-        },
-        {
-          "position": 5,
           "player1": null,
           "player2": null,
-          "score": "0-3",
           "status": "unresolved"
         }
       ],
