@@ -990,11 +990,11 @@
       "individual_matches": [
         {
           "position": 1,
-          "player1": "Cheng Hiu Tung Kaley",
+          "player1": "Jue Emily Xiao Ran",
           "player2": "Yuen Wai Ting",
           "score": "3-0",
           "status": "confirmed",
-          "player1_hks_no": "34026",
+          "player1_hks_no": "34589",
           "player2_hks_no": "31848"
         },
         {
@@ -1008,20 +1008,22 @@
         },
         {
           "position": 3,
-          "player1": null,
-          "player2": "Cheung Diana",
+          "player1": "Chiu Amber Elisabeth",
+          "player2": "Wong Chor Wai",
           "score": "3-1",
-          "status": "unresolved",
-          "player2_hks_no": "35085"
+          "status": "confirmed",
+          "player1_hks_no": "35173",
+          "player2_hks_no": "35854"
         },
         {
           "position": 4,
           "score": "CR",
           "effective_score": "3-0",
           "result_type": "concession",
-          "player1": null,
+          "player1": "Carlsson Rosa",
           "player2": null,
-          "status": "unresolved"
+          "status": "confirmed",
+          "player1_hks_no": "34788"
         }
       ],
       "notification_sent": false
