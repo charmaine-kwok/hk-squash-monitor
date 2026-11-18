@@ -266,16 +266,16 @@
       "31848": {
         "name": "Yuen Wai Ting",
         "average": 12.0,
-        "matches_played": 4,
-        "published_games_played": 3,
-        "total_game_points": 36.0,
-        "won": 0,
-        "lost": 3
+        "matches_played": 3
       },
       "34870": {
         "name": "Chak Wai Suen",
         "average": 19.5,
-        "matches_played": 4
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 78.0,
+        "won": 3,
+        "lost": 1
       },
       "30714": {
         "name": "Tsang Ka Lei Carrie",
@@ -284,8 +284,8 @@
       },
       "35854": {
         "name": "Wong Chor Wai",
-        "average": 6.0,
-        "matches_played": 3
+        "average": 4.5,
+        "matches_played": 2
       },
       "35085": {
         "name": "Cheung Diana",
@@ -342,31 +342,23 @@
       },
       "34589": {
         "name": "Jue Emily Xiao Ran",
-        "average": 25.5,
-        "matches_played": 2
+        "average": 24.0,
+        "matches_played": 1
       },
       "35173": {
         "name": "Chiu Amber Elisabeth",
-        "average": 15.0,
-        "matches_played": 3
+        "average": 13.5,
+        "matches_played": 2
       },
       "34789": {
         "name": "Krefman Kylie Judith",
         "average": 10.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 30.0,
-        "won": 1,
-        "lost": 2
+        "matches_played": 3
       },
       "34026": {
         "name": "Cheng Hiu Tung Kaley",
         "average": 27.0,
-        "matches_played": 2,
-        "published_games_played": 1,
-        "total_game_points": 27.0,
-        "won": 1,
-        "lost": 0
+        "matches_played": 2
       },
       "34309": {
         "name": "Wang Youying",
@@ -386,15 +378,6 @@
       "34598": {
         "name": "Verma Tara",
         "average": 9.0,
-        "matches_played": 2,
-        "published_games_played": 1,
-        "total_game_points": 9.0,
-        "won": 0,
-        "lost": 1
-      },
-      "34788": {
-        "name": "Carlsson Rosa",
-        "average": 18.0,
         "matches_played": 1
       }
     },

@@ -832,11 +832,11 @@
         {
           "position": 4,
           "player1": "Cheung Diana",
-          "player1_hks_no": "35085",
           "player2": "Hui Kristal",
           "player2_hks_no": "34937",
           "score": "2-3",
-          "status": "confirmed"
+          "status": "confirmed",
+          "player1_hks_no": "35085"
         }
       ],
       "notification_sent": true
@@ -1000,10 +1000,11 @@
         {
           "position": 2,
           "player1": "Krefman Kylie Judith",
-          "player2": null,
+          "player2": "Chak Wai Suen",
           "score": "0-3",
-          "status": "unresolved",
-          "player1_hks_no": "34789"
+          "status": "confirmed",
+          "player1_hks_no": "34789",
+          "player2_hks_no": "34870"
         },
         {
           "position": 3,
