@@ -229,7 +229,7 @@
           ]
         },
         "JESSICA L4 Mochis": {
-          "effective_date": "2026-11-13",
+          "effective_date": "2026-11-25",
           "players": [
             {
               "order": 1,
@@ -338,6 +338,30 @@
               "won": 3,
               "lost": 0,
               "total_game_points": 63.0
+            },
+            {
+              "order": 10,
+              "hks_no": "35410",
+              "name": "Sun Hoi Ting",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
+            },
+            {
+              "order": 11,
+              "hks_no": "35194",
+              "name": "Li Wai Wai",
+              "ranking": "0",
+              "points": null,
+              "overall_rank": null,
+              "games_played": 0,
+              "won": 0,
+              "lost": 0,
+              "total_game_points": 0.0
             }
           ]
         },
