@@ -331,6 +331,171 @@
         }
       ],
       "notification_sent": true
+    },
+    "21/11/2026|Raimondi College|Kinetic Squash Club 6|HK Squash Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Raimondi College",
+      "team2": "Kinetic Squash Club 6",
+      "team_result": "3-2(2-3,3-2,3-1,0-3,3-0)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Tang Tin Ming Helios",
+          "player1_hks_no": "34414",
+          "player2": "Man Vincent Winn Siae",
+          "player2_hks_no": "35291",
+          "score": "2-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Dong Zi Yuan",
+          "player1_hks_no": "35212",
+          "player2": "Chan Wing Lun",
+          "player2_hks_no": "36442",
+          "score": "3-2",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Chan Yu Hin",
+          "player1_hks_no": "34418",
+          "player2": "Lok Rachel Wing Kiu",
+          "player2_hks_no": "36462",
+          "score": "3-1",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Lam Chak Him",
+          "player1_hks_no": "34853",
+          "player2": "Wei Susan",
+          "player2_hks_no": "35272",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 5,
+          "player1": "Cheng Hoi Him",
+          "player1_hks_no": "37194",
+          "player2": "Wong Po Yu",
+          "player2_hks_no": "36904",
+          "score": "3-0",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
+    },
+    "21/11/2026|Hong Kong International School D15|North District Sports Association 3|HK Squash Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Hong Kong International School D15",
+      "team2": "North District Sports Association 3",
+      "team_result": "0-5(2-3,0-3,2-3,0-3,0-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Krefman Kylie Judith",
+          "player1_hks_no": "34789",
+          "player2": "Chiu Yee Lai",
+          "player2_hks_no": "26010",
+          "score": "2-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Yeoh Shu Ting Alexandra",
+          "player1_hks_no": "34884",
+          "player2": "Lam Shun Yan",
+          "player2_hks_no": "31501",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Carlsson Rosa",
+          "player1_hks_no": "34788",
+          "player2": "Leung Hing Chung",
+          "player2_hks_no": "33164",
+          "score": "2-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Kim Justin",
+          "player1_hks_no": "36575",
+          "player2": "Lo Wing Yan",
+          "player2_hks_no": "33418",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 5,
+          "player1": "Kim Irene",
+          "player1_hks_no": "36586",
+          "player2": "Chen Shuai Yun",
+          "player2_hks_no": "36554",
+          "score": "0-3",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
+    },
+    "21/11/2026|Electrify Squash Club D15|French Boast Club|HK Squash Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "Electrify Squash Club D15",
+      "team2": "French Boast Club",
+      "team_result": "3-2(0-3,0-3,3-0,3-2,3-2)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Lai Long Kin",
+          "player1_hks_no": "35828",
+          "player2": "Yim Tsz Kin",
+          "player2_hks_no": "36922",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Lau Man Kit",
+          "player1_hks_no": "35827",
+          "player2": "Chou Kowk Wai",
+          "player2_hks_no": "35010",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Ng Dick Hei",
+          "player1_hks_no": "32865",
+          "player2": "Chow Hoi Ying",
+          "player2_hks_no": "35315",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "player1": "Law Sheung Chit",
+          "player1_hks_no": "36219",
+          "player2": "LEUNG SUM MUI CRYSTAL",
+          "player2_hks_no": "36917",
+          "score": "3-2",
+          "status": "confirmed"
+        },
+        {
+          "position": 5,
+          "player1": "Cheng Ho Yan",
+          "player1_hks_no": "34708",
+          "player2": "Chan Yi Ying",
+          "player2_hks_no": "36918",
+          "score": "3-2",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
     }
   },
   "L4": {
@@ -1118,6 +1283,100 @@
         }
       ],
       "notification_sent": false
+    },
+    "20/11/2026|JESSICA L4|Hong Kong Cricket Club L4 Rockettes|HK Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "JESSICA L4",
+      "team2": "Hong Kong Cricket Club L4 Rockettes",
+      "team_result": "4-0(3-0,3-0,3-0,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Cai Yuxi Serena",
+          "player1_hks_no": "34327",
+          "player2": "Beyers Karli",
+          "player2_hks_no": "35566",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Yeung Hei Lo Keiko",
+          "player1_hks_no": "35075",
+          "player2": "Mak Wing Sze",
+          "player2_hks_no": "34646",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Pun Zhe Qiao Kimi",
+          "player1_hks_no": "34012",
+          "player2": "Potter Kathryn Jane",
+          "player2_hks_no": "37073",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": "Chiu Yuet Yi",
+          "player1_hks_no": "34206",
+          "player2": null,
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
+    },
+    "20/11/2026|JESSICA L4 Mochis|Hong Kong Football Club L4B|HK Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "JESSICA L4 Mochis",
+      "team2": "Hong Kong Football Club L4B",
+      "team_result": "2-2(0-3,3-0,3-0,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Kwok To Yan",
+          "player1_hks_no": "34258",
+          "player2": "Lin Zixuan Emma",
+          "player2_hks_no": "33884",
+          "score": "0-3",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Wong Wun Yin",
+          "player1_hks_no": "34039",
+          "player2": "Cheng Chen Kaja",
+          "player2_hks_no": "33257",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "player1": "Ho Chin Pik",
+          "player1_hks_no": "27974",
+          "player2": "Dua Jigyasa",
+          "player2_hks_no": "34108",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": null,
+          "player2": "Lim Zi Xuan Leanna",
+          "player2_hks_no": "37251",
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
     }
   }
 }
