@@ -77,6 +77,498 @@ POINTS_TABLE = {
 }
 
 
+def audit_player_statistics(
+    league_names=("L4", "D15B"),
+):
+    player_matches = load_json(PLAYER_MATCHES_FILE) or {}
+
+    mismatches = []
+    checked = 0
+
+    for league_name in league_names:
+
+        published_teams = get_players(league_name)
+
+        reconstructed = {}
+
+        fixtures = player_matches.get(
+            league_name,
+            {},
+        )
+
+        for fixture in fixtures.values():
+
+            team1 = fixture.get("team1")
+            team2 = fixture.get("team2")
+
+            for match in fixture.get(
+                "individual_matches",
+                [],
+            ):
+
+                status = match.get("status")
+                result_type = match.get("result_type")
+
+                if status == "unresolved":
+                    continue
+
+                if status != "confirmed" and result_type != "concession":
+                    continue
+
+                position = match.get("position")
+
+                score = match.get(
+                    "effective_score",
+                    match.get("score"),
+                )
+
+                if position not in POINTS_TABLE or not score:
+                    continue
+
+                player1_hks = match.get("player1_hks_no")
+
+                if player1_hks:
+                    player1_hks = str(player1_hks)
+
+                    key = (
+                        team1,
+                        player1_hks,
+                    )
+
+                    reconstructed.setdefault(
+                        key,
+                        {
+                            "name": match.get("player1"),
+                            "played": 0,
+                            "points": 0.0,
+                            "won": 0,
+                            "lost": 0,
+                        },
+                    )
+
+                    if result_type == "concession":
+                        if match.get("player1") and not match.get("player2"):
+                            player1_score = "3-0"
+                        elif match.get("player2") and not match.get("player1"):
+                            player1_score = "0-3"
+                        else:
+                            player1_score = score
+                    else:
+                        player1_score = score
+
+                    points = POINTS_TABLE[position].get(player1_score)
+
+                    if points is not None:
+                        item = reconstructed[key]
+
+                        item["played"] += 1
+                        item["points"] += points
+
+                        left, right = map(
+                            int,
+                            player1_score.split("-"),
+                        )
+
+                        if left > right:
+                            item["won"] += 1
+                        else:
+                            item["lost"] += 1
+
+                player2_hks = match.get("player2_hks_no")
+
+                if player2_hks:
+                    player2_hks = str(player2_hks)
+
+                    key = (
+                        team2,
+                        player2_hks,
+                    )
+
+                    reconstructed.setdefault(
+                        key,
+                        {
+                            "name": match.get("player2"),
+                            "played": 0,
+                            "points": 0.0,
+                            "won": 0,
+                            "lost": 0,
+                        },
+                    )
+
+                    if result_type == "concession":
+                        if match.get("player2") and not match.get("player1"):
+                            player2_score = "3-0"
+                        elif match.get("player1") and not match.get("player2"):
+                            player2_score = "0-3"
+                        else:
+                            player2_score = reverse_score(score)
+                    else:
+                        player2_score = reverse_score(score)
+
+                    points = POINTS_TABLE[position].get(player2_score)
+
+                    if points is not None:
+                        item = reconstructed[key]
+
+                        item["played"] += 1
+                        item["points"] += points
+
+                        left, right = map(
+                            int,
+                            player2_score.split("-"),
+                        )
+
+                        if left > right:
+                            item["won"] += 1
+                        else:
+                            item["lost"] += 1
+
+        for (
+            team_name,
+            team_data,
+        ) in published_teams.items():
+
+            for (
+                hks_no,
+                published,
+            ) in team_data.get(
+                "players",
+                {},
+            ).items():
+
+                published_played = published.get("games_played")
+
+                # Ignore players for whom the
+                # ranking page gives no statistics.
+                if published_played is None:
+                    continue
+
+                checked += 1
+
+                calculated = reconstructed.get(
+                    (
+                        team_name,
+                        str(hks_no),
+                    ),
+                    {
+                        "name": published.get("name"),
+                        "played": 0,
+                        "points": 0.0,
+                        "won": 0,
+                        "lost": 0,
+                    },
+                )
+
+                played = calculated["played"]
+
+                points = calculated["points"]
+
+                average = points / played if played else 0.0
+
+                published_points = published.get(
+                    "total_game_points",
+                    0,
+                )
+
+                published_average = published.get(
+                    "ranking_average",
+                    0,
+                )
+
+                published_won = published.get(
+                    "won",
+                    0,
+                )
+
+                published_lost = published.get(
+                    "lost",
+                    0,
+                )
+
+                differences = []
+
+                if played != published_played:
+                    differences.append(
+                        (
+                            "Played",
+                            played,
+                            published_played,
+                        )
+                    )
+
+                if abs(points - float(published_points or 0)) > 0.01:
+                    differences.append(
+                        (
+                            "Points",
+                            points,
+                            published_points,
+                        )
+                    )
+
+                if abs(average - float(published_average or 0)) > 0.01:
+                    differences.append(
+                        (
+                            "Average",
+                            round(
+                                average,
+                                2,
+                            ),
+                            published_average,
+                        )
+                    )
+
+                if calculated["won"] != published_won:
+                    differences.append(
+                        (
+                            "Won",
+                            calculated["won"],
+                            published_won,
+                        )
+                    )
+
+                if calculated["lost"] != published_lost:
+                    differences.append(
+                        (
+                            "Lost",
+                            calculated["lost"],
+                            published_lost,
+                        )
+                    )
+
+                if differences:
+                    mismatches.append(
+                        {
+                            "league": league_name,
+                            "team": team_name,
+                            "hks_no": str(hks_no),
+                            "name": published.get("name") or calculated["name"],
+                            "differences": differences,
+                        }
+                    )
+
+    return checked, mismatches
+
+
+def get_audit_delta(mismatch):
+    differences = {
+        field: (
+            reconstructed,
+            published,
+        )
+        for (
+            field,
+            reconstructed,
+            published,
+        ) in mismatch["differences"]
+    }
+
+    def delta(field):
+        values = differences.get(field)
+
+        if not values:
+            return 0
+
+        reconstructed, published = values
+
+        return published - reconstructed
+
+    return {
+        "played": delta("Played"),
+        "points": delta("Points"),
+        "won": delta("Won"),
+        "lost": delta("Lost"),
+    }
+
+
+def expected_player_delta(
+    position,
+    score,
+):
+    points = POINTS_TABLE[position].get(score)
+
+    if points is None:
+        return None
+
+    left, right = map(
+        int,
+        score.split("-"),
+    )
+
+    return {
+        "played": 1,
+        "points": points,
+        "won": 1 if left > right else 0,
+        "lost": 1 if left < right else 0,
+    }
+
+
+def audit_delta_matches(
+    mismatch,
+    expected,
+):
+    actual = get_audit_delta(mismatch)
+
+    return (
+        actual["played"] == expected["played"]
+        and abs(actual["points"] - expected["points"]) <= 0.01
+        and actual["won"] == expected["won"]
+        and actual["lost"] == expected["lost"]
+    )
+
+
+def repair_unresolved_from_audit(
+    league_names=("L4", "D15B"),
+    apply_changes=False,
+):
+    player_matches = load_json(PLAYER_MATCHES_FILE) or {}
+
+    _, mismatches = audit_player_statistics(league_names)
+
+    repairs = []
+
+    for league_name in league_names:
+
+        fixtures = player_matches.get(
+            league_name,
+            {},
+        )
+
+        for (
+            fixture_id,
+            fixture,
+        ) in fixtures.items():
+
+            team1 = fixture.get("team1")
+
+            team2 = fixture.get("team2")
+
+            for match in fixture.get(
+                "individual_matches",
+                [],
+            ):
+
+                if match.get("status") != "unresolved":
+                    continue
+
+                # For now only repair
+                # normal played rubbers.
+                if match.get("result_type") == "concession":
+                    continue
+
+                position = match.get("position")
+
+                score = match.get("score")
+
+                if position not in POINTS_TABLE or not score or "-" not in score:
+                    continue
+
+                # -------------------
+                # Missing player 1
+                # -------------------
+
+                if not match.get("player1_hks_no"):
+
+                    expected = expected_player_delta(
+                        position,
+                        score,
+                    )
+
+                    candidates = [
+                        item
+                        for item in mismatches
+                        if (
+                            item["league"] == league_name
+                            and item["team"] == team1
+                            and audit_delta_matches(
+                                item,
+                                expected,
+                            )
+                        )
+                    ]
+
+                    if len(candidates) == 1:
+                        candidate = candidates[0]
+
+                        repairs.append(
+                            {
+                                "league": league_name,
+                                "fixture": fixture_id,
+                                "position": position,
+                                "side": "player1",
+                                "name": candidate["name"],
+                                "hks_no": candidate["hks_no"],
+                            }
+                        )
+
+                        if apply_changes:
+                            match["player1"] = candidate["name"]
+
+                            match["player1_hks_no"] = candidate["hks_no"]
+
+                # -------------------
+                # Missing player 2
+                # -------------------
+
+                if not match.get("player2_hks_no"):
+
+                    player2_score = reverse_score(score)
+
+                    expected = expected_player_delta(
+                        position,
+                        player2_score,
+                    )
+
+                    candidates = [
+                        item
+                        for item in mismatches
+                        if (
+                            item["league"] == league_name
+                            and item["team"] == team2
+                            and audit_delta_matches(
+                                item,
+                                expected,
+                            )
+                        )
+                    ]
+
+                    if len(candidates) == 1:
+                        candidate = candidates[0]
+
+                        repairs.append(
+                            {
+                                "league": league_name,
+                                "fixture": fixture_id,
+                                "position": position,
+                                "side": "player2",
+                                "name": candidate["name"],
+                                "hks_no": candidate["hks_no"],
+                            }
+                        )
+
+                        if apply_changes:
+                            match["player2"] = candidate["name"]
+
+                            match["player2_hks_no"] = candidate["hks_no"]
+
+                if apply_changes and match.get("player1_hks_no") and match.get("player2_hks_no"):
+                    match["status"] = "confirmed"
+
+    if apply_changes and repairs:
+        save_json(
+            PLAYER_MATCHES_FILE,
+            player_matches,
+        )
+
+        save_json(
+            "docs/player_matches.json",
+            player_matches,
+        )
+
+        rebuild_and_save_player_state()
+
+    return repairs
+
+
 def load_json(path):
 
     if not os.path.exists(path):
@@ -319,11 +811,7 @@ def get_players(league_name):
 
         # metadata between Team Name and Points.
 
-        while (
-            i < len(tokens)
-            and tokens[i].lower() != "points"
-            and tokens[i].lower() != "team name:"
-        ):
+        while i < len(tokens) and tokens[i].lower() != "points" and tokens[i].lower() != "team name:":
 
             i += 1
 
@@ -415,11 +903,7 @@ def get_players(league_name):
             known_teams=teams.keys(),
         )
     except Exception as error:
-        print(
-            "Division ranking fetch failed for "
-            f"{league_name}: {error}. "
-            "Falling back to roster averages only."
-        )
+        print("Division ranking fetch failed for " f"{league_name}: {error}. " "Falling back to roster averages only.")
         ranking_stats = {}
 
     for team_name, team_data in teams.items():
@@ -444,10 +928,7 @@ def get_players(league_name):
         for player in team_data.get("players", {}).values()
         if player.get("games_played") is not None
     )
-    print(
-        f"Division {league_name}: merged ranking stats for "
-        f"{merged_count} player(s)."
-    )
+    print(f"Division {league_name}: merged ranking stats for " f"{merged_count} player(s).")
 
     return teams
 
@@ -554,11 +1035,7 @@ def save_roster_snapshot(
 
         if not effective_date:
 
-            print(
-                "No effective date found for "
-                f"{team_name}; "
-                "roster snapshot skipped."
-            )
+            print("No effective date found for " f"{team_name}; " "roster snapshot skipped.")
 
             continue
 
@@ -599,12 +1076,7 @@ def save_roster_snapshot(
 
             changed = True
 
-            print(
-                "Saved roster snapshot: "
-                f"{league_name} / "
-                f"{team_name} / "
-                f"{effective_date}"
-            )
+            print("Saved roster snapshot: " f"{league_name} / " f"{team_name} / " f"{effective_date}")
 
     if changed:
 
@@ -673,11 +1145,7 @@ def get_historical_team_players(
 
     snapshots = roster_history.get(league_name, {}).get(team_name, {})
 
-    valid_dates = [
-        effective_date
-        for effective_date in snapshots
-        if effective_date <= match_date_normalised
-    ]
+    valid_dates = [effective_date for effective_date in snapshots if effective_date <= match_date_normalised]
 
     if not valid_dates:
 
@@ -721,9 +1189,7 @@ def get_historical_team_players(
             "lost": (live.get("lost") if live else None),
         }
 
-    print(
-        "Using roster " f"{effective_date} for " f"{team_name} " f"(match {match_date})"
-    )
+    print("Using roster " f"{effective_date} for " f"{team_name} " f"(match {match_date})")
 
     return historical_players
 
@@ -769,57 +1235,11 @@ def reverse_score(score):
 
 def resolve_cr_scores(result):
     """
-
-
-
-
-
-
-
     Convert the result into separate score lists for team1 and team2.
-
-
-
-
-
-
-
-
-
-
-
     ``CR`` by itself does not identify which side conceded. Infer the
-
-
-
-
-
-
-
     concession winner from the overall team score and the non-CR matches.
-
-
-
-
-
-
-
     The winning side receives "CR" and the conceding side receives
-
-
-
-
-
-
-
     None for that position.
-
-
-
-
-
-
-
     """
 
     scores = extract_individual_scores(result)
@@ -832,9 +1252,7 @@ def resolve_cr_scores(result):
 
     try:
 
-        team1_total, team2_total = [
-            int(value.strip()) for value in team_score_text.split("-", 1)
-        ]
+        team1_total, team2_total = [int(value.strip()) for value in team_score_text.split("-", 1)]
 
     except (TypeError, ValueError):
 
@@ -878,11 +1296,7 @@ def resolve_cr_scores(result):
 
     # Sanity check: all CR positions should be explained by the team score.
 
-    if (
-        team1_cr_wins < 0
-        or team2_cr_wins < 0
-        or team1_cr_wins + team2_cr_wins != cr_count
-    ):
+    if team1_cr_wins < 0 or team2_cr_wins < 0 or team1_cr_wins + team2_cr_wins != cr_count:
 
         return [], []
 
@@ -1319,16 +1733,14 @@ def solve_team_lineup(
     # Multiple mathematically valid lineups may remain.  Prefer lineups
     # with the strongest divisional-ranking participation evidence.
     best_evidence = max(
-        sum(player.get("ranking_evidence", 0) for player in solution.values())
-        for solution in solutions
+        sum(player.get("ranking_evidence", 0) for player in solution.values()) for solution in solutions
     )
 
     if best_evidence > 0:
         solutions = [
             solution
             for solution in solutions
-            if sum(player.get("ranking_evidence", 0) for player in solution.values())
-            == best_evidence
+            if sum(player.get("ranking_evidence", 0) for player in solution.values()) == best_evidence
         ]
 
         if len(solutions) == 1:
@@ -1622,11 +2034,7 @@ def fixture_has_unresolved(
 
             return True
 
-        if (
-            match.get("result_type") == "concession"
-            and not match.get("player1")
-            and not match.get("player2")
-        ):
+        if match.get("result_type") == "concession" and not match.get("player1") and not match.get("player2"):
 
             return True
 
@@ -1837,9 +2245,7 @@ def solve_missing_positions(
 
         # Already-used players cannot appear again.
 
-        candidates = [
-            player for player in candidates if player["hks_no"] not in used_hks
-        ]
+        candidates = [player for player in candidates if player["hks_no"] not in used_hks]
 
         filtered = []
 
@@ -1901,9 +2307,7 @@ def solve_missing_positions(
 
         resolved_count = len(chosen)
 
-        evidence_score = sum(
-            player.get("ranking_evidence", 0) for player in chosen.values()
-        )
+        evidence_score = sum(player.get("ranking_evidence", 0) for player in chosen.values())
 
         score = (
             resolved_count,
@@ -2218,17 +2622,11 @@ def retry_unresolved_fixtures(
 
                 fixture_improved = True
 
-            if match.get("result_type") == "concession" and (
-                match.get("player1") or match.get("player2")
-            ):
+            if match.get("result_type") == "concession" and (match.get("player1") or match.get("player2")):
 
                 match["status"] = "confirmed"
 
-            elif (
-                match.get("status") == "unresolved"
-                and match.get("player1")
-                and match.get("player2")
-            ):
+            elif match.get("status") == "unresolved" and match.get("player1") and match.get("player2"):
 
                 match["status"] = "confirmed"
 
@@ -2236,11 +2634,7 @@ def retry_unresolved_fixtures(
 
             improved_count += 1
 
-            print(
-                "Improved unresolved fixture: "
-                f"{fixture['team1']} vs "
-                f"{fixture['team2']}"
-            )
+            print("Improved unresolved fixture: " f"{fixture['team1']} vs " f"{fixture['team2']}")
 
             if not fixture_has_unresolved(fixture) and not fixture.get(
                 "notification_sent",
@@ -2652,9 +3046,7 @@ def find_ranking_inconsistencies(
     values.
     """
 
-    rebuilt = rebuild_player_state_from_matches(
-        {league_name: player_matches.get(league_name, {})}
-    )
+    rebuilt = rebuild_player_state_from_matches({league_name: player_matches.get(league_name, {})})
 
     differences = []
 
@@ -2700,9 +3092,7 @@ def find_ranking_inconsistencies(
             if published_total is not None:
                 points_delta = float(published_total) - reconstructed_total
 
-            if games_delta != 0 or (
-                points_delta is not None and abs(points_delta) >= 0.06
-            ):
+            if games_delta != 0 or (points_delta is not None and abs(points_delta) >= 0.06):
                 differences.append(
                     {
                         "team": team_name,
@@ -2768,17 +3158,11 @@ def audit_and_reopen_corrections(
                         side = None
                         score = None
 
-                        if (
-                            team1 == old_player["team"]
-                            and match.get("player1_hks_no") == old_player["hks_no"]
-                        ):
+                        if team1 == old_player["team"] and match.get("player1_hks_no") == old_player["hks_no"]:
                             side = 1
                             score = match.get("score")
 
-                        elif (
-                            team2 == old_player["team"]
-                            and match.get("player2_hks_no") == old_player["hks_no"]
-                        ):
+                        elif team2 == old_player["team"] and match.get("player2_hks_no") == old_player["hks_no"]:
                             side = 2
 
                             if match.get("result_type") == "concession":

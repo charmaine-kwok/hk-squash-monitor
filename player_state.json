@@ -31,47 +31,27 @@
       "34414": {
         "name": "Tang Tin Ming Helios",
         "average": 16.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 33.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "34418": {
         "name": "Chan Yu Hin",
         "average": 16.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 33.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "37194": {
         "name": "Cheng Hoi Him",
         "average": 10.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 21.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "35212": {
         "name": "Dong Zi Yuan",
         "average": 18.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 18.0,
-        "won": 1,
-        "lost": 0
+        "matches_played": 1
       },
       "34853": {
         "name": "Lam Chak Him",
         "average": 3.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 3.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       }
     },
     "Grit Squash-1": {
@@ -85,11 +65,7 @@
       "35827": {
         "name": "Lau Man Kit",
         "average": 18.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 36.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "35351": {
         "name": "Lai Man Po",
@@ -99,11 +75,7 @@
       "34708": {
         "name": "Cheng Ho Yan",
         "average": 15.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 30.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "36666": {
         "name": "Tang Ranqi",
@@ -118,49 +90,29 @@
       "35828": {
         "name": "Lai Long Kin",
         "average": 12.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 12.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       },
       "32865": {
         "name": "Ng Dick Hei",
         "average": 21.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 21.0,
-        "won": 1,
-        "lost": 0
+        "matches_played": 1
       },
       "36219": {
         "name": "Law Sheung Chit",
         "average": 12.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 12.0,
-        "won": 1,
-        "lost": 0
+        "matches_played": 1
       }
     },
     "French Boast Club": {
       "36922": {
         "name": "Yim Tsz Kin",
         "average": 27.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 54.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "35010": {
         "name": "Chou Kowk Wai",
         "average": 24.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 48.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "35443": {
         "name": "Chiu Ho Ying",
@@ -180,29 +132,17 @@
       "35315": {
         "name": "Chow Hoi Ying",
         "average": 6.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 6.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       },
       "36917": {
         "name": "LEUNG SUM MUI CRYSTAL",
         "average": 9.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 9.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       },
       "36918": {
         "name": "Chan Yi Ying",
         "average": 6.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 6.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       }
     },
     "Hong Kong International School D15": {
@@ -219,11 +159,7 @@
       "34789": {
         "name": "Krefman Kylie Judith",
         "average": 13.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 27.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "35000": {
         "name": "Leekha Reyansh",
@@ -233,67 +169,39 @@
       "36575": {
         "name": "Kim Justin",
         "average": 1.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 3.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "34884": {
         "name": "Yeoh Shu Ting Alexandra",
         "average": 9.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 9.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       },
       "34788": {
         "name": "Carlsson Rosa",
         "average": 12.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 12.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       },
       "36586": {
         "name": "Kim Irene",
         "average": 0.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 0.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       }
     },
     "North District Sports Association 3": {
       "26010": {
         "name": "Chiu Yee Lai",
         "average": 24.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 48.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "33164": {
         "name": "Leung Hing Chung",
         "average": 19.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 39.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "33418": {
         "name": "Lo Wing Yan",
         "average": 18.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 36.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "36553": {
         "name": "Deng Hui Ru",
@@ -308,20 +216,12 @@
       "31501": {
         "name": "Lam Shun Yan",
         "average": 24.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 24.0,
-        "won": 1,
-        "lost": 0
+        "matches_played": 1
       },
       "36554": {
         "name": "Chen Shuai Yun",
         "average": 15.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 15.0,
-        "won": 1,
-        "lost": 0
+        "matches_played": 1
       }
     },
     "Kwai Tsing District Squash Club D15": {
@@ -387,11 +287,7 @@
       "35291": {
         "name": "Man Vincent Winn Siae",
         "average": 24.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 72.0,
-        "won": 3,
-        "lost": 0
+        "matches_played": 3
       },
       "36670": {
         "name": "Poon Ka Hei Joshua",
@@ -406,11 +302,7 @@
       "35272": {
         "name": "Wei Susan",
         "average": 18.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 36.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "36899": {
         "name": "Chan Man Wai",
@@ -420,29 +312,17 @@
       "36442": {
         "name": "Chan Wing Lun",
         "average": 19.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 39.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "36904": {
         "name": "Wong Po Yu",
         "average": 0.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 0.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "36462": {
         "name": "Lok Rachel Wing Kiu",
         "average": 9.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 9.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       }
     }
   },
@@ -461,43 +341,27 @@
       "34870": {
         "name": "Chak Wai Suen",
         "average": 17.4,
-        "matches_played": 5,
-        "published_games_played": 5,
-        "total_game_points": 87.0,
-        "won": 3,
-        "lost": 2
+        "matches_played": 5
       },
       "30714": {
         "name": "Tsang Ka Lei Carrie",
         "average": 11.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 33.0,
-        "won": 1,
-        "lost": 2
+        "matches_played": 3
       },
       "35854": {
         "name": "Wong Chor Wai",
-        "average": 4.5,
-        "matches_played": 2
+        "average": 6.0,
+        "matches_played": 3
       },
       "35085": {
         "name": "Cheung Diana",
-        "average": 9.0,
-        "matches_played": 2,
-        "published_games_played": 1,
-        "total_game_points": 9.0,
-        "won": 0,
-        "lost": 1
+        "average": 6.0,
+        "matches_played": 2
       },
       "29533": {
         "name": "Cheung Hoi Suen",
         "average": 12.0,
-        "matches_played": 1,
-        "published_games_played": 1,
-        "total_game_points": 12.0,
-        "won": 0,
-        "lost": 1
+        "matches_played": 1
       }
     },
     "Kwai Tsing District Squash Club L4": {
@@ -545,13 +409,13 @@
       },
       "34589": {
         "name": "Jue Emily Xiao Ran",
-        "average": 24.0,
-        "matches_played": 1
+        "average": 25.5,
+        "matches_played": 2
       },
       "35173": {
         "name": "Chiu Amber Elisabeth",
-        "average": 13.5,
-        "matches_played": 2
+        "average": 15.0,
+        "matches_played": 3
       },
       "34789": {
         "name": "Krefman Kylie Judith",
@@ -561,7 +425,7 @@
       "34026": {
         "name": "Cheng Hiu Tung Kaley",
         "average": 27.0,
-        "matches_played": 2
+        "matches_played": 1
       },
       "34309": {
         "name": "Wang Youying",
@@ -582,6 +446,11 @@
         "name": "Verma Tara",
         "average": 9.0,
         "matches_played": 1
+      },
+      "34788": {
+        "name": "Carlsson Rosa",
+        "average": 18.0,
+        "matches_played": 1
       }
     },
     "Hong Kong Cricket Club L4 Rockettes": {
@@ -598,20 +467,12 @@
       "35566": {
         "name": "Beyers Karli",
         "average": 11.25,
-        "matches_played": 4,
-        "published_games_played": 4,
-        "total_game_points": 45.0,
-        "won": 1,
-        "lost": 3
+        "matches_played": 4
       },
       "37073": {
         "name": "Potter Kathryn Jane",
         "average": 4.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 12.0,
-        "won": 0,
-        "lost": 3
+        "matches_played": 3
       },
       "24255": {
         "name": "Cheung Helen Wai Ching",
@@ -621,11 +482,7 @@
       "34646": {
         "name": "Mak Wing Sze",
         "average": 10.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 30.0,
-        "won": 1,
-        "lost": 2
+        "matches_played": 3
       },
       "35004": {
         "name": "Lam Ka Yin",
@@ -642,20 +499,12 @@
       "33819": {
         "name": "Chui Jennifer",
         "average": 19.5,
-        "matches_played": 4,
-        "published_games_played": 4,
-        "total_game_points": 78.0,
-        "won": 2,
-        "lost": 2
+        "matches_played": 4
       },
       "34134": {
         "name": "Law Tsz Ting",
         "average": 18.0,
-        "matches_played": 5,
-        "published_games_played": 5,
-        "total_game_points": 90.0,
-        "won": 3,
-        "lost": 2
+        "matches_played": 5
       },
       "34651": {
         "name": "Ho Suet Ying",
@@ -665,11 +514,7 @@
       "33570": {
         "name": "Wan Esther",
         "average": 15.75,
-        "matches_played": 4,
-        "published_games_played": 4,
-        "total_game_points": 63.0,
-        "won": 3,
-        "lost": 1
+        "matches_played": 4
       },
       "34138": {
         "name": "Fong Chui Ping",
@@ -679,11 +524,7 @@
       "35352": {
         "name": "Yu Bella",
         "average": 25.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 75.0,
-        "won": 3,
-        "lost": 0
+        "matches_played": 3
       },
       "33757": {
         "name": "Ooi Hui Hoon",
@@ -695,11 +536,7 @@
       "33257": {
         "name": "Cheng Chen Kaja",
         "average": 13.5,
-        "matches_played": 4,
-        "published_games_played": 4,
-        "total_game_points": 54.0,
-        "won": 0,
-        "lost": 4
+        "matches_played": 4
       },
       "26243": {
         "name": "Man Angela Pui Kei",
@@ -709,11 +546,7 @@
       "34108": {
         "name": "Dua Jigyasa",
         "average": 6.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 12.0,
-        "won": 0,
-        "lost": 2
+        "matches_played": 2
       },
       "26526": {
         "name": "Tsang Lorita Yau Ching",
@@ -723,20 +556,12 @@
       "33884": {
         "name": "Lin Zixuan Emma",
         "average": 21.0,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 42.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       },
       "37251": {
         "name": "Lim Zi Xuan Leanna",
         "average": 11.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 33.0,
-        "won": 1,
-        "lost": 2
+        "matches_played": 3
       },
       "33758": {
         "name": "Leung Suen Yan Tiffany",
@@ -753,11 +578,7 @@
       "34327": {
         "name": "Cai Yuxi Serena",
         "average": 22.8,
-        "matches_played": 5,
-        "published_games_played": 5,
-        "total_game_points": 114.0,
-        "won": 4,
-        "lost": 1
+        "matches_played": 5
       },
       "34354": {
         "name": "Lam Ngo Sze Osee",
@@ -767,11 +588,7 @@
       "34206": {
         "name": "Chiu Yuet Yi",
         "average": 18.0,
-        "matches_played": 4,
-        "published_games_played": 4,
-        "total_game_points": 72.0,
-        "won": 4,
-        "lost": 0
+        "matches_played": 4
       },
       "34848": {
         "name": "Guttendorf Zoe",
@@ -781,20 +598,12 @@
       "35075": {
         "name": "Yeung Hei Lo Keiko",
         "average": 22.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 66.0,
-        "won": 3,
-        "lost": 0
+        "matches_played": 3
       },
       "34012": {
         "name": "Pun Zhe Qiao Kimi",
         "average": 18.0,
-        "matches_played": 4,
-        "published_games_played": 4,
-        "total_game_points": 72.0,
-        "won": 3,
-        "lost": 1
+        "matches_played": 4
       }
     },
     "JESSICA L4 Mochis": {
@@ -806,11 +615,7 @@
       "34258": {
         "name": "Kwok To Yan",
         "average": 15.0,
-        "matches_played": 3,
-        "published_games_played": 3,
-        "total_game_points": 45.0,
-        "won": 1,
-        "lost": 2
+        "matches_played": 3
       },
       "32125": {
         "name": "Chan Siu Yuen",
@@ -830,20 +635,12 @@
       "34039": {
         "name": "Wong Wun Yin",
         "average": 25.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 51.0,
-        "won": 2,
-        "lost": 0
+        "matches_played": 2
       },
       "27974": {
         "name": "Ho Chin Pik",
         "average": 16.5,
-        "matches_played": 2,
-        "published_games_played": 2,
-        "total_game_points": 33.0,
-        "won": 1,
-        "lost": 1
+        "matches_played": 2
       }
     }
   }

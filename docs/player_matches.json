@@ -1275,11 +1275,12 @@
         },
         {
           "position": 4,
-          "player1": null,
+          "player1": "Cheung Diana",
           "player2": "Wan Esther",
           "score": "0-3",
-          "status": "unresolved",
-          "player2_hks_no": "33570"
+          "status": "confirmed",
+          "player2_hks_no": "33570",
+          "player1_hks_no": "35085"
         }
       ],
       "notification_sent": false

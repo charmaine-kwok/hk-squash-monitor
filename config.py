@@ -4,12 +4,14 @@ LEAGUES = {
         "year": "2026-2027",
         "season": "Squash",
         "pages_id": 25,
+        "positions": 5,
     },
     "L4": {
         "id": "D00542",
         "year": "2026-2027",
         "season": "Squash",
         "pages_id": 25,
+        "positions": 4,
     },
 }
 
@@ -38,6 +40,7 @@ def standings_url(league_name):
         f"year/{config['year']}/"
         f"pages_id/{config['pages_id']}.html"
     )
+
 
 def players_url(league_name):
     config = LEAGUES[league_name]

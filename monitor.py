@@ -8,9 +8,11 @@ from dotenv import load_dotenv
 from config import LEAGUES, results_url
 from player_matches import (
     audit_and_reopen_corrections,
+    audit_player_statistics,
     fixture_has_unresolved,
     mark_fixture_notified,
     process_result_updates,
+    repair_unresolved_from_audit,
     retry_unresolved_fixtures,
     save_players_for_website,
 )
@@ -22,6 +24,70 @@ load_dotenv()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 BOT_COMMAND = os.getenv("BOT_COMMAND", "")
+
+
+def run_audit_fix():
+    repairs = repair_unresolved_from_audit(
+        ("L4", "D15B"),
+        apply_changes=True,
+    )
+
+    if not repairs:
+        message = "✅ Audit repair complete\n\n" "No uniquely repairable " "matches found."
+
+        print(message)
+        send_telegram_message(message)
+        return
+
+    lines = [
+        "🔧 HK Squash audit repair",
+        "",
+        (f"Repairs made: " f"{len(repairs)}"),
+    ]
+
+    for repair in repairs:
+        lines.extend(
+            [
+                "",
+                (f"{repair['league']} " f"Position " f"{repair['position']}"),
+                (f"{repair['side']}: " f"{repair['name']} " f"({repair['hks_no']})"),
+            ]
+        )
+
+    message = "\n".join(lines)
+
+    print(message)
+
+    send_telegram_message(message)
+
+
+def validate_team_result(
+    league_name,
+    team_result,
+):
+    expected = LEAGUES[league_name]["positions"]
+
+    if not team_result:
+        return False, "Missing result"
+
+    start = team_result.find("(")
+    end = team_result.rfind(")")
+
+    if start == -1 or end == -1 or end <= start:
+        return (
+            False,
+            "Invalid result format",
+        )
+
+    scores = [score.strip() for score in team_result[start + 1 : end].split(",") if score.strip()]
+
+    if len(scores) != expected:
+        return (
+            False,
+            f"Expected {expected} " f"rubbers but received " f"{len(scores)}",
+        )
+
+    return True, None
 
 
 def send_telegram_message(message):
@@ -136,9 +202,7 @@ def get_matches(url):
         if "[BYE]" in team1 or "[BYE]" in team2:
             continue
 
-        match_id = (
-            f"{current_date}|" f"{team1}|" f"{team2}|" f"{venue}|" f"{match_time}"
-        )
+        match_id = f"{current_date}|" f"{team1}|" f"{team2}|" f"{venue}|" f"{match_time}"
 
         matches[match_id] = {
             "week": current_week,
@@ -211,6 +275,27 @@ def check_for_updates(
                 "result",
                 "",
             )
+
+            if new_result and new_result != old_result:
+                valid, reason = validate_team_result(
+                    league_name,
+                    new_result,
+                )
+
+                if not valid:
+                    print(
+                        "⚠️ Invalid result ignored: "
+                        f"{league_name} | "
+                        f"{match['team1']} vs "
+                        f"{match['team2']} | "
+                        f"{reason}"
+                    )
+
+                    # Keep the previous
+                    # known-good result.
+                    match["result"] = old_result
+
+                    continue
 
             if old_result == "" and new_result != "":
                 updates.append(
@@ -321,7 +406,185 @@ def add_individual_matches_to_message(
     return message
 
 
+def run_audit():
+    print("Fetching latest HK Squash " "results...")
+
+    live_results = {}
+
+    for league_name in (
+        "L4",
+        "D15B",
+    ):
+        url = results_url(league_name)
+
+        matches = get_matches(url)
+
+        live_results[league_name] = matches
+
+        print(f"Division {league_name}: " f"{len(matches)} fixture(s)")
+
+    stored_results = load_previous_results()
+
+    result_mismatches = []
+    invalid_results = []
+
+    for (
+        league_name,
+        live_matches,
+    ) in live_results.items():
+
+        stored_league = stored_results.get(
+            league_name,
+            {},
+        )
+
+        for (
+            match_id,
+            live_match,
+        ) in live_matches.items():
+
+            live_result = live_match.get("result", "")
+
+            if not live_result:
+                continue
+
+            valid, reason = validate_team_result(
+                league_name,
+                live_result,
+            )
+
+            if not valid:
+                invalid_results.append(
+                    {
+                        "league": league_name,
+                        "match_id": match_id,
+                        "team1": live_match["team1"],
+                        "team2": live_match["team2"],
+                        "result": live_result,
+                        "reason": reason,
+                    }
+                )
+
+                continue
+
+            stored_match = stored_league.get(match_id)
+
+            if not stored_match:
+                result_mismatches.append(
+                    {
+                        "league": league_name,
+                        "team1": live_match["team1"],
+                        "team2": live_match["team2"],
+                        "live": live_result,
+                        "stored": None,
+                    }
+                )
+
+                continue
+
+            stored_result = stored_match.get("result", "")
+
+            if stored_result != live_result:
+                result_mismatches.append(
+                    {
+                        "league": league_name,
+                        "team1": live_match["team1"],
+                        "team2": live_match["team2"],
+                        "live": live_result,
+                        "stored": stored_result,
+                    }
+                )
+
+    checked, player_mismatches = audit_player_statistics(("L4", "D15B"))
+
+    lines = [
+        "🔎 HK Squash audit",
+        "",
+        "RESULT SYNC",
+    ]
+
+    if not invalid_results:
+        lines.append("✅ No invalid results")
+    else:
+        lines.append(f"❌ {len(invalid_results)} " "invalid result(s)")
+
+        for item in invalid_results:
+            lines.extend(
+                [
+                    "",
+                    (f"{item['league']} | " f"{item['team1']} vs " f"{item['team2']}"),
+                    (f"Result: " f"{item['result']}"),
+                    (f"Reason: " f"{item['reason']}"),
+                ]
+            )
+
+    if not result_mismatches:
+        lines.append("✅ Stored results match " "HK Squash")
+
+    else:
+        lines.append(f"⚠️ " f"{len(result_mismatches)} " "result mismatch(es)")
+
+        for item in result_mismatches:
+            lines.extend(
+                [
+                    "",
+                    (f"{item['league']} | " f"{item['team1']} vs " f"{item['team2']}"),
+                    ("HK Squash: " f"{item['live']}"),
+                    ("Stored: " f"{item['stored']}"),
+                ]
+            )
+
+    lines.extend(
+        [
+            "",
+            "PLAYER STATISTICS",
+            (f"Players checked: " f"{checked}"),
+        ]
+    )
+
+    if not player_mismatches:
+        lines.append("✅ No player " "statistic mismatches")
+
+    else:
+        lines.append(f"⚠️ " f"{len(player_mismatches)} " "player mismatch(es)")
+
+        for item in player_mismatches:
+            lines.extend(
+                [
+                    "",
+                    (f"{item['league']} | " f"{item['team']}"),
+                    (f"{item['name']} " f"({item['hks_no']})"),
+                ]
+            )
+
+            for (
+                field,
+                reconstructed,
+                published,
+            ) in item["differences"]:
+                lines.append(f"❌ {field}: " f"{reconstructed} / " f"{published}")
+
+    message = "\n".join(lines)
+
+    print(message)
+
+    send_telegram_message(message)
+
+
 def main():
+
+    if BOT_COMMAND == "audit":
+        print("Auditing HK Squash " "player statistics...\n")
+
+        run_audit()
+        return
+
+    if BOT_COMMAND == "auditfix":
+        print("Repairing uniquely " "identifiable matches...\n")
+
+        run_audit_fix()
+        return
+
     print("Checking HK Squash " "results...\n")
 
     previous_results = load_previous_results()
@@ -342,13 +605,7 @@ def main():
 
         pending_counts[league_name] = not_updated
 
-        print(
-            f"Division "
-            f"{league_name}: "
-            f"{len(matches)} matches, "
-            f"{not_updated} results "
-            f"not updated"
-        )
+        print(f"Division " f"{league_name}: " f"{len(matches)} matches, " f"{not_updated} results " f"not updated")
 
     if not previous_results:
         print("\nNo previous " "results found.")
@@ -391,12 +648,7 @@ def main():
         print("\n🚨 NEW RESULT " "UPDATES!\n")
 
         for update in updates:
-            print(
-                f"Division "
-                f'{update["league"]}: '
-                f'{update["team1"]} vs '
-                f'{update["team2"]}'
-            )
+            print(f"Division " f'{update["league"]}: ' f'{update["team1"]} vs ' f'{update["team2"]}')
 
             if "old_result" in update:
                 print(f"Old: " f'{update["old_result"]}')
@@ -442,13 +694,7 @@ def main():
                         update["match_id"],
                     )
 
-                    print(
-                        "Telegram "
-                        "notification sent: "
-                        f'{update["team1"]}'
-                        " vs "
-                        f'{update["team2"]}'
-                    )
+                    print("Telegram " "notification sent: " f'{update["team1"]}' " vs " f'{update["team2"]}')
 
             else:
                 print(
