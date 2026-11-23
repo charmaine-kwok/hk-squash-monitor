@@ -123,12 +123,12 @@
               "hks_no": "29533",
               "name": "Cheung Hoi Suen",
               "ranking": "0",
-              "points": null,
+              "points": 12.0,
               "overall_rank": null,
-              "games_played": 0,
+              "games_played": 1,
               "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
+              "lost": 1,
+              "total_game_points": 12.0
             },
             {
               "order": 3,
@@ -146,13 +146,13 @@
               "order": 4,
               "hks_no": "34870",
               "name": "Chak Wai Suen",
-              "ranking": "0",
-              "points": 19.5,
-              "overall_rank": null,
-              "games_played": 4,
+              "ranking": "2",
+              "points": 17.4,
+              "overall_rank": 2,
+              "games_played": 5,
               "won": 3,
-              "lost": 1,
-              "total_game_points": 78.0
+              "lost": 2,
+              "total_game_points": 87.0
             },
             {
               "order": 5,
@@ -171,12 +171,12 @@
               "hks_no": "30714",
               "name": "Tsang Ka Lei Carrie",
               "ranking": "0",
-              "points": 13.5,
+              "points": 11.0,
               "overall_rank": null,
-              "games_played": 2,
+              "games_played": 3,
               "won": 1,
-              "lost": 1,
-              "total_game_points": 27.0
+              "lost": 2,
+              "total_game_points": 33.0
             },
             {
               "order": 7,
@@ -195,12 +195,12 @@
               "hks_no": "35085",
               "name": "Cheung Diana",
               "ranking": "0",
-              "points": 9.0,
+              "points": 6.0,
               "overall_rank": null,
-              "games_played": 1,
+              "games_played": 2,
               "won": 0,
-              "lost": 1,
-              "total_game_points": 9.0
+              "lost": 2,
+              "total_game_points": 12.0
             },
             {
               "order": 9,
@@ -736,36 +736,36 @@
               "hks_no": "33819",
               "name": "Chui Jennifer",
               "ranking": "0",
-              "points": 17.0,
+              "points": 19.5,
               "overall_rank": null,
-              "games_played": 3,
-              "won": 1,
+              "games_played": 4,
+              "won": 2,
               "lost": 2,
-              "total_game_points": 51.0
+              "total_game_points": 78.0
             },
             {
               "order": 2,
               "hks_no": "35352",
               "name": "Yu Bella",
               "ranking": "0",
-              "points": 25.5,
+              "points": 25.0,
               "overall_rank": null,
-              "games_played": 2,
-              "won": 2,
+              "games_played": 3,
+              "won": 3,
               "lost": 0,
-              "total_game_points": 51.0
+              "total_game_points": 75.0
             },
             {
               "order": 3,
               "hks_no": "34134",
               "name": "Law Tsz Ting",
-              "ranking": "0",
-              "points": 17.25,
-              "overall_rank": null,
-              "games_played": 4,
-              "won": 2,
+              "ranking": "1",
+              "points": 18.0,
+              "overall_rank": 1,
+              "games_played": 5,
+              "won": 3,
               "lost": 2,
-              "total_game_points": 69.0
+              "total_game_points": 90.0
             },
             {
               "order": 4,
@@ -784,12 +784,12 @@
               "hks_no": "33570",
               "name": "Wan Esther",
               "ranking": "0",
-              "points": 15.0,
+              "points": 15.75,
               "overall_rank": null,
-              "games_played": 3,
-              "won": 2,
+              "games_played": 4,
+              "won": 3,
               "lost": 1,
-              "total_game_points": 45.0
+              "total_game_points": 63.0
             },
             {
               "order": 6,

@@ -1073,6 +1073,51 @@
         }
       ],
       "notification_sent": true
+    },
+    "20/11/2026|Squashathon Ladies|Hong Kong Football Club L4A|Cornwall Street Squash Centre|19:00:00": {
+      "week": "week 5",
+      "date": "20/11/2026",
+      "team1": "Squashathon Ladies",
+      "team2": "Hong Kong Football Club L4A",
+      "team_result": "0-4(0-3,0-3,0-3,0-3)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Cheung Hoi Suen",
+          "player2": "Chui Jennifer",
+          "score": "0-3",
+          "status": "confirmed",
+          "player2_hks_no": "33819",
+          "player1_hks_no": "29533"
+        },
+        {
+          "position": 2,
+          "player1": "Chak Wai Suen",
+          "player2": "Yu Bella",
+          "score": "0-3",
+          "status": "confirmed",
+          "player2_hks_no": "35352",
+          "player1_hks_no": "34870"
+        },
+        {
+          "position": 3,
+          "player1": "Tsang Ka Lei Carrie",
+          "player2": "Law Tsz Ting",
+          "score": "0-3",
+          "status": "confirmed",
+          "player2_hks_no": "34134",
+          "player1_hks_no": "30714"
+        },
+        {
+          "position": 4,
+          "player1": null,
+          "player2": "Wan Esther",
+          "score": "0-3",
+          "status": "unresolved",
+          "player2_hks_no": "33570"
+        }
+      ],
+      "notification_sent": false
     }
   }
 }

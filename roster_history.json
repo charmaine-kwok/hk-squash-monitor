@@ -111,7 +111,7 @@
           "34870": {
             "name": "Chak Wai Suen",
             "order": 4,
-            "ranking": "0"
+            "ranking": "2"
           },
           "35473": {
             "name": "Lin Jia Li",
@@ -236,6 +236,65 @@
           "35157": {
             "name": "Pang Sze Yiu",
             "order": 9,
+            "ranking": "0"
+          }
+        }
+      },
+      "2026-11-25": {
+        "players": {
+          "34461": {
+            "name": "Jin Olivia",
+            "order": 1,
+            "ranking": "0"
+          },
+          "34258": {
+            "name": "Kwok To Yan",
+            "order": 2,
+            "ranking": "0"
+          },
+          "34284": {
+            "name": "Lau Cheuk Yan",
+            "order": 3,
+            "ranking": "0"
+          },
+          "33953": {
+            "name": "Man Yu Ching",
+            "order": 4,
+            "ranking": "0"
+          },
+          "34039": {
+            "name": "Wong Wun Yin",
+            "order": 5,
+            "ranking": "0"
+          },
+          "27974": {
+            "name": "Ho Chin Pik",
+            "order": 6,
+            "ranking": "0"
+          },
+          "32125": {
+            "name": "Chan Siu Yuen",
+            "order": 7,
+            "ranking": "0"
+          },
+          "35141": {
+            "name": "Ng Hei Ching",
+            "order": 8,
+            "ranking": "0"
+          },
+          "35157": {
+            "name": "Pang Sze Yiu",
+            "order": 9,
+            "ranking": "0"
+          },
+          "35410": {
+            "name": "Sun Hoi Ting",
+            "order": 10,
+            "ranking": "0"
+          },
+          "35194": {
+            "name": "Li Wai Wai",
+            "order": 11,
             "ranking": "0"
           }
         }
@@ -474,7 +533,7 @@
           "34134": {
             "name": "Law Tsz Ting",
             "order": 3,
-            "ranking": "0"
+            "ranking": "1"
           },
           "34651": {
             "name": "Ho Suet Ying",

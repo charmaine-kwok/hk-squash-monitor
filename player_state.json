@@ -270,13 +270,21 @@
       },
       "34870": {
         "name": "Chak Wai Suen",
-        "average": 19.5,
-        "matches_played": 4
+        "average": 17.4,
+        "matches_played": 5,
+        "published_games_played": 5,
+        "total_game_points": 87.0,
+        "won": 3,
+        "lost": 2
       },
       "30714": {
         "name": "Tsang Ka Lei Carrie",
-        "average": 13.5,
-        "matches_played": 2
+        "average": 11.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 33.0,
+        "won": 1,
+        "lost": 2
       },
       "35854": {
         "name": "Wong Chor Wai",
@@ -289,6 +297,15 @@
         "matches_played": 2,
         "published_games_played": 1,
         "total_game_points": 9.0,
+        "won": 0,
+        "lost": 1
+      },
+      "29533": {
+        "name": "Cheung Hoi Suen",
+        "average": 12.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 12.0,
         "won": 0,
         "lost": 1
       }
@@ -422,13 +439,21 @@
     "Hong Kong Football Club L4A": {
       "33819": {
         "name": "Chui Jennifer",
-        "average": 17.0,
-        "matches_played": 3
+        "average": 19.5,
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 78.0,
+        "won": 2,
+        "lost": 2
       },
       "34134": {
         "name": "Law Tsz Ting",
-        "average": 17.25,
-        "matches_played": 4
+        "average": 18.0,
+        "matches_played": 5,
+        "published_games_played": 5,
+        "total_game_points": 90.0,
+        "won": 3,
+        "lost": 2
       },
       "34651": {
         "name": "Ho Suet Ying",
@@ -437,8 +462,12 @@
       },
       "33570": {
         "name": "Wan Esther",
-        "average": 15.0,
-        "matches_played": 3
+        "average": 15.75,
+        "matches_played": 4,
+        "published_games_played": 4,
+        "total_game_points": 63.0,
+        "won": 3,
+        "lost": 1
       },
       "34138": {
         "name": "Fong Chui Ping",
@@ -447,8 +476,12 @@
       },
       "35352": {
         "name": "Yu Bella",
-        "average": 25.5,
-        "matches_played": 2
+        "average": 25.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 75.0,
+        "won": 3,
+        "lost": 0
       },
       "33757": {
         "name": "Ooi Hui Hoon",
