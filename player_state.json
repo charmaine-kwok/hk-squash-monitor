@@ -367,8 +367,12 @@
     "Kwai Tsing District Squash Club L4": {
       "35315": {
         "name": "Chow Hoi Ying",
-        "average": 14.25,
-        "matches_played": 4
+        "average": 14.4,
+        "matches_played": 5,
+        "published_games_played": 5,
+        "total_game_points": 72.0,
+        "won": 1,
+        "lost": 4
       },
       "35392": {
         "name": "Yu Wing Tung",
@@ -387,25 +391,46 @@
       },
       "35471": {
         "name": "Wong Chi Chi",
-        "average": 10.5,
-        "matches_played": 2
+        "average": 10.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 30.0,
+        "won": 0,
+        "lost": 3
       },
       "29719": {
         "name": "Chung Wai Ting",
-        "average": 18.0,
-        "matches_played": 1
+        "average": 16.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 33.0,
+        "won": 2,
+        "lost": 0
       },
       "35467": {
         "name": "Lau Yuk Yee",
         "average": 6.0,
         "matches_played": 1
+      },
+      "35271": {
+        "name": "Lam Lai Kuen",
+        "average": 3.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 3.0,
+        "won": 0,
+        "lost": 1
       }
     },
     "Hong Kong Cricket Club L4": {
       "28446": {
         "name": "Leung Lilian Wai Shan",
-        "average": 13.5,
-        "matches_played": 2
+        "average": 17.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 51.0,
+        "won": 1,
+        "lost": 2
       },
       "34589": {
         "name": "Jue Emily Xiao Ran",
@@ -424,8 +449,12 @@
       },
       "34026": {
         "name": "Cheng Hiu Tung Kaley",
-        "average": 27.0,
-        "matches_played": 1
+        "average": 25.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 51.0,
+        "won": 2,
+        "lost": 0
       },
       "34309": {
         "name": "Wang Youying",
@@ -440,7 +469,11 @@
       "34078": {
         "name": "Adjemian Kasey",
         "average": 12.0,
-        "matches_played": 1
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 24.0,
+        "won": 1,
+        "lost": 1
       },
       "34598": {
         "name": "Verma Tara",
@@ -450,7 +483,11 @@
       "34788": {
         "name": "Carlsson Rosa",
         "average": 18.0,
-        "matches_played": 1
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 36.0,
+        "won": 2,
+        "lost": 0
       }
     },
     "Hong Kong Cricket Club L4 Rockettes": {

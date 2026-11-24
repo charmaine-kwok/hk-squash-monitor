@@ -9,25 +9,25 @@
               "order": 1,
               "hks_no": "35315",
               "name": "Chow Hoi Ying",
-              "ranking": "0",
-              "points": 14.25,
-              "overall_rank": null,
-              "games_played": 4,
+              "ranking": "4",
+              "points": 14.4,
+              "overall_rank": 4,
+              "games_played": 5,
               "won": 1,
-              "lost": 3,
-              "total_game_points": 57.0
+              "lost": 4,
+              "total_game_points": 72.0
             },
             {
               "order": 2,
               "hks_no": "35471",
               "name": "Wong Chi Chi",
               "ranking": "0",
-              "points": 10.5,
+              "points": 10.0,
               "overall_rank": null,
-              "games_played": 2,
+              "games_played": 3,
               "won": 0,
-              "lost": 2,
-              "total_game_points": 21.0
+              "lost": 3,
+              "total_game_points": 30.0
             },
             {
               "order": 3,
@@ -70,12 +70,12 @@
               "hks_no": "29719",
               "name": "Chung Wai Ting",
               "ranking": "0",
-              "points": 18.0,
+              "points": 16.5,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
+              "games_played": 2,
+              "won": 2,
               "lost": 0,
-              "total_game_points": 18.0
+              "total_game_points": 33.0
             },
             {
               "order": 7,
@@ -94,12 +94,12 @@
               "hks_no": "35271",
               "name": "Lam Lai Kuen",
               "ranking": "0",
-              "points": null,
+              "points": 3.0,
               "overall_rank": null,
-              "games_played": 0,
+              "games_played": 1,
               "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
+              "lost": 1,
+              "total_game_points": 3.0
             }
           ]
         },
@@ -611,12 +611,12 @@
               "hks_no": "34026",
               "name": "Cheng Hiu Tung Kaley",
               "ranking": "0",
-              "points": 27.0,
+              "points": 25.5,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
+              "games_played": 2,
+              "won": 2,
               "lost": 0,
-              "total_game_points": 27.0
+              "total_game_points": 51.0
             },
             {
               "order": 2,
@@ -659,12 +659,12 @@
               "hks_no": "28446",
               "name": "Leung Lilian Wai Shan",
               "ranking": "0",
-              "points": 13.5,
+              "points": 17.0,
               "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
+              "games_played": 3,
+              "won": 1,
               "lost": 2,
-              "total_game_points": 27.0
+              "total_game_points": 51.0
             },
             {
               "order": 6,
@@ -673,10 +673,10 @@
               "ranking": "0",
               "points": 12.0,
               "overall_rank": null,
-              "games_played": 1,
+              "games_played": 2,
               "won": 1,
-              "lost": 0,
-              "total_game_points": 12.0
+              "lost": 1,
+              "total_game_points": 24.0
             },
             {
               "order": 7,
@@ -721,10 +721,10 @@
               "ranking": "0",
               "points": 18.0,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
+              "games_played": 2,
+              "won": 2,
               "lost": 0,
-              "total_game_points": 18.0
+              "total_game_points": 36.0
             }
           ]
         },
