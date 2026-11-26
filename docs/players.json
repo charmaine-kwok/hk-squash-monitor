@@ -990,12 +990,12 @@
               "hks_no": "35267",
               "name": "Yu Tak Gi",
               "ranking": "0",
-              "points": 24.0,
+              "points": 25.5,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 1,
+              "games_played": 2,
+              "won": 2,
               "lost": 0,
-              "total_game_points": 24.0
+              "total_game_points": 51.0
             },
             {
               "order": 2,
@@ -1014,24 +1014,24 @@
               "hks_no": "35106",
               "name": "Lu Tsz Him",
               "ranking": "0",
-              "points": null,
+              "points": 24.0,
               "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
+              "games_played": 1,
+              "won": 1,
               "lost": 0,
-              "total_game_points": 0.0
+              "total_game_points": 24.0
             },
             {
               "order": 4,
               "hks_no": "35471",
               "name": "Wong Chi Chi",
               "ranking": "0",
-              "points": null,
+              "points": 21.0,
               "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
+              "games_played": 1,
+              "won": 1,
               "lost": 0,
-              "total_game_points": 0.0
+              "total_game_points": 21.0
             },
             {
               "order": 5,
@@ -1086,24 +1086,24 @@
               "hks_no": "35467",
               "name": "Lau Yuk Yee",
               "ranking": "0",
-              "points": null,
+              "points": 18.0,
               "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
+              "games_played": 1,
+              "won": 1,
               "lost": 0,
-              "total_game_points": 0.0
+              "total_game_points": 18.0
             },
             {
               "order": 10,
               "hks_no": "36531",
               "name": "Tong Yuen Ping",
               "ranking": "0",
-              "points": null,
+              "points": 15.0,
               "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
+              "games_played": 1,
+              "won": 1,
               "lost": 0,
-              "total_game_points": 0.0
+              "total_game_points": 15.0
             }
           ]
         },
@@ -1497,12 +1497,12 @@
               "hks_no": "35236",
               "name": "Chan Yan Tung Jasmine",
               "ranking": "0",
-              "points": null,
+              "points": 12.0,
               "overall_rank": null,
-              "games_played": 0,
+              "games_played": 1,
               "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
+              "lost": 1,
+              "total_game_points": 12.0
             },
             {
               "order": 10,
@@ -1521,12 +1521,12 @@
               "hks_no": "36906",
               "name": "Cheung Aiden Kinlong",
               "ranking": "0",
-              "points": null,
+              "points": 9.0,
               "overall_rank": null,
-              "games_played": 0,
+              "games_played": 1,
               "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
+              "lost": 1,
+              "total_game_points": 9.0
             }
           ]
         },

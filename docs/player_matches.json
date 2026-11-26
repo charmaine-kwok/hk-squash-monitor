@@ -496,6 +496,64 @@
         }
       ],
       "notification_sent": true
+    },
+    "21/11/2026|The Zero Squash Club D15B|Grit Squash-1|Kwun Chung Sports Centre|17:00:00": {
+      "week": "week 3",
+      "date": "21/11/2026",
+      "team1": "The Zero Squash Club D15B",
+      "team2": "Grit Squash-1",
+      "team_result": "5-0(3-0,3-0,CR,CR,CR)",
+      "individual_matches": [
+        {
+          "position": 1,
+          "player1": "Yu Tak Gi",
+          "player1_hks_no": "35267",
+          "player2": "Chan Yan Tung Jasmine",
+          "player2_hks_no": "35236",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 2,
+          "player1": "Lu Tsz Him",
+          "player1_hks_no": "35106",
+          "player2": "Cheung Aiden Kinlong",
+          "player2_hks_no": "36906",
+          "score": "3-0",
+          "status": "confirmed"
+        },
+        {
+          "position": 3,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": "Wong Chi Chi",
+          "player1_hks_no": "35471",
+          "player2": null,
+          "status": "confirmed"
+        },
+        {
+          "position": 4,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": "Lau Yuk Yee",
+          "player1_hks_no": "35467",
+          "player2": null,
+          "status": "confirmed"
+        },
+        {
+          "position": 5,
+          "score": "CR",
+          "effective_score": "3-0",
+          "result_type": "concession",
+          "player1": "Tong Yuen Ping",
+          "player1_hks_no": "36531",
+          "player2": null,
+          "status": "confirmed"
+        }
+      ],
+      "notification_sent": true
     }
   },
   "L4": {

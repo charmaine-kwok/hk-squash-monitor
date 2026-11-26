@@ -3,8 +3,12 @@
     "The Zero Squash Club D15B": {
       "35267": {
         "name": "Yu Tak Gi",
-        "average": 24.0,
-        "matches_played": 1
+        "average": 25.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 51.0,
+        "won": 2,
+        "lost": 0
       },
       "35250": {
         "name": "Hong Ming Chit",
@@ -25,6 +29,42 @@
         "name": "Lau Ka Chun",
         "average": 15.0,
         "matches_played": 1
+      },
+      "35106": {
+        "name": "Lu Tsz Him",
+        "average": 24.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 24.0,
+        "won": 1,
+        "lost": 0
+      },
+      "35471": {
+        "name": "Wong Chi Chi",
+        "average": 21.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 21.0,
+        "won": 1,
+        "lost": 0
+      },
+      "35467": {
+        "name": "Lau Yuk Yee",
+        "average": 18.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 18.0,
+        "won": 1,
+        "lost": 0
+      },
+      "36531": {
+        "name": "Tong Yuen Ping",
+        "average": 15.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 15.0,
+        "won": 1,
+        "lost": 0
       }
     },
     "Raimondi College": {
@@ -59,6 +99,24 @@
         "name": "Wong Hagios",
         "average": 12.0,
         "matches_played": 1
+      },
+      "35236": {
+        "name": "Chan Yan Tung Jasmine",
+        "average": 12.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 12.0,
+        "won": 0,
+        "lost": 1
+      },
+      "36906": {
+        "name": "Cheung Aiden Kinlong",
+        "average": 9.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 9.0,
+        "won": 0,
+        "lost": 1
       }
     },
     "Electrify Squash Club D15": {
