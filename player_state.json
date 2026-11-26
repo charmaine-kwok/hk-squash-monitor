@@ -285,8 +285,12 @@
     "Kwai Tsing District Squash Club D15": {
       "36903": {
         "name": "Ho Hing Kin",
-        "average": 10.5,
-        "matches_played": 2
+        "average": 14.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 42.0,
+        "won": 1,
+        "lost": 2
       },
       "36525": {
         "name": "Cheung Kwok Po Aurora",
@@ -300,8 +304,12 @@
       },
       "36527": {
         "name": "Po Wing Yan",
-        "average": 9.0,
-        "matches_played": 2
+        "average": 11.0,
+        "matches_played": 3,
+        "published_games_played": 3,
+        "total_game_points": 33.0,
+        "won": 2,
+        "lost": 1
       },
       "36893": {
         "name": "Wong Tak Yu",
@@ -310,35 +318,73 @@
       },
       "34846": {
         "name": "Wong Chi Kit",
-        "average": 15.0,
-        "matches_played": 1
+        "average": 19.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 39.0,
+        "won": 1,
+        "lost": 1
       },
       "35268": {
         "name": "Hung Lee Wun",
         "average": 15.0,
         "matches_played": 1
+      },
+      "36891": {
+        "name": "wong chung long",
+        "average": 24.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 24.0,
+        "won": 1,
+        "lost": 0
+      },
+      "35318": {
+        "name": "Poon Yee Wah",
+        "average": 6.0,
+        "matches_played": 1,
+        "published_games_played": 1,
+        "total_game_points": 6.0,
+        "won": 0,
+        "lost": 1
       }
     },
     "Star Squash Club 4": {
       "36931": {
         "name": "TSOI Hiu Tung",
-        "average": 12.0,
-        "matches_played": 1
+        "average": 13.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 27.0,
+        "won": 0,
+        "lost": 2
       },
       "36934": {
         "name": "Yue Hung Yuen",
-        "average": 24.0,
-        "matches_played": 1
+        "average": 16.5,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 33.0,
+        "won": 1,
+        "lost": 1
       },
       "35846": {
         "name": "Chan Yui Ching Kayden",
-        "average": 18.0,
-        "matches_played": 1
+        "average": 12.0,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 24.0,
+        "won": 1,
+        "lost": 1
       },
       "35372": {
         "name": "Yang Zi Kang",
-        "average": 3.0,
-        "matches_played": 1
+        "average": 9.0,
+        "matches_played": 2,
+        "published_games_played": 2,
+        "total_game_points": 18.0,
+        "won": 1,
+        "lost": 1
       }
     },
     "Kinetic Squash Club 6": {

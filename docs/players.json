@@ -1264,36 +1264,36 @@
               "hks_no": "34846",
               "name": "Wong Chi Kit",
               "ranking": "0",
-              "points": 15.0,
+              "points": 19.5,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
+              "games_played": 2,
+              "won": 1,
               "lost": 1,
-              "total_game_points": 15.0
+              "total_game_points": 39.0
             },
             {
               "order": 2,
               "hks_no": "36891",
               "name": "wong chung long",
               "ranking": "0",
-              "points": null,
+              "points": 24.0,
               "overall_rank": null,
-              "games_played": 0,
-              "won": 0,
+              "games_played": 1,
+              "won": 1,
               "lost": 0,
-              "total_game_points": 0.0
+              "total_game_points": 24.0
             },
             {
               "order": 3,
               "hks_no": "36903",
               "name": "Ho Hing Kin",
               "ranking": "0",
-              "points": 10.5,
+              "points": 14.0,
               "overall_rank": null,
-              "games_played": 2,
-              "won": 0,
+              "games_played": 3,
+              "won": 1,
               "lost": 2,
-              "total_game_points": 21.0
+              "total_game_points": 42.0
             },
             {
               "order": 4,
@@ -1348,12 +1348,12 @@
               "hks_no": "35318",
               "name": "Poon Yee Wah",
               "ranking": "0",
-              "points": null,
+              "points": 6.0,
               "overall_rank": null,
-              "games_played": 0,
+              "games_played": 1,
               "won": 0,
-              "lost": 0,
-              "total_game_points": 0.0
+              "lost": 1,
+              "total_game_points": 6.0
             },
             {
               "order": 9,
@@ -1372,12 +1372,12 @@
               "hks_no": "36527",
               "name": "Po Wing Yan",
               "ranking": "0",
-              "points": 9.0,
+              "points": 11.0,
               "overall_rank": null,
-              "games_played": 2,
-              "won": 1,
+              "games_played": 3,
+              "won": 2,
               "lost": 1,
-              "total_game_points": 18.0
+              "total_game_points": 33.0
             },
             {
               "order": 11,
@@ -1675,12 +1675,12 @@
               "hks_no": "36931",
               "name": "TSOI Hiu Tung",
               "ranking": "0",
-              "points": 12.0,
+              "points": 13.5,
               "overall_rank": null,
-              "games_played": 1,
+              "games_played": 2,
               "won": 0,
-              "lost": 1,
-              "total_game_points": 12.0
+              "lost": 2,
+              "total_game_points": 27.0
             },
             {
               "order": 2,
@@ -1699,12 +1699,12 @@
               "hks_no": "36934",
               "name": "Yue Hung Yuen",
               "ranking": "0",
-              "points": 24.0,
+              "points": 16.5,
               "overall_rank": null,
-              "games_played": 1,
+              "games_played": 2,
               "won": 1,
-              "lost": 0,
-              "total_game_points": 24.0
+              "lost": 1,
+              "total_game_points": 33.0
             },
             {
               "order": 4,
@@ -1723,12 +1723,12 @@
               "hks_no": "35846",
               "name": "Chan Yui Ching Kayden",
               "ranking": "0",
-              "points": 18.0,
+              "points": 12.0,
               "overall_rank": null,
-              "games_played": 1,
+              "games_played": 2,
               "won": 1,
-              "lost": 0,
-              "total_game_points": 18.0
+              "lost": 1,
+              "total_game_points": 24.0
             },
             {
               "order": 6,
@@ -1747,12 +1747,12 @@
               "hks_no": "35372",
               "name": "Yang Zi Kang",
               "ranking": "0",
-              "points": 3.0,
+              "points": 9.0,
               "overall_rank": null,
-              "games_played": 1,
-              "won": 0,
+              "games_played": 2,
+              "won": 1,
               "lost": 1,
-              "total_game_points": 3.0
+              "total_game_points": 18.0
             },
             {
               "order": 8,
